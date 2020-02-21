@@ -1,0 +1,14 @@
+Richard:
+- Make ability name key
+- Make equipment mask key
+- Enter F's for commons & uniques
+- Install git :)
+- Make github account
+
+Krissy:
+- Change ability names if +/- 2stdev from mean
+- Change ability names per Richard's key
+- Equipment mask conversion
+
+
+MODELLLLLLLLLLLLLLS
