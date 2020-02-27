@@ -1,0 +1,37 @@
+<style>
+img {
+  float: left;
+  max-width:20%;
+  height:auto;
+}
+</style>
+
+<div style="border-style:solid;border-width:4px">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right:15px;margin-bottom:10px">
+
+  <! --one star, common "white"
+  two star, "LimeGreen"
+  three star unique "Navy"
+  four star epic "Purple"
+  five star hero "OrangeRed"
+  one shield special "Black"
+  wings legendary "DarkGoldenRod" ––>
+
+  <h1 style="color:purple;margin:0"><b>Ardent Templar</b></h1>
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
+  <br />
+  <p>Best templar in the Galaxy. At least according to his mother.</p>
+  <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
+
+  <div style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px">
+    <h3 style="color:MidnightBlue"><b>Core Stats</b></h2>
+      <div style="text-align: center;letter-spacing: 50px;">
+        <h4 style="vertical-align: middle;display: inline-block"><u>HP</u></h4>
+        <h4 style="vertical-align: middle;display: inline-block"><u>Attack</u></h4>
+        <h4 style="vertical-align: middle;display: inline-block"><u>Repair</u></h4>
+      </div>
+  </div>
+</div>
