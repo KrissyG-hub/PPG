@@ -1,13 +1,20 @@
 <style>
-img {
-  float: left;
-  max-width:20%;
-  height:auto;
+.statinnercontainer {
+  text-align: center;
+  word-spacing: 50px;
+}
+.statblock {
+  vertical-align: middle;
+  display: inline-block;
+  word-spacing: normal;
+}
+.statheading {
+  margin-bottom: 0px;
 }
 </style>
 
 <div style="border-style:solid;border-width:4px">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right:15px;margin-bottom:10px">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right: 10px;margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
 
   <! --one star, common "white"
   two star, "LimeGreen"
@@ -18,20 +25,109 @@ img {
   wings legendary "DarkGoldenRod" ––>
 
   <h1 style="color:purple;margin:0"><b>Ardent Templar</b></h1>
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <br />
-  <p>Best templar in the Galaxy. At least according to his mother.</p>
+  <h5>Best templar in the Galaxy. At least according to his mother.</h5>
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
-  <div style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px">
-    <h3 style="color:MidnightBlue"><b>Core Stats</b></h2>
-      <div style="text-align: center;letter-spacing: 50px;">
-        <h4 style="vertical-align: middle;display: inline-block"><u>HP</u></h4>
-        <h4 style="vertical-align: middle;display: inline-block"><u>Attack</u></h4>
-        <h4 style="vertical-align: middle;display: inline-block"><u>Repair</u></h4>
+  <div style="border-style: solid;border-color: MidnightBlue;border-width: 4px;border-radius: 6px;margin: 4px">
+    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Core Stats</b></h4>
+      <div class="statinnercontainer">
+        <div class="statblock">
+          <h5 class="statheading"><u>HP</u></h5>
+          <h5>8</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Attack</u></h5>
+          <h5>4.8</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Repair</u></h5>
+          <h5>2</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Ability</u></h5>
+          <h5>8HP First Aid</h5>
+        </div>
+        <div class="statblock">
+          <button id="moreStatsButton" style="color: white;background-color: MidnightBlue;" onclick="moreStats()">More Stats</button>
+        </div>
       </div>
   </div>
+  <div id="roomStats" style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px;display:none;">
+    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Room Stats</b></h4>
+      <div class="statinnercontainer">
+        <div class="statblock">
+          <h5 class="statheading"><u>Weapon</u></h5>
+          <h5>15</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Science</u></h5>
+          <h5>10</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Pilot</u></h5>
+          <h5>20</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Engine</u></h5>
+          <h5>10</h5>
+        </div>
+      </div>
+  </div>
+  <div id="utilityStats" style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px;display:none;">
+    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Utility Stats</b></h4>
+      <div class="statinnercontainer">
+        <div class="statblock">
+          <h5 class="statheading"><u>Walk/Run Speed</u></h5>
+          <h5>1/2</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Fire Resist</u></h5>
+          <h5>5</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Training Points</u></h5>
+          <h5>80</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Collection</u></h5>
+          <h5>Ardent</h5>
+        </div>
+        <div class="statblock">
+          <h5 class="statheading"><u>Equipment</u></h5>
+          <h5>Accessory, Hand</h5>
+        </div>
+      </div>
+  </div>
+  <div style="border-style:solid;border-color:Purple;border-width:4px;border-radius:6px;margin:4px">
+    <h4 style="color:Purple;margin-left: 5px;margin-bottom: 10px;"><b>Roles</b></h4>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Best in class:</u> <b>antiboarder, boarder</b></h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Good as:</u> </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Average as:</u> gunner, pilot</h5>
+  </div>
+  <div style="border-style:solid;border-color:DarkGoldenrod;border-width:4px;border-radius:6px;margin:4px">
+    <h4 style="color: DarkGoldenrod;margin-left: 5px;margin-bottom: 10px;"><b>Prestige Options</b></h4>
+    <h5 style="margin-left: 5px;"><u>Xin</u>, <u>Lollita</u>, <u>Guan Yu</u>, <u>Lyu Bu</u>, <u>Rocky</u>, <u>Jaiden</u>, <u>Ryzen</u>, <u>Admiral Serena</u>, <u>Sagita</u>, <u>Leon Mars</u>, <u>Ichigo</u>, <u>Turkey Hero</u></h5> 
+  </div>
 </div>
+
+<script>
+function moreStats() {
+  var roomStats = document.getElementById("roomStats");
+  var utilityStats = document.getElementById("utilityStats");
+  var moreStatsButton = document.getElementById("moreStatsButton");
+  if (roomStats.style.display === "none") {
+    roomStats.style.display = "block";
+    utilityStats.style.display = "block";
+    moreStatsButton.innerHTML = "Fewer Stats";
+  } else {
+    roomStats.style.display = "none";
+    utilityStats.style.display = "none";
+    moreStatsButton.innerHTML = "More Stats";
+  }
+}
+</script>
