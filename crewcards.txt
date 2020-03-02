@@ -1,19 +1,61 @@
+<?php
+if (isset($_POST['CrewName'])) {
+  $crewName = $_POST['CrewName'];
+} else {
+  $crewName = 'Laura';
+}
+
+$wpdb->show_errors();
+$query = 'SELECT * FROM crew_stats WHERE CharacterDesignName = "' . $crewName . '"';
+$crew = $wpdb->get_results($query);
+
+//Clean up the data to be human readable
+
+?>
+
 <style>
-.statinnercontainer {
+#crewTitle {
+  color:purple;
+  margin:0;
+}
+.outercontainer {
+  border-color: MidnightBlue;  
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 6px;
+  margin: 4px;
+}
+.containerheading {
+  color:MidnightBlue;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.statcontainer {
   text-align: center;
-  word-spacing: 50px;
+  word-spacing: 30px;
 }
 .statblock {
   vertical-align: middle;
   display: inline-block;
   word-spacing: normal;
+  flex-wrap: wrap;
+  flex: 0 1 80%;
 }
 .statheading {
   margin-bottom: 0px;
 }
 </style>
 
-<div style="border-style:solid;border-width:4px">
+<div>
+  <p>The crew cards are on this page can be used to review the stats of crew, what roles they can perform on your ship, and what crew they can prestige into. Crew role ratings are among ALL crew, so a crew marked "Best as: gunner" is one of the best gunner crews in the game.</p>
+  <form action="" method="post">
+    <label for="crewName">Crew name:</label>
+    <input type="text" style="width: 150px;margin-right: 10px" id="CrewName" name="CrewName">
+    <input type="submit" value="Submit"><br /><br />
+  </form>
+</div>
+
+<div style="border-style:solid;border-width:4px;max-width:650px">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right: 10px;margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
 
   <! --one star, common "white"
@@ -24,94 +66,94 @@
   one shield special "Black"
   wings legendary "DarkGoldenRod" ––>
 
-  <h1 style="color:purple;margin:0"><b>Ardent Templar</b></h1>
+  <h1 id="crewTitle"><strong><? echo $crew[0]->CharacterDesignName; ?></strong></h1>
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <br />
-  <h5>Best templar in the Galaxy. At least according to his mother.</h5>
+  <h5><? echo $crew[0]->CharacterDesignDescription; ?></h5>
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
-  <div style="border-style: solid;border-color: MidnightBlue;border-width: 4px;border-radius: 6px;margin: 4px">
-    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Core Stats</b></h4>
-      <div class="statinnercontainer">
+  <div class="outercontainer">
+    <h4 class="containerheading"><strong>Core Stats</strong></h4>
+      <div class="statcontainer">
         <div class="statblock">
-          <h5 class="statheading"><u>HP</u></h5>
-          <h5>8</h5>
+          <h5 class="statheading"><strong>HP</strong></h5>
+          <h5><? echo $crew[0]->FinalHp; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Attack</u></h5>
-          <h5>4.8</h5>
+          <h5 class="statheading"><strong>Attack</strong></h5>
+          <h5><? echo $crew[0]->FinalAttack; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Repair</u></h5>
-          <h5>2</h5>
+          <h5 class="statheading"><strong>Repair</strong></h5>
+          <h5><? echo $crew[0]->FinalRepair; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Ability</u></h5>
-          <h5>8HP First Aid</h5>
+          <h5 class="statheading"><strong>Ability</strong></h5>
+          <h5><? echo $crew[0]->SpecialAbilityFinalArgument; echo $crew[0]->SpecialAbilityType;?></h5>
         </div>
         <div class="statblock">
           <button id="moreStatsButton" style="color: white;background-color: MidnightBlue;" onclick="moreStats()">More Stats</button>
         </div>
       </div>
   </div>
-  <div id="roomStats" style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px;display:none;">
-    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Room Stats</b></h4>
-      <div class="statinnercontainer">
+  <div class="outercontainer" id="roomStats" style="display: none">
+    <h4 class="containerheading"><b>Room Stats</b></h4>
+      <div class="statcontainer">
         <div class="statblock">
-          <h5 class="statheading"><u>Weapon</u></h5>
-          <h5>15</h5>
+          <h5 class="statheading"><strong>Weapon</strong></h5>
+          <h5><? echo $crew[0]->FinalWeapon; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Science</u></h5>
-          <h5>10</h5>
+          <h5 class="statheading"><strong>Science</strong></h5>
+          <h5><? echo $crew[0]->FinalScience; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Pilot</u></h5>
-          <h5>20</h5>
+          <h5 class="statheading"><strong>Pilot</strong></h5>
+          <h5><? echo $crew[0]->FinalPilot; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Engine</u></h5>
-          <h5>10</h5>
+          <h5 class="statheading"><strong>Engine</strong></h5>
+          <h5><? echo $crew[0]->FinalEngine; ?></h5>
         </div>
       </div>
   </div>
-  <div id="utilityStats" style="border-style:solid;border-color:MidnightBlue;border-width:4px;border-radius:6px;margin:4px;display:none;">
-    <h4 style="color:MidnightBlue;margin-left: 5px;margin-bottom: 10px;"><b>Utility Stats</b></h4>
-      <div class="statinnercontainer">
+  <div class="outercontainer" id="utilityStats" style="display: none">
+    <h4 class="containerheading"><strong>Utility Stats</strong></h4>
+      <div class="statcontainer">
         <div class="statblock">
-          <h5 class="statheading"><u>Walk/Run Speed</u></h5>
-          <h5>1/2</h5>
+          <h5 class="statheading"><strong>Walk/Run Speed</strong></h5>
+          <h5><? echo $crew[0]->WalkingSpeed; echo '/'; echo $crew[0]->RunSpeed;?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Fire Resist</u></h5>
-          <h5>5</h5>
+          <h5 class="statheading"><strong>Fire Resist</strong></h5>
+          <h5><? echo $crew[0]->FireResistance; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Training Points</u></h5>
-          <h5>80</h5>
+          <h5 class="statheading"><strong>Training Points</strong></h5>
+          <h5><? echo $crew[0]->TrainingCapacity; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Collection</u></h5>
-          <h5>Ardent</h5>
+          <h5 class="statheading"><strong>Collection</strong></h5>
+          <h5><? echo $crew[0]->CollectionDesignId; ?></h5>
         </div>
         <div class="statblock">
-          <h5 class="statheading"><u>Equipment</u></h5>
-          <h5>Accessory, Hand</h5>
+          <h5 class="statheading"><strong>Equipment</strong></h5>
+          <h5><? echo $crew[0]->EquipmentMask; ?></h5>
         </div>
       </div>
   </div>
   <div style="border-style:solid;border-color:Purple;border-width:4px;border-radius:6px;margin:4px">
-    <h4 style="color:Purple;margin-left: 5px;margin-bottom: 10px;"><b>Roles</b></h4>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Best in class:</u> <b>antiboarder, boarder</b></h5>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Good as:</u> </h5>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><u>Average as:</u> gunner, pilot</h5>
+    <h4 class="containerheading" style="color:Purple;"><strong>Roles</strong></h4>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Best as:</strong> TO BE COMPLETED </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Good as:</strong> TO BE COMPLETED </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Average as:</strong> TO BE COMPLETED </h5>
   </div>
   <div style="border-style:solid;border-color:DarkGoldenrod;border-width:4px;border-radius:6px;margin:4px">
-    <h4 style="color: DarkGoldenrod;margin-left: 5px;margin-bottom: 10px;"><b>Prestige Options</b></h4>
-    <h5 style="margin-left: 5px;"><u>Xin</u>, <u>Lollita</u>, <u>Guan Yu</u>, <u>Lyu Bu</u>, <u>Rocky</u>, <u>Jaiden</u>, <u>Ryzen</u>, <u>Admiral Serena</u>, <u>Sagita</u>, <u>Leon Mars</u>, <u>Ichigo</u>, <u>Turkey Hero</u></h5> 
+    <h4 class="containerheading" style="color: DarkGoldenrod;"><b>Prestige Options</b></h4>
+    <h5 style="margin-left: 5px;"><u> TO BE COMPLETED </u>, <u>Rocky</u>, <u>Jaiden</u>, <u>Ryzen</u>, <u>Admiral Serena</u>, <u>Sagita</u>, <u>Leon Mars</u>, <u>Ichigo</u>, <u>Turkey Hero</u></h5> 
   </div>
 </div>
 
