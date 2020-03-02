@@ -10,6 +10,121 @@ $query = 'SELECT * FROM crew_stats WHERE CharacterDesignName = "' . $crewName . 
 $crew = $wpdb->get_results($query);
 
 //Clean up the data to be human readable
+//Ability type and power
+switch ($crew[0]->SpecialAbilityType) {
+    case 'AddReload':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . '% Rush';
+        break;
+    case 'DamageToCurrentEnemy':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Critical Strike';
+        break;
+    case 'DamageToRoom':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'dmg Ultra Dismantle';
+        break;
+    case 'DamageToSameRoomCharacters':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Poison Gas';
+        break;
+    case 'DeductReload':
+        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's System Hack';
+        break;
+    case 'FireWalk':
+        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Fire Walk';
+        break;
+    case 'Freeze':
+        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Cryo Blast';
+        break;
+    case 'HealRoomHp':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'dmg Urgent Repair';
+        break;
+    case 'HealSameRoomCharacters':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Healing Rain';
+        break;
+    case 'HealSelfHp':
+        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP First Aid';
+        break;
+    case 'SetFire':
+        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 'x Arson';
+        break;
+    default:
+        $formattedAbility = 'None';
+}
+//Collection
+switch ($crew[0]->CollectionDesignId) {
+    case '0':
+        $formattedCollection = 'None';
+        break;
+    case '1':
+        $formattedCollection = 'SavySoda';
+        break;
+    case '2':
+        $formattedCollection = 'Sango';
+        break;
+    case '3':
+        $formattedCollection = 'Cats';
+        break;
+    case '4':
+        $formattedCollection = 'Office Worker';
+        break;
+    case '5':
+        $formattedCollection = 'Critters';
+        break;
+    case '6':
+        $formattedCollection = 'Space Pirate';
+        break;
+    case '7':
+        $formattedCollection = 'Federation';
+        break;
+    case '8':
+        $formattedCollection = 'Qtarian';
+        break;
+    case '9':
+        $formattedCollection = 'Constellation';
+        break;
+    case '13':
+        $formattedCollection = 'Gray';
+        break;
+    case '14':
+        $formattedCollection = 'Visiri';
+        break;
+    case '15':
+        $formattedCollection = 'Ardent';
+        break;
+    case '16':
+        $formattedCollection = 'OncePerYear';
+        break;
+    default:
+        $formattedCollection = 'None';
+}
+
+//Equipment
+$formattedEquipment = 'None';
+$equipmentArray = array();
+
+if ($crew[0]->EquipmentMask >= 32) {
+  array_push($equipmentArray, 'pet');
+  $crew[0]->EquipmentMask -= 32;
+}
+if ($crew[0]->EquipmentMask >= 16) {
+  array_push($equipmentArray, 'accessory');
+  $crew[0]->EquipmentMask -= 16;
+}
+if ($crew[0]->EquipmentMask >= 8) {
+  array_push($equipmentArray, 'weapon');
+  $crew[0]->EquipmentMask -= 8;
+}
+if ($crew[0]->EquipmentMask >= 4) {
+  array_push($equipmentArray, 'leg');
+  $crew[0]->EquipmentMask -= 4;
+}
+if ($crew[0]->EquipmentMask >= 2) {
+  array_push($equipmentArray, 'body');
+  $crew[0]->EquipmentMask -= 2;
+}
+if ($crew[0]->EquipmentMask >= 1) {
+  array_push($equipmentArray, 'head');
+  $crew[0]->EquipmentMask -= 1;
+}
+$formattedEquipment = join(', ',$equipmentArray);
 
 ?>
 
@@ -24,22 +139,20 @@ $crew = $wpdb->get_results($query);
   border-width: 4px;
   border-radius: 6px;
   margin: 4px;
+  text-align: center;
+  word-spacing: 30px;
 }
 .containerheading {
+  text-align: left;
   color:MidnightBlue;
   margin-left: 5px;
   margin-bottom: 10px;
-}
-.statcontainer {
-  text-align: center;
-  word-spacing: 30px;
+  word-spacing: normal;
 }
 .statblock {
   vertical-align: middle;
   display: inline-block;
   word-spacing: normal;
-  flex-wrap: wrap;
-  flex: 0 1 80%;
 }
 .statheading {
   margin-bottom: 0px;
@@ -76,74 +189,70 @@ $crew = $wpdb->get_results($query);
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
   <div class="outercontainer">
-    <h4 class="containerheading"><strong>Core Stats</strong></h4>
-      <div class="statcontainer">
-        <div class="statblock">
-          <h5 class="statheading"><strong>HP</strong></h5>
-          <h5><? echo $crew[0]->FinalHp; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Attack</strong></h5>
-          <h5><? echo $crew[0]->FinalAttack; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Repair</strong></h5>
-          <h5><? echo $crew[0]->FinalRepair; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Ability</strong></h5>
-          <h5><? echo $crew[0]->SpecialAbilityFinalArgument; echo $crew[0]->SpecialAbilityType;?></h5>
-        </div>
-        <div class="statblock">
-          <button id="moreStatsButton" style="color: white;background-color: MidnightBlue;" onclick="moreStats()">More Stats</button>
-        </div>
-      </div>
+    <h4 class="containerheading"><strong>Core Stats<br /></strong></h4>
+    <div class="statblock">
+      <h5 class="statheading"><strong>HP</strong></h5>
+      <h5><? echo $crew[0]->FinalHp; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Attack</strong></h5>
+      <h5><? echo $crew[0]->FinalAttack; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Repair</strong></h5>
+      <h5><? echo $crew[0]->FinalRepair; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Ability</strong></h5>
+      <h5><? echo $formattedAbility; ?></h5>
+    </div>
+    <div class="statblock">
+      <button id="moreStatsButton" style="color: white;background-color: MidnightBlue;" onclick="moreStats()">More Stats</button>
+    </div>
   </div>
-  <div class="outercontainer" id="roomStats" style="display: none">
-    <h4 class="containerheading"><b>Room Stats</b></h4>
-      <div class="statcontainer">
-        <div class="statblock">
-          <h5 class="statheading"><strong>Weapon</strong></h5>
-          <h5><? echo $crew[0]->FinalWeapon; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Science</strong></h5>
-          <h5><? echo $crew[0]->FinalScience; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Pilot</strong></h5>
-          <h5><? echo $crew[0]->FinalPilot; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Engine</strong></h5>
-          <h5><? echo $crew[0]->FinalEngine; ?></h5>
-        </div>
-      </div>
+<!--  <div class="outercontainer" id="roomStats" style="display: none"> -->
+  <div class="outercontainer" id="roomStats">
+    <h4 class="containerheading"><b>Room Stats<br /></b></h4>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Weapon</strong></h5>
+      <h5><? echo $crew[0]->FinalWeapon; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Science</strong></h5>
+      <h5><? echo $crew[0]->FinalScience; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Pilot</strong></h5>
+      <h5><? echo $crew[0]->FinalPilot; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Engine</strong></h5>
+      <h5><? echo $crew[0]->FinalEngine; ?></h5>
+    </div>
   </div>
-  <div class="outercontainer" id="utilityStats" style="display: none">
-    <h4 class="containerheading"><strong>Utility Stats</strong></h4>
-      <div class="statcontainer">
-        <div class="statblock">
-          <h5 class="statheading"><strong>Walk/Run Speed</strong></h5>
-          <h5><? echo $crew[0]->WalkingSpeed; echo '/'; echo $crew[0]->RunSpeed;?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Fire Resist</strong></h5>
-          <h5><? echo $crew[0]->FireResistance; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Training Points</strong></h5>
-          <h5><? echo $crew[0]->TrainingCapacity; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Collection</strong></h5>
-          <h5><? echo $crew[0]->CollectionDesignId; ?></h5>
-        </div>
-        <div class="statblock">
-          <h5 class="statheading"><strong>Equipment</strong></h5>
-          <h5><? echo $crew[0]->EquipmentMask; ?></h5>
-        </div>
-      </div>
+<!--  <div class="outercontainer" id="utilityStats" style="display: none"> -->
+  <div class="outercontainer" id="utilityStats">
+    <h4 class="containerheading"><strong>Utility Stats<br /></strong></h4>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Walk/Run Speed</strong></h5>
+      <h5><? echo $crew[0]->WalkingSpeed; echo '/'; echo $crew[0]->RunSpeed;?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Fire Resist</strong></h5>
+      <h5><? echo $crew[0]->FireResistance; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Training Points</strong></h5>
+      <h5><? echo $crew[0]->TrainingCapacity; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Collection</strong></h5>
+      <h5><? echo $formattedCollection; ?></h5>
+    </div>
+    <div class="statblock">
+      <h5 class="statheading"><strong>Equipment</strong></h5>
+      <h5><? echo $formattedEquipment; ?></h5>
+    </div>
   </div>
   <div style="border-style:solid;border-color:Purple;border-width:4px;border-radius:6px;margin:4px">
     <h4 class="containerheading" style="color:Purple;"><strong>Roles</strong></h4>
