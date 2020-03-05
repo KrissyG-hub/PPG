@@ -1,13 +1,24 @@
 <?php
+$wpdb->show_errors();
+
+//Check if a crew was searched for
 if (isset($_POST['CrewName'])) {
-  $crewName = $_POST['CrewName'];
+  $crewName = sanitize_text_field($_POST['CrewName']);
 } else {
   $crewName = 'Laura';
 }
 
-$wpdb->show_errors();
-$query = 'SELECT * FROM crew_stats WHERE CharacterDesignName = "' . $crewName . '"';
-$crew = $wpdb->get_results($query);
+//$fetchCrew = $wpdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $CrewName);
+//$crew = $wpdb->get_results($fetchCrew);
+$fetchCrew = 'SELECT * FROM crew_stats WHERE CharacterDesignName = "' . $crewName . '"';
+$crew = $wpdb->get_results($fetchCrew);
+
+//Check if a crew was graded
+if (isset($_POST['Rating'])) {
+  $rating = sanitize_text_field($_POST['Rating']);
+//  $insertRating = $wpdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewName, $rating, $rating));
+//  $wpdb->query('INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES($crewName, \'rigging\', $rating) ON DUPLICATE KEY UPDATE GunnerInput=$rating');
+}
 
 //Clean up the data to be human readable
 //Ability type and power
@@ -168,9 +179,25 @@ $formattedEquipment = join(', ',$equipmentArray);
   </form>
 </div>
 
-<div style="border-style:solid;border-width:4px;max-width:650px">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right: 10px;margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
+<div>
+  <form action="" method="post">
+    <input type="radio" id="zero" name="rating" value="0">
+    <label for="zero">0</label><br>
+    <input type="radio" id="one" name="rating" value="1">
+    <label for="one">1</label><br>
+    <input type="radio" id="two" name="rating" value="2">
+    <label for="two">2</label><br>
+    <input type="radio" id="three" name="rating" value="3">
+    <label for="three">3</label><br>
+    <input type="radio" id="four" name="rating" value="4">
+    <label for="four">4</label><br>
+    <input type="submit" value="Rate"><br /><br />
+  </form>
+</div>
 
+<div style="border-style:solid;border-width:4px;max-width:650px">
+<!--  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right: 10px;margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
+  -->
   <! --one star, common "white"
   two star, "LimeGreen"
   three star unique "Navy"
