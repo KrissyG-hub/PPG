@@ -1,16 +1,20 @@
 <?php
 $wpdb->show_errors();
 
+echo $_POST['CrewName'] . '\n';
 //Check if a crew was searched for
 if (isset($_POST['CrewName'])) {
   $crewName = sanitize_text_field($_POST['CrewName']);
+  echo 'in if' . $crewName;
 } else {
-  $crewName = 'Laura';
+  $crewName = 'Xin';
 }
+echo 'out of if' . $crewName;
 
 //$fetchCrew = $wpdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $CrewName);
 //$crew = $wpdb->get_results($fetchCrew);
-$fetchCrew = 'SELECT * FROM crew_stats WHERE CharacterDesignName = "' . $crewName . '"';
+$fetchCrew = 'SELECT * FROM crew_stats WHERE CharacterDesignName = \'' . $crewName . '\';';
+echo $fetchCrew;
 $crew = $wpdb->get_results($fetchCrew);
 
 //Check if a crew was graded
@@ -22,6 +26,7 @@ if (isset($_POST['Rating'])) {
 
 //Clean up the data to be human readable
 //Ability type and power
+echo var_dump($array);
 switch ($crew[0]->SpecialAbilityType) {
     case 'AddReload':
         $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . '% Rush';
@@ -39,7 +44,7 @@ switch ($crew[0]->SpecialAbilityType) {
         $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's System Hack';
         break;
     case 'FireWalk':
-        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Fire Walk';
+        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Blaze Walk';
         break;
     case 'Freeze':
         $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Cryo Blast';
@@ -63,48 +68,63 @@ switch ($crew[0]->SpecialAbilityType) {
 switch ($crew[0]->CollectionDesignId) {
     case '0':
         $formattedCollection = 'None';
+        $collectionDescription = 'No effect';
         break;
     case '1':
         $formattedCollection = 'SavySoda';
+        $collectionDescription = '';
         break;
     case '2':
         $formattedCollection = 'Sango';
+        $collectionDescription = '';
         break;
     case '3':
         $formattedCollection = 'Cats';
+        $collectionDescription = '';
         break;
     case '4':
         $formattedCollection = 'Office Worker';
+        $collectionDescription = '';
         break;
     case '5':
         $formattedCollection = 'Critters';
+        $collectionDescription = 'Small self heal when attacking enemy crew';
         break;
     case '6':
         $formattedCollection = 'Space Pirate';
+        $collectionDescription = '';
         break;
     case '7':
         $formattedCollection = 'Federation';
+        $collectionDescription = '';
         break;
     case '8':
         $formattedCollection = 'Qtarian';
+        $collectionDescription = '';
         break;
     case '9':
         $formattedCollection = 'Constellation';
+        $collectionDescription = '';
         break;
     case '13':
         $formattedCollection = 'Gray';
+        $collectionDescription = '';
         break;
     case '14':
         $formattedCollection = 'Visiri';
+        $collectionDescription = '';
         break;
     case '15':
         $formattedCollection = 'Ardent';
+        $collectionDescription = '';
         break;
     case '16':
         $formattedCollection = 'OncePerYear';
+        $collectionDescription = '';
         break;
     default:
         $formattedCollection = 'None';
+        $collectionDescription = '';
 }
 
 //Equipment
@@ -167,6 +187,40 @@ $formattedEquipment = join(', ',$equipmentArray);
 }
 .statheading {
   margin-bottom: 0px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  color:MidnightBlue;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 </style>
 
@@ -274,7 +328,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Collection</strong></h5>
-      <h5><? echo $formattedCollection; ?></h5>
+      <h5><? echo $formattedCollection; ?><sup class="tooltip">info<span class="tooltiptext"><? echo $collectionDescription; ?></span></sup></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Equipment</strong></h5>
