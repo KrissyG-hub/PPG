@@ -1,71 +1,67 @@
 <?php
 $wpdb->show_errors();
+$crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219.104');
 
-echo $_POST['CrewName'] . '\n';
 //Check if a crew was searched for
 if (isset($_POST['CrewName'])) {
   $crewName = sanitize_text_field($_POST['CrewName']);
-  echo 'in if' . $crewName;
 } else {
-  $crewName = 'Xin';
+  $crewName = 'Roborob';
 }
-echo 'out of if' . $crewName;
 
-//$fetchCrew = $wpdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $CrewName);
-//$crew = $wpdb->get_results($fetchCrew);
-$fetchCrew = 'SELECT * FROM crew_stats WHERE CharacterDesignName = \'' . $crewName . '\';';
-echo $fetchCrew;
-$crew = $wpdb->get_results($fetchCrew);
+$fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $crewName);
+$crew = $crewdb->get_row($fetchCrew);
 
 //Check if a crew was graded
 if (isset($_POST['Rating'])) {
   $rating = sanitize_text_field($_POST['Rating']);
-//  $insertRating = $wpdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewName, $rating, $rating));
-//  $wpdb->query('INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES($crewName, \'rigging\', $rating) ON DUPLICATE KEY UPDATE GunnerInput=$rating');
+//  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewName, $rating, $rating));
+//  $crewdb->query('INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES($crewName, \'rigging\', $rating) ON DUPLICATE KEY UPDATE GunnerInput=$rating');
 }
+
+//print_r($crew); //debugging for printing all crew data
 
 //Clean up the data to be human readable
 //Ability type and power
-echo var_dump($array);
-switch ($crew[0]->SpecialAbilityType) {
+switch ($crew->SpecialAbilityType) {
     case 'AddReload':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . '% Rush';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . '% Rush';
         break;
     case 'DamageToCurrentEnemy':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Critical Strike';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Critical Strike';
         break;
     case 'DamageToRoom':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'dmg Ultra Dismantle';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'dmg Ultra Dismantle';
         break;
     case 'DamageToSameRoomCharacters':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Poison Gas';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Poison Gas';
         break;
     case 'DeductReload':
-        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's System Hack';
+        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 's System Hack';
         break;
     case 'FireWalk':
-        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Blaze Walk';
+        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 's Blaze Walk';
         break;
     case 'Freeze':
-        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 's Cryo Blast';
+        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 's Cryo Blast';
         break;
     case 'HealRoomHp':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'dmg Urgent Repair';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'dmg Urgent Repair';
         break;
     case 'HealSameRoomCharacters':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP Healing Rain';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Healing Rain';
         break;
     case 'HealSelfHp':
-        $formattedAbility = $crew[0]->SpecialAbilityFinalArgument . 'HP First Aid';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP First Aid';
         break;
     case 'SetFire':
-        $formattedAbility = ($crew[0]->SpecialAbilityFinalArgument / 40) . 'x Arson';
+        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 'x Arson';
         break;
     default:
         $formattedAbility = 'None';
 }
 //Collection
-switch ($crew[0]->CollectionDesignId) {
+switch ($crew->CollectionDesignId) {
     case '0':
         $formattedCollection = 'None';
         $collectionDescription = 'No effect';
@@ -131,29 +127,29 @@ switch ($crew[0]->CollectionDesignId) {
 $formattedEquipment = 'None';
 $equipmentArray = array();
 
-if ($crew[0]->EquipmentMask >= 32) {
+if ($crew->EquipmentMask >= 32) {
   array_push($equipmentArray, 'pet');
-  $crew[0]->EquipmentMask -= 32;
+  $crew->EquipmentMask -= 32;
 }
-if ($crew[0]->EquipmentMask >= 16) {
+if ($crew->EquipmentMask >= 16) {
   array_push($equipmentArray, 'accessory');
-  $crew[0]->EquipmentMask -= 16;
+  $crew->EquipmentMask -= 16;
 }
-if ($crew[0]->EquipmentMask >= 8) {
+if ($crew->EquipmentMask >= 8) {
   array_push($equipmentArray, 'weapon');
-  $crew[0]->EquipmentMask -= 8;
+  $crew->EquipmentMask -= 8;
 }
-if ($crew[0]->EquipmentMask >= 4) {
+if ($crew->EquipmentMask >= 4) {
   array_push($equipmentArray, 'leg');
-  $crew[0]->EquipmentMask -= 4;
+  $crew->EquipmentMask -= 4;
 }
-if ($crew[0]->EquipmentMask >= 2) {
+if ($crew->EquipmentMask >= 2) {
   array_push($equipmentArray, 'body');
-  $crew[0]->EquipmentMask -= 2;
+  $crew->EquipmentMask -= 2;
 }
-if ($crew[0]->EquipmentMask >= 1) {
+if ($crew->EquipmentMask >= 1) {
   array_push($equipmentArray, 'head');
-  $crew[0]->EquipmentMask -= 1;
+  $crew->EquipmentMask -= 1;
 }
 $formattedEquipment = join(', ',$equipmentArray);
 
@@ -260,28 +256,28 @@ $formattedEquipment = join(', ',$equipmentArray);
   one shield special "Black"
   wings legendary "DarkGoldenRod" ––>
 
-  <h1 id="crewTitle"><strong><? echo $crew[0]->CharacterDesignName; ?></strong></h1>
+  <h1 id="crewTitle"><strong><? echo $crew->CharacterDesignName; ?></strong></h1>
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
   <br />
-  <h5><? echo $crew[0]->CharacterDesignDescription; ?></h5>
+  <h5><? echo $crew->CharacterDesignDescription; ?></h5>
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
   <div class="outercontainer">
     <h4 class="containerheading"><strong>Core Stats<br /></strong></h4>
     <div class="statblock">
       <h5 class="statheading"><strong>HP</strong></h5>
-      <h5><? echo $crew[0]->FinalHp; ?></h5>
+      <h5><? echo $crew->FinalHp; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Attack</strong></h5>
-      <h5><? echo $crew[0]->FinalAttack; ?></h5>
+      <h5><? echo $crew->FinalAttack; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Repair</strong></h5>
-      <h5><? echo $crew[0]->FinalRepair; ?></h5>
+      <h5><? echo $crew->FinalRepair; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Ability</strong></h5>
@@ -296,19 +292,19 @@ $formattedEquipment = join(', ',$equipmentArray);
     <h4 class="containerheading"><b>Room Stats<br /></b></h4>
     <div class="statblock">
       <h5 class="statheading"><strong>Weapon</strong></h5>
-      <h5><? echo $crew[0]->FinalWeapon; ?></h5>
+      <h5><? echo $crew->FinalWeapon; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Science</strong></h5>
-      <h5><? echo $crew[0]->FinalScience; ?></h5>
+      <h5><? echo $crew->FinalScience; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Pilot</strong></h5>
-      <h5><? echo $crew[0]->FinalPilot; ?></h5>
+      <h5><? echo $crew->FinalPilot; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Engine</strong></h5>
-      <h5><? echo $crew[0]->FinalEngine; ?></h5>
+      <h5><? echo $crew->FinalEngine; ?></h5>
     </div>
   </div>
 <!--  <div class="outercontainer" id="utilityStats" style="display: none"> -->
@@ -316,15 +312,15 @@ $formattedEquipment = join(', ',$equipmentArray);
     <h4 class="containerheading"><strong>Utility Stats<br /></strong></h4>
     <div class="statblock">
       <h5 class="statheading"><strong>Walk/Run Speed</strong></h5>
-      <h5><? echo $crew[0]->WalkingSpeed; echo '/'; echo $crew[0]->RunSpeed;?></h5>
+      <h5><? echo $crew->WalkingSpeed; echo '/'; echo $crew->RunSpeed;?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Fire Resist</strong></h5>
-      <h5><? echo $crew[0]->FireResistance; ?></h5>
+      <h5><? echo $crew->FireResistance; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Training Points</strong></h5>
-      <h5><? echo $crew[0]->TrainingCapacity; ?></h5>
+      <h5><? echo $crew->TrainingCapacity; ?></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Collection</strong></h5>
