@@ -2,6 +2,7 @@
 $wpdb->show_errors();
 $crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219.104');
 
+/* Turn this back on for normal search of crew
 //Check if a crew was searched for
 if (isset($_POST['CrewName'])) {
   $crewName = sanitize_text_field($_POST['CrewName']);
@@ -11,13 +12,21 @@ if (isset($_POST['CrewName'])) {
 
 $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $crewName);
 $crew = $crewdb->get_row($fetchCrew);
+*/
 
-//Check if a crew was graded
-if (isset($_POST['Rating'])) {
-  $rating = sanitize_text_field($_POST['Rating']);
-//  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewName, $rating, $rating));
-//  $crewdb->query('INSERT INTO crew_input (CharacterDesignName, User, GunnerInput) VALUES($crewName, \'rigging\', $rating) ON DUPLICATE KEY UPDATE GunnerInput=$rating');
+/* Use this to do grading, check if a crew was graded */
+if (isset($_POST['rating'])) {
+  $rating = sanitize_text_field($_POST['rating']);
+  $crewName = sanitize_text_field($_POST['CrewName']);
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, ShielderInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE ShielderInput=%d", array($crewName, $rating, $rating));
+  echo $insertRating;
+  $crewdb->query($insertRating);
 }
+
+/* Get the next crew to grade */
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignName = crew_input.CharacterDesignName WHERE crew_input.ShielderInput IS NULL ORDER BY crew_stats.CharacterDesignName LIMIT 1");
+$crew = $crewdb->get_row($fetchCrew);
+$crewName = $crew->CharacterDesignName;
 
 //print_r($crew); //debugging for printing all crew data
 
@@ -220,15 +229,16 @@ $formattedEquipment = join(', ',$equipmentArray);
 }
 </style>
 
+<!-- Also turn this back on to search for crew
 <div>
   <p>The crew cards are on this page can be used to review the stats of crew, what roles they can perform on your ship, and what crew they can prestige into. Crew role ratings are among ALL crew, so a crew marked "Best as: gunner" is one of the best gunner crews in the game.</p>
   <form action="" method="post">
     <label for="crewName">Crew name:</label>
-    <input type="text" style="width: 150px;margin-right: 10px" id="CrewName" name="CrewName">
+    <input type="text" style="width: 150px;margin-right: 10px" name="CrewName">
     <input type="submit" value="Submit"><br /><br />
   </form>
 </div>
-
+-->
 <div>
   <form action="" method="post">
     <input type="radio" id="zero" name="rating" value="0">
@@ -241,6 +251,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     <label for="three">3</label><br>
     <input type="radio" id="four" name="rating" value="4">
     <label for="four">4</label><br>
+    <input type="hidden" name="CrewName" value=<? echo $crewName; ?>>
     <input type="submit" value="Rate"><br /><br />
   </form>
 </div>
