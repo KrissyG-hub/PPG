@@ -17,16 +17,16 @@ $crew = $crewdb->get_row($fetchCrew);
 /* Use this to do grading, check if a crew was graded */
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
-  $crewName = sanitize_text_field($_POST['CrewName']);
-  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignName, User, ShielderInput) VALUES(%s, 'rigging', %d) ON DUPLICATE KEY UPDATE ShielderInput=%d", array($crewName, $rating, $rating));
+  $crewId = sanitize_text_field($_POST['CrewId']);
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, ShielderInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE ShielderInput=%d", array($crewId, $rating, $rating));
   echo $insertRating;
   $crewdb->query($insertRating);
 }
 
 /* Get the next crew to grade */
-$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignName = crew_input.CharacterDesignName WHERE crew_input.ShielderInput IS NULL ORDER BY crew_stats.CharacterDesignName LIMIT 1");
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.ShielderInput IS NULL ORDER BY crew_stats.CharacterDesignId LIMIT 1");
 $crew = $crewdb->get_row($fetchCrew);
-$crewName = $crew->CharacterDesignName;
+$crewId = $crew->CharacterDesignId;
 
 //print_r($crew); //debugging for printing all crew data
 
@@ -73,63 +73,48 @@ switch ($crew->SpecialAbilityType) {
 switch ($crew->CollectionDesignId) {
     case '0':
         $formattedCollection = 'None';
-        $collectionDescription = 'No effect';
         break;
     case '1':
         $formattedCollection = 'SavySoda';
-        $collectionDescription = '';
         break;
     case '2':
         $formattedCollection = 'Sango';
-        $collectionDescription = '';
         break;
     case '3':
         $formattedCollection = 'Cats';
-        $collectionDescription = '';
         break;
     case '4':
         $formattedCollection = 'Office Worker';
-        $collectionDescription = '';
         break;
     case '5':
         $formattedCollection = 'Critters';
-        $collectionDescription = 'Small self heal when attacking enemy crew';
         break;
     case '6':
         $formattedCollection = 'Space Pirate';
-        $collectionDescription = '';
         break;
     case '7':
         $formattedCollection = 'Federation';
-        $collectionDescription = '';
         break;
     case '8':
         $formattedCollection = 'Qtarian';
-        $collectionDescription = '';
         break;
     case '9':
         $formattedCollection = 'Constellation';
-        $collectionDescription = '';
         break;
     case '13':
         $formattedCollection = 'Gray';
-        $collectionDescription = '';
         break;
     case '14':
         $formattedCollection = 'Visiri';
-        $collectionDescription = '';
         break;
     case '15':
         $formattedCollection = 'Ardent';
-        $collectionDescription = '';
         break;
     case '16':
         $formattedCollection = 'OncePerYear';
-        $collectionDescription = '';
         break;
     default:
         $formattedCollection = 'None';
-        $collectionDescription = '';
 }
 
 //Equipment
@@ -193,40 +178,6 @@ $formattedEquipment = join(', ',$equipmentArray);
 .statheading {
   margin-bottom: 0px;
 }
-.tooltip {
-  position: relative;
-  display: inline-block;
-  color:MidnightBlue;
-}
-.tooltip .tooltiptext {
-  visibility: hidden;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
 </style>
 
 <!-- Also turn this back on to search for crew
@@ -239,6 +190,7 @@ $formattedEquipment = join(', ',$equipmentArray);
   </form>
 </div>
 -->
+<!-- Turn this on to grade crew -->
 <div>
   <form action="" method="post">
     <input type="radio" id="zero" name="rating" value="0">
@@ -251,7 +203,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     <label for="three">3</label><br>
     <input type="radio" id="four" name="rating" value="4">
     <label for="four">4</label><br>
-    <input type="hidden" name="CrewName" value=<? echo $crewName; ?>>
+    <input type="hidden" name="CrewId" value=<? echo $crewId; ?>>
     <input type="submit" value="Rate"><br /><br />
   </form>
 </div>
@@ -335,7 +287,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Collection</strong></h5>
-      <h5><? echo $formattedCollection; ?><sup class="tooltip">info<span class="tooltiptext"><? echo $collectionDescription; ?></span></sup></h5>
+      <h5><? echo $formattedCollection; ?><sup>info</sup></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Equipment</strong></h5>
