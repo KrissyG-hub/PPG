@@ -16,16 +16,17 @@ $crew = $crewdb->get_row($fetchCrew);
 */
 
 /* Use this to do grading, check if a crew was graded */
+/* Three places to change when changing role to grade! */
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
   $crewId = sanitize_text_field($_POST['CrewId']);
-  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, ShielderInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE ShielderInput=%d", array($crewId, $rating, $rating));
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, GunnerInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewId, $rating, $rating));
   echo $insertRating;
   $crewdb->query($insertRating);
 }
 
 /* Get the next crew to grade */
-$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.ShielderInput IS NULL ORDER BY crew_stats.CharacterDesignId LIMIT 1");
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.GunnerInput IS NULL ORDER BY RAND() LIMIT 1");
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
 
@@ -65,7 +66,7 @@ switch ($crew->SpecialAbilityType) {
         $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP First Aid';
         break;
     case 'SetFire':
-        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 'x Arson';
+        $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 's Arson';
         break;
     default:
         $formattedAbility = 'None';
@@ -204,17 +205,17 @@ $formattedEquipment = join(', ',$equipmentArray);
 <div>
   <form action="" method="post">
     <input type="radio" id="zero" name="rating" value="0">
-    <label for="zero">0</label><br>
-    <input type="radio" id="one" name="rating" value="1">
-    <label for="one">1</label><br>
-    <input type="radio" id="two" name="rating" value="2">
-    <label for="two">2</label><br>
-    <input type="radio" id="three" name="rating" value="3">
-    <label for="three">3</label><br>
-    <input type="radio" id="four" name="rating" value="4">
-    <label for="four">4</label><br>
+    <label for="zero">0</label>
+    <input type="radio" id="one" style="margin-left: 20px;" name="rating" value="1">
+    <label for="one">1</label>
+    <input type="radio" id="two" style="margin-left: 20px;" name="rating" value="2">
+    <label for="two">2</label>
+    <input type="radio" id="three" style="margin-left: 20px;" name="rating" value="3">
+    <label for="three">3</label>
+    <input type="radio" id="four" style="margin-left: 20px;" name="rating" value="4">
+    <label for="four">4</label>
     <input type="hidden" name="CrewId" value=<? echo $crewId; ?>>
-    <input type="submit" value="Rate"><br /><br />
+    <input type="submit" value="Rate"><br />
   </form>
 </div>
 
