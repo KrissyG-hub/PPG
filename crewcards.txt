@@ -6,6 +6,7 @@ $crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219
 //Check if a crew was searched for
 if (isset($_POST['CrewName'])) {
   $crewName = sanitize_text_field($_POST['CrewName']);
+  echo $crewName;
 } else {
   $crewName = 'Roborob';
 }
@@ -40,7 +41,7 @@ switch ($crew->SpecialAbilityType) {
         $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Critical Strike';
         break;
     case 'DamageToRoom':
-        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'dmg Ultra Dismantle';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Ultra Dismantle';
         break;
     case 'DamageToSameRoomCharacters':
         $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Poison Gas';
@@ -55,7 +56,7 @@ switch ($crew->SpecialAbilityType) {
         $formattedAbility = ($crew->SpecialAbilityFinalArgument / 40) . 's Cryo Blast';
         break;
     case 'HealRoomHp':
-        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'dmg Urgent Repair';
+        $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Urgent Repair';
         break;
     case 'HealSameRoomCharacters':
         $formattedAbility = $crew->SpecialAbilityFinalArgument . 'HP Healing Rain';
@@ -180,12 +181,21 @@ $formattedEquipment = join(', ',$equipmentArray);
 }
 </style>
 
-<!-- Also turn this back on to search for crew
+<!-- Also turn this back on to search for crew 
 <div>
   <p>The crew cards are on this page can be used to review the stats of crew, what roles they can perform on your ship, and what crew they can prestige into. Crew role ratings are among ALL crew, so a crew marked "Best as: gunner" is one of the best gunner crews in the game.</p>
   <form action="" method="post">
     <label for="crewName">Crew name:</label>
-    <input type="text" style="width: 150px;margin-right: 10px" name="CrewName">
+    <input type="text" style="width: 150px;margin-right: 10px" name="CrewName" placeholder="Ardent Templar" autocomplete="off" list="crewList"autofocus>
+      <?php 
+        echo '<datalist id="crewList">';
+        $fetchCrewNames = $crewdb->prepare("SELECT CharacterDesignName FROM crew_stats ORDER BY CharacterDesignName");
+        $crewsList = $crewdb->get_results($fetchCrewNames);
+        foreach ($crewsList as $crewList) {
+          echo '<option value="' . $crewList->CharacterDesignName . '"/>';
+        }
+        echo '</datalist>';
+      ?>
     <input type="submit" value="Submit"><br /><br />
   </form>
 </div>
@@ -279,7 +289,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Fire Resist</strong></h5>
-      <h5><? echo $crew->FireResistance; ?></h5>
+      <h5><? echo $crew->FireResistance; ?>%</h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Training Points</strong></h5>
@@ -287,7 +297,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Collection</strong></h5>
-      <h5><? echo $formattedCollection; ?><sup>info</sup></h5>
+      <h5><? echo $formattedCollection; ?><sup><a href="https://pixelstarships.fandom.com/wiki/Category:Crew_Collections">info</a></sup></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Equipment</strong></h5>
