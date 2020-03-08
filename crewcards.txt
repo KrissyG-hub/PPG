@@ -20,13 +20,13 @@ $crew = $crewdb->get_row($fetchCrew);
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
   $crewId = sanitize_text_field($_POST['CrewId']);
-  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, GunnerInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE GunnerInput=%d", array($crewId, $rating, $rating));
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, ShielderInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE ShielderInput=%d", array($crewId, $rating, $rating));
   echo $insertRating;
   $crewdb->query($insertRating);
 }
 
 /* Get the next crew to grade */
-$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.GunnerInput IS NULL ORDER BY RAND() LIMIT 1");
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.ShielderInput IS NULL ORDER BY RAND() LIMIT 1");
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
 
@@ -149,12 +149,78 @@ if ($crew->EquipmentMask >= 1) {
 }
 $formattedEquipment = join(', ',$equipmentArray);
 
+//Rarity
+$crewGem = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-gem.png" alt="gem" style="margin-left: 10px;float: left;width:32px;height:28px;">';
+$crewShield = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-shield.png" alt="shield" style="margin-left: 10px;float: left;width:24px;height:28px;margin-right:10px;">';
+$crewWings = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-wings.png" alt="wings" style="margin-left: 10px;float: left;width:45px;height:28px;margin-right:10px;">';
+switch ($crew->Rarity) {
+    case 'Common':
+        $crewRarityColor = 'Grey';
+        $crewRarityImage = $crewGem;
+        break;
+    case 'Elite':
+        $crewRarityColor = '#1be600';
+        $crewRarityImage = $crewGem . $crewGem;
+        break;
+    case 'Unique':
+        $crewRarityColor = '#0070dd';
+        $crewRarityImage = $crewGem . $crewGem . $crewGem;
+        break;
+    case 'Epic':
+        $crewRarityColor = '#a335ee';
+        $crewRarityImage = $crewGem . $crewGem . $crewGem . $crewGem;
+        break;
+    case 'Hero':
+        $crewRarityColor = '#ff8000';
+        $crewRarityImage = $crewGem . $crewGem . $crewGem . $crewGem . $crewGem;
+        break;
+    case 'Special':
+        $crewRarityColor = 'BrightGold';
+        $crewRarityColor = '#d0cd2f';
+        $crewRarityImage = $crewShield; 
+        break;
+    case 'Legendary':
+        $crewRarityColor = '#d5aa2a';
+        $crewRarityImage = $crewWings; 
+        break;
+    default:
+        $crewRarityColor = 'Black';
+        $crewRarityImage = '';
+}
+
+//Roles
+$fetchCrewRoles = $crewdb->prepare("SELECT crew_input.* FROM crew_input WHERE crew_input.CharacterDesignId = %d", $crew->CharacterDesignId);
+$crewRoles = $crewdb->get_row($fetchCrewRoles);
+$roleStrings = array(
+    0 => '',
+    1 => '',
+    2 => '',
+    3 => '',
+    4 => '',
+);
+$roleStrings[$crewRoles->RusherInput] = $roleStrings[$crewRoles->RusherInput] . 'Rusher ';
+$roleStrings[$crewRoles->RepairerInput] = $roleStrings[$crewRoles->RepairerInput] . 'Repairer ';
+$roleStrings[$crewRoles->GunnerInput] = $roleStrings[$crewRoles->GunnerInput] . 'Gunner ';
+$roleStrings[$crewRoles->ShielderInput] = $roleStrings[$crewRoles->ShielderInput] . 'Shielder ';
+$roleStrings[$crewRoles->EngineerInput] = $roleStrings[$crewRoles->EngineerInput] . 'Engineer ';
+$roleStrings[$crewRoles->PilotInput] = $roleStrings[$crewRoles->PilotInput] . 'Pilot ';
+$roleStrings[$crewRoles->BoarderInput] = $roleStrings[$crewRoles->BoarderInput] . 'Boarder ';
+$roleStrings[$crewRoles->AntiboarderInput] = $roleStrings[$crewRoles->AntiboarderInput] . 'Antiboarder ';
+
+/* from pixyship, green range sprite
+<div class="ctooltip">
+  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/249.png&quot;) 0px 0px; width: 18px; height: 16px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
+  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/252.png&quot;) 0px 0px; width: 18px; height: 7px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
+  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/253.png&quot;) 0px 0px; width: 10px; height: 5px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
+</div>
+*/
 ?>
 
 <style>
 #crewTitle {
-  color:purple;
+  color:<?php echo $crewRarityColor; ?>;
   margin:0;
+  margin-left: 10px;
 }
 .outercontainer {
   border-color: MidnightBlue;  
@@ -220,23 +286,13 @@ $formattedEquipment = join(', ',$equipmentArray);
 </div>
 
 <div style="border-style:solid;border-width:4px;max-width:650px">
-<!--  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-right: 10px;margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
+<!--  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
   -->
-  <! --one star, common "white"
-  two star, "LimeGreen"
-  three star unique "Navy"
-  four star epic "Purple"
-  five star hero "OrangeRed"
-  one shield special "Black"
-  wings legendary "DarkGoldenRod" ––>
-
   <h1 id="crewTitle"><strong><? echo $crew->CharacterDesignName; ?></strong></h1>
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
-  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/gem.png" alt="gem" style="float: left;width:20px;height:20px;margin-right:10px;">
+  <? echo $crewRarityImage; ?>
   <br />
-  <h5><? echo $crew->CharacterDesignDescription; ?></h5>
+  <br />
+  <h5 style="margin-left: 10px;"><? echo $crew->CharacterDesignDescription; ?></h5>
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
   <div class="outercontainer">
@@ -298,7 +354,7 @@ $formattedEquipment = join(', ',$equipmentArray);
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Collection</strong></h5>
-      <h5><? echo $formattedCollection; ?><sup><a href="https://pixelstarships.fandom.com/wiki/Category:Crew_Collections">info</a></sup></h5>
+      <h5><? echo $formattedCollection . ' '; ?><sup><a href="https://pixelstarships.fandom.com/wiki/Category:Crew_Collections">info</a></sup></h5>
     </div>
     <div class="statblock">
       <h5 class="statheading"><strong>Equipment</strong></h5>
@@ -307,9 +363,9 @@ $formattedEquipment = join(', ',$equipmentArray);
   </div>
   <div style="border-style:solid;border-color:Purple;border-width:4px;border-radius:6px;margin:4px">
     <h4 class="containerheading" style="color:Purple;"><strong>Roles</strong></h4>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Best as:</strong> TO BE COMPLETED </h5>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Good as:</strong> TO BE COMPLETED </h5>
-    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Average as:</strong> TO BE COMPLETED </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Best as:</strong> <? echo $roleStrings[4]; ?> </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Good as:</strong> <? echo $roleStrings[3]; ?> </h5>
+    <h5 style="margin-left: 5px;margin-bottom: 5px;"><strong>Average as:</strong> <? echo $roleStrings[2]; ?> </h5>
   </div>
   <div style="border-style:solid;border-color:DarkGoldenrod;border-width:4px;border-radius:6px;margin:4px">
     <h4 class="containerheading" style="color: DarkGoldenrod;"><b>Prestige Options</b></h4>
