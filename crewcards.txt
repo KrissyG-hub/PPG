@@ -150,9 +150,10 @@ if ($crew->EquipmentMask >= 1) {
 $formattedEquipment = join(', ',$equipmentArray);
 
 //Rarity
-$crewGem = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-gem.png" alt="gem" style="margin-left: 10px;float: left;width:32px;height:28px;">';
-$crewShield = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-shield.png" alt="shield" style="margin-left: 10px;float: left;width:24px;height:28px;margin-right:10px;">';
-$crewWings = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-wings.png" alt="wings" style="margin-left: 10px;float: left;width:45px;height:28px;margin-right:10px;">';
+$crewGem = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-gem.png" alt="gem" style="margin-left: 10 px; margin-right: 10px; float: left; width:32px; height:28px;">';
+$crewShield = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-shield.png" alt="shield" style="margin-left: 10 px; float: left; width:24px; height:28px;">';
+$crewWings = '<img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/rarity-wings.png" alt="wings" style="margin-left: 10 px; float: left; width:45px; height:28px;">';
+//First color is pixyship's color, second is my choice
 switch ($crew->Rarity) {
     case 'Common':
         $crewRarityColor = 'Grey';
@@ -160,18 +161,22 @@ switch ($crew->Rarity) {
         break;
     case 'Elite':
         $crewRarityColor = '#1be600';
+        $crewRarityColor = 'LimeGreen';
         $crewRarityImage = $crewGem . $crewGem;
         break;
     case 'Unique':
         $crewRarityColor = '#0070dd';
+        $crewRarityColor = 'Navy';
         $crewRarityImage = $crewGem . $crewGem . $crewGem;
         break;
     case 'Epic':
         $crewRarityColor = '#a335ee';
+        $crewRarityColor = 'Purple';
         $crewRarityImage = $crewGem . $crewGem . $crewGem . $crewGem;
         break;
     case 'Hero':
         $crewRarityColor = '#ff8000';
+        $crewRarityColor = 'OrangeRed';
         $crewRarityImage = $crewGem . $crewGem . $crewGem . $crewGem . $crewGem;
         break;
     case 'Special':
@@ -181,6 +186,7 @@ switch ($crew->Rarity) {
         break;
     case 'Legendary':
         $crewRarityColor = '#d5aa2a';
+        $crewRarityColor = 'DarkGoldenRod';
         $crewRarityImage = $crewWings; 
         break;
     default:
@@ -213,11 +219,12 @@ $roleStrings[$crewRoles->AntiboarderInput] = $roleStrings[$crewRoles->Antiboarde
   <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/252.png&quot;) 0px 0px; width: 18px; height: 7px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
   <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/253.png&quot;) 0px 0px; width: 10px; height: 5px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
 </div>
-
-crew raw data
-<CharacterDesign CharacterDesignId="7" CharacterDesignName="Green Ranger - Oliver" CharacterHeadPartId="41" CharacterBodyPartId="42" GenderType="Male" RaceType="White" Hp="3" Pilot="0" Attack="1" FireResistance="1" Repair="1.7" Weapon="1" Science="1" Engine="1" Research="1" Level="1" WalkingSpeed="1" GasCost="0" MineralCost="0" MinShipLevel="1" FinalHp="9" FinalPilot="3" FinalAttack="2.8" FinalRepair="2.4" FinalWeapon="7" FinalScience="21" FinalEngine="6" FinalResearch="4" CharacterLegPartId="43" Rarity="Hero" ProgressionType="Linear" CharacterDesignDescription="Justice never loses" XpRequirementScale="1" MaxCharacterLevel="40" SpecialAbilityType="DamageToSameRoomCharacters" SpecialAbilityArgument="4" SpecialAbilityFinalArgument="6" ProfileSpriteId="2875" RunSpeed="2" TrainingCapacity="90" EquipmentMask="3" SpeechVoice="" SpeechPhrases="" SpeechRate="1" SpeechPitch="1" Flags="3" RootCharacterDesignId="7" TapSoundFileId="593" ActionSoundFileId="592" CollectionDesignId="0"><CharacterParts><CharacterPart CharacterPartId="41" CharacterPartName="greenSolider1Head" CharacterPartType="Head" StandardSpriteId="481" StandardFileId="0" ActionFileId="0" StandardBorderFileId="0" ActionBorderFileId="0" ActionSpriteId="482" StandardBorderSpriteId="483" ActionBorderSpriteId="484" /><CharacterPart CharacterPartId="42" CharacterPartName="greenSolider1Body" CharacterPartType="Body" StandardSpriteId="485" StandardFileId="0" ActionFileId="0" StandardBorderFileId="0" ActionBorderFileId="0" ActionSpriteId="486" StandardBorderSpriteId="487" ActionBorderSpriteId="488" /><CharacterPart CharacterPartId="43" CharacterPartName="greenSolider1Leg" CharacterPartType="Leg" StandardSpriteId="489" StandardFileId="0" ActionFileId="0" StandardBorderFileId="0" ActionBorderFileId="0" ActionSpriteId="490" StandardBorderSpriteId="491" ActionBorderSpriteId="492" /></CharacterParts></CharacterDesign>
-
+from pixyship github Crew.vue
+        <div class="char-part" :style="spriteStyle(char.head_sprite)"></div>
+        <div class="char-part" :style="spriteStyle(char.body_sprite)"></div>
+        <div class="char-part" :style="spriteStyle(char.leg_sprite)"></div>
 http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=489
+http://apibackup.pixelstarships.com/FileService/DownloadSprite?SpriteId=485
 */
 ?>
 
@@ -226,6 +233,9 @@ http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=489
   color:<?php echo $crewRarityColor; ?>;
   margin:0;
   margin-left: 10px;
+}
+.char-part {
+    margin: 0px auto;
 }
 .outercontainer {
   border-color: MidnightBlue;  
@@ -291,13 +301,18 @@ http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=489
 </div>
 
 <div style="border-style:solid;border-width:4px;max-width:650px">
-<!--  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/02/ardenttemplar.png" alt="Ardent Templar" style="margin-bottom: 10px;float: left;max-width: 20%;height: auto;">
-  -->
+<div style="float: left; max-width: 20%; min-width: 100px; height: auto;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/green-ranger-head.png" alt="head image" style="width: 72px; height: 64px; image-rendering: pixelated; display: block; margin: 10px auto -4px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/green-ranger-body.png" alt="body image" style="width: 72px; height: 28px; image-rendering: pixelated; display: block; margin: 0 auto -4px;">
+  <img src="https://pixelperfectguide.com/wp-content/uploads/2020/03/green-ranger-legs.png" alt="legs image" style="width: 40px; height: 20px; image-rendering: pixelated; display: block; margin: 0 auto 0 ;">
+</div>
+
   <h1 id="crewTitle"><strong><? echo $crew->CharacterDesignName; ?></strong></h1>
-  <? echo $crewRarityImage; ?>
-  <br />
-  <br />
-  <h5 style="margin-left: 10px;"><? echo $crew->CharacterDesignDescription; ?></h5>
+  <div>
+    <? echo $crewRarityImage; ?>
+  </div>
+  <p style="float: right; margin-top:0px; margin-bottom:0px; height:28px; display: block"> </p>
+  <h5 style="clear: right; margin-left: 10px; margin-right: 5px; display: block;"><? echo $crew->CharacterDesignDescription; ?></h5>
   <p style="clear:both;margin-top:0px;margin-bottom:0px"> </p>
 
   <div class="outercontainer">
