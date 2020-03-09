@@ -14,7 +14,7 @@ import numpy as np
 
 def main(crew_data):
     # ----------------------- Drop the columns that aren't needed for modeling
-    feats_df = crew_data.drop(['CharacterHeadPartId', 'CharacterBodyPartId', 'CharacterLegPartId', 
+    feats_df = crew_data.drop(['Head', 'Body', 'Leg', 
                                'CharacterDesignDescription', 'CharacterDesignName'], axis=1)
     
     
