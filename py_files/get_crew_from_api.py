@@ -68,6 +68,23 @@ def xmltree_to_dict3(raw_text, key):
                 d[ccc.attrib[key]] = ccc.attrib
     return d
 
+def xmltree_to_dict_inclSprites(raw_text, key):
+    root = xml.etree.ElementTree.fromstring(raw_text)
+    for c in root:  # ListAllCharacterDesigns
+        for cc in c:  # CharacterDesigns
+            d = {}
+            for ccc in cc:  # CharacterDesign
+                d_string = ccc.attrib
+                # d[ccc.attrib[key]] = ccc.attrib
+                
+                for CharacterPart in ccc.iter('CharacterPart'):  # Parts to get the image sprites
+                    PartType = CharacterPart.attrib['CharacterPartType']
+                    SpriteId = CharacterPart.attrib['StandardSpriteId']
+                    
+                    d_string.update({PartType:SpriteId})
+                d[ccc.attrib[key]] = d_string
+    return d
+
 
 def create_reverse_lookup(d, new_key, new_value):
     """Creates a dictionary of the form:
@@ -96,7 +113,7 @@ def request_new_char_sheet():
 def get_char_sheet(refresh='auto'):
     url = base_url + 'CharacterService/ListAllCharacterDesigns?languageKey=en'
     raw_text = load_data_from_url(PSS_CHARS_RAW_FILE, url, refresh=refresh)
-    ctbl = xmltree_to_dict3(raw_text, 'CharacterDesignId')
+    ctbl = xmltree_to_dict_inclSprites(raw_text, 'CharacterDesignId')
     return ctbl
 
 
@@ -111,8 +128,7 @@ def main():
     # start with excel file headers
     txt = ('CharacterDesignId,CharacterDesignName,RaceType,FinalHp,FinalPilot,FinalAttack,FinalRepair,'
     'FinalWeapon,FinalScience,FinalEngine,FireResistance,Rarity,SpecialAbilityType,SpecialAbilityFinalArgument,'
-           'WalkingSpeed,RunSpeed,TrainingCapacity,EquipmentMask,CollectionDesignId,Flags,CharacterHeadPartId,CharacterBodyPartId,'
-           'CharacterLegPartId,CharacterDesignDescription\n')
+           'WalkingSpeed,RunSpeed,TrainingCapacity,EquipmentMask,CollectionDesignId,Flags,Head,Body,Leg,CharacterDesignDescription\n')
 
     # Add character stats
     for k in ctbl.keys():
@@ -138,9 +154,9 @@ def main():
         txt += f"{item['EquipmentMask']},"
         txt += f"{item['CollectionDesignId']},"
         txt += f"{item['Flags']},"
-        txt += f"{item['CharacterHeadPartId']},"       
-        txt += f"{item['CharacterBodyPartId']},"
-        txt += f"{item['CharacterLegPartId']},"
+        txt += f"{item['Head']},"       
+        txt += f"{item['Body']},"
+        txt += f"{item['Leg']},"
         
         desc = item['CharacterDesignDescription'].replace(",", "").encode('ascii', 'replace').decode()
         txt += desc + '\n'
