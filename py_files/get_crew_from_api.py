@@ -170,8 +170,8 @@ def main():
     crew_df = pd.read_csv('characters_fulldata.csv')
     
     # HACK hack HACK - drop the common Michelle, since there are two crew named Michelle =/
-    row = crew_df.query('CharacterDesignName=="Michelle" & Rarity=="Common"').index
-    crew_df.drop(row, axis=0, inplace=True)
+    # row = crew_df.query('CharacterDesignName=="Michelle" & Rarity=="Common"').index
+    # crew_df = crew_df.drop(row, axis=0).copy()
     
     # -------------------------- Write to wordpress
     engine = create_engine('mysql://pixelpg4_rigging:PIXs@tt03fl@162.241.219.104/pixelpg4_crew', echo=False)    

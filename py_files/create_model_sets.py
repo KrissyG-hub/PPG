@@ -19,7 +19,7 @@ import pandas as pd
 import numpy as np
 
 
-def main(feats_data, manual_grades, role_name):
+def main(feats_data, manual_grades, role_name, p = True):
     # ------------------------------------ make sure the role exists
     if role_name in ['Gunner', 'Shielder', 'Engineer', 'Pilot', 'Rusher', 'Antiboarder', 'Repairer', 'Boarder'] == False:
         print("That role doesn't exist. Make sure it's formatted correctly as one of the below")
@@ -29,7 +29,7 @@ def main(feats_data, manual_grades, role_name):
     
     # ------------------------------------ add grades to the feats data frame
     # for each character in the grades list, put the label in the "grade" column
-    print('Matching up grades with crew...')
+    if p: print('Matching up grades with crew...')
     df = feats_data.copy()
     df['grade'] = None  # default is no grade
        
@@ -39,14 +39,15 @@ def main(feats_data, manual_grades, role_name):
     
     
     # ------------------------------------ remove ungraded crew
-    print('Removing ungraded crew...')
+    if p: print('Removing ungraded crew...')
     split_df = df[df.grade.isnull() == False]
-    print("The size of the model-able data is:")
-    print(split_df.shape)
+    if p: 
+        print("The size of the model-able data is:")
+        print(split_df.shape)
     
     # ----------------------------------- randomly select an 80/20 train/test split
     # create a random arrangement of the data sets
-    print('Randomly selecting data sets...')
+    if p: print('Randomly selecting data sets...')
     np.random.seed(0)
     shuffle = np.random.permutation(np.arange(len(split_df['grade'].values)))
 
@@ -61,7 +62,7 @@ def main(feats_data, manual_grades, role_name):
     test_features = features[split_n+1:]
     test_labels = labels[split_n+1:].astype(int)
 
-    print('We will use ' + str(len(train_labels)) + ' training points and ' + str(len(test_labels)) + ' test points.')
+    if p: print('We will use ' + str(len(train_labels)) + ' training points and ' + str(len(test_labels)) + ' test points.')
     
     return train_features, train_labels, test_features, test_labels;
     
