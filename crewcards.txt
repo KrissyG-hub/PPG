@@ -21,12 +21,12 @@ $crewId = $crew->CharacterDesignId;
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
   $crewId = sanitize_text_field($_POST['CrewId']);
-  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, EngineerInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE EngineerInput=%d", array($crewId, $rating, $rating));
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, PilotInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE PilotInput=%d", array($crewId, $rating, $rating));
   $crewdb->query($insertRating);
 }
 
 /* Get the next crew to grade */
-$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.EngineerInput IS NULL ORDER BY RAND() LIMIT 1");
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.PilotInput IS NULL ORDER BY RAND() LIMIT 1");
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
 
@@ -276,7 +276,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
     }
 }
 if ($prestigeCrewString == '') {
-  $prestigeCrewString = 'No prestige options rated "Average" or better in any role.';
+  $prestigeCrewString = 'No prestige crew rated "Best" in any role. All prestige options are ' . '<a href="http://pixyship.com/crew/' . $crewId . '">here</a>.';
 }
 ?>
 
