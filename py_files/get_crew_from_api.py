@@ -17,6 +17,9 @@ import numpy as np
 import mysql.connector
 from sqlalchemy import create_engine
 
+import pymysql
+pymysql.install_as_MySQLdb()
+
 PSS_CHARS_RAW_FILE = 'pss-chars-raw.txt'
 MAXIMUM_CHARACTERS = 1900
 
@@ -134,29 +137,29 @@ def main():
     for k in ctbl.keys():
         item=ctbl[k]
             
-        txt += f"{item['CharacterDesignId']},"
-        txt += f"{item['CharacterDesignName']},"
-        txt += f"{item['RaceType']},"
-        txt += f"{item['FinalHp']},"
-        txt += f"{item['FinalPilot']},"
-        txt += f"{item['FinalAttack']},"
-        txt += f"{item['FinalRepair']},"
-        txt += f"{item['FinalWeapon']},"
-        txt += f"{item['FinalScience']},"
-        txt += f"{item['FinalEngine']},"
-        txt += f"{item['FireResistance']},"
-        txt += f"{item['Rarity']},"
-        txt += f"{item['SpecialAbilityType']},"
-        txt += f"{item['SpecialAbilityFinalArgument']},"
-        txt += f"{item['WalkingSpeed']},"
-        txt += f"{item['RunSpeed']},"
-        txt += f"{item['TrainingCapacity']},"
-        txt += f"{item['EquipmentMask']},"
-        txt += f"{item['CollectionDesignId']},"
-        txt += f"{item['Flags']},"
-        txt += f"{item['Head']},"       
-        txt += f"{item['Body']},"
-        txt += f"{item['Leg']},"
+        txt += str(item['CharacterDesignId']) + ','
+        txt += str(item['CharacterDesignName']) + ',' 
+        txt += str(item['RaceType']) + ','
+        txt += str(item['FinalHp']) + ','
+        txt += str(item['FinalPilot']) + ','
+        txt += str(item['FinalAttack']) + ','
+        txt += str(item['FinalRepair']) + ','
+        txt += str(item['FinalWeapon']) + ','
+        txt += str(item['FinalScience']) + ","
+        txt += str(item['FinalEngine']) + ","
+        txt += str(item['FireResistance']) + ","
+        txt += str(item['Rarity']) + ","
+        txt += str(item['SpecialAbilityType']) + ","
+        txt += str(item['SpecialAbilityFinalArgument']) + ","
+        txt += str(item['WalkingSpeed']) + ","
+        txt += str(item['RunSpeed']) + ","
+        txt += str(item['TrainingCapacity']) + ","
+        txt += str(item['EquipmentMask']) + ","
+        txt += str(item['CollectionDesignId']) + ","
+        txt += str(item['Flags']) + ","
+        txt += str(item['Head']) + ","
+        txt += str(item['Body']) + ","
+        txt += str(item['Leg']) + ","
         
         desc = item['CharacterDesignDescription'].replace(",", "").encode('ascii', 'replace').decode()
         txt += desc + '\n'

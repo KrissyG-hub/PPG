@@ -34,9 +34,9 @@ def main(feats_data, manual_grades, role_name, p = True):
     df['grade'] = None  # default is no grade
        
     for ind in range(len(manual_grades)):
-        g = manual_grades[f"{role_name + 'Input'}"].values[ind]
-        df.set_value(df.CharacterDesignId == manual_grades['CharacterDesignId'].values[ind], 'grade', g)
-    
+        g = manual_grades[role_name + 'Input'].values[ind]
+        # df.set_value(df.CharacterDesignId == manual_grades['CharacterDesignId'].values[ind], 'grade', g)
+        df.at[df.CharacterDesignId == manual_grades['CharacterDesignId'].values[ind], 'grade'] = g
     
     # ------------------------------------ remove ungraded crew
     if p: print('Removing ungraded crew...')
