@@ -87,7 +87,7 @@ def main(crew_data):
     
     # -------------------------- HACK: drop some features i'm just not ready to model right now
     model_data.drop(['Flags', 'EquipmentMask'], axis=1, inplace=True)
-    model_data.drop(['0', '1', '13', '14', '15', '16', '2', '3', '4', '5', '6', '7', '8', '9'], axis = 1, inplace=True)
+    # model_data.drop(['0', '1', '13', '14', '15', '16', '2', '3', '4', '5', '6', '7', '8', '9'], axis = 1, inplace=True)
     
     print("Ready for modeling!")
     return model_data;   

@@ -1,356 +1,356 @@
 CharacterDesignId,CharacterDesignName,RaceType,FinalHp,FinalPilot,FinalAttack,FinalRepair,FinalWeapon,FinalScience,FinalEngine,FireResistance,Rarity,SpecialAbilityType,SpecialAbilityFinalArgument,WalkingSpeed,RunSpeed,TrainingCapacity,EquipmentMask,CollectionDesignId,Flags,Head,Body,Leg,CharacterDesignDescription
-1,Laura,Unknown,6,18,1.9,1.7,4,7,3,1,Special,DeductReload,460,1,2,200,62,0,9,366,370,373,Space Academy graduate and much loved Capt'n of the Starship.
-2,Lisa,Unknown,6,18,1.9,1.7,7,12,4,1,Special,HealSelfHp,6,1,2,200,62,0,9,391,395,399,Space Academy graduate and much loved Capt'n of the Starship.
-3,Michelle,Unknown,6,18,1.9,1.7,13,4,3,1,Special,HealSameRoomCharacters,5,1,2,200,62,0,9,415,420,423,Space Academy graduate and much loved Capt'n of the Starship.
-4,Bobby,Unknown,6,18,1.9,1.7,3,3,14,1,Special,AddReload,40,1,2,200,62,0,9,306,311,315,Space Academy graduate and much loved Capt'n of the Starship.
-5,Edward,Unknown,6,18,1.9,1.7,3,6,4,1,Special,DamageToRoom,4,1,2,200,62,0,9,377,381,387,Space Academy graduate and much loved Capt'n of the Starship.
-6,Tony,Unknown,6,18,1.9,1.7,2,4,7,1,Special,HealRoomHp,5,1,2,200,62,0,9,403,407,411,Space Academy graduate and much loved Capt'n of the Starship.
-7,Green Ranger - Oliver,White,9,3,2.8,2.4,7,21,6,1,Hero,DamageToSameRoomCharacters,6,1,2,90,3,0,3,481,485,489,Justice never loses
-8,Engineer Bob,Asian,7,3,1.7,3,6,6,24,1,Special,HealRoomHp,10,1,2,100,3,0,3,640,311,315,An engineer engine up!
-9,Big Football Fan,White,4,3,2.3,1.8,2,7,8,1,Elite,None,0,1,2,60,6,0,19,662,666,670,A football fan who is seeking the legendary football player
-10,Mr Coconut,Asian,7,15,2.7,2.5,25,18,18,1,Hero,DeductReload,600,1,2,90,3,1,3,674,678,682,A man born from a coconut.
-11,Verunus,Alien,6,12,2.6,2,15,12,3,1,Unique,HealSameRoomCharacters,5,1,2,70,5,0,19,686,690,694,Verunus is born to seduce youeh... okseduce alien 
-12,Menga Linuxer,Robot,12,12,3,3.1,21,18,21,1,Hero,DamageToRoom,6,1,2,90,5,1,3,740,744,748,A crazy robot developer put himself into a linux-base robot body
-13,Visiri Capt'n,Alien,6,12,2.4,2.4,18,12,18,1,Unique,AddReload,30,1,2,70,24,14,19,863,867,871,An ugly alien captain.
-14,Medusa,Alien,7,15,2.9,2.9,14,12,20,1,Epic,AddReload,35,1,2,80,24,14,19,876,867,880,Visiri with evolved manuvering mechanics.
-15,Doge,Animal,9,15,3,2.8,15,18,16,1,Special,HealSameRoomCharacters,8,1,2,100,6,5,3,891,895,899,Man's Best Friend
-16,Serge Eric,White,5,3,2.1,1.7,12,7,10,1,Unique,DeductReload,360,1,2,70,3,0,19,903,907,911,A boy who willing to be a general in the space
-17,Robot,Robot,7,12,2.7,2.8,14,14,14,1,Special,DeductReload,480,1,2,100,10,0,3,915,919,923,R..o..b....o.........to
-18,Yusi,Asian,10,18,2.5,2.9,18,21,12,1,Hero,HealSelfHp,10,1,2,90,3,1,3,927,931,935,An artist wish that he found every astronomical landscape and record them by drawing
-19,Xin,Asian,10,18,2.7,2.7,15,18,24,1,Hero,AddReload,50,1,2,90,3,1,3,953,957,961,The BOSS
-20,Monk,White,4,1,1.4,2.1,3,15,3,1,Elite,None,0,1,2,60,9,0,19,965,969,973,A monk who doesn't want to limit his own living area trying find the only truth.
-21,Roborob,Robot,12,12,2.8,3.1,20,20,8,1,Hero,DeductReload,360,1,2,90,9,0,3,1030,1034,1038,Artificial life super technology if you don't see a man inside
-22,Steve,Asian,4,3,1.4,1.4,6,6,6,1,Common,None,0,1,2,50,3,0,19,1342,311,315,A humble crew.
-23,Lin,Asian,3,4,1.8,1.3,6,6,6,1,Common,None,0,1,2,50,6,0,19,1346,370,373,A cute girl.
-24,Hulk,Black,3,4,1.4,1.4,8,6,6,1,Common,None,0,1,2,50,3,0,19,1350,407,411,In pursuit of happiness.
-25,Michelle,Black,3,4,1.4,1.4,6,8,6,1,Common,None,0,1,2,50,3,0,19,1354,420,423,Wants to marry a president.
-26,Kevin,White,3,4,1.4,1.4,6,6,8,1,Common,None,0,1,2,50,6,0,19,1358,381,387,Jack of all trades.
-27,Monica,White,3,4,1.4,1.8,6,6,6,1,Common,None,0,1,2,50,3,0,19,1362,395,399,The mistress.
-28,Assassin alien,Alien,6,12,2.8,2.5,18,15,15,1,Epic,DamageToCurrentEnemy,6,1,2,80,9,0,19,1367,1371,1375,The best assassin from the well known bloody planet.
-29,Ponytail Alien,Alien,6,3,2.4,2.8,14,10,10,1,Epic,DeductReload,540,1,2,80,24,0,19,1379,1383,1387,An alien who loves humankind culture. 
-30,Area51 Alien,Alien,8,14,2.7,2.7,12,14,18,5,Special,DeductReload,600,1,2,100,10,13,3,1391,931,935,Loading...
-31,Dennis,White,6,10,2,2.8,12,9,9,3,Unique,HealSameRoomCharacters,4,1,2,70,6,0,19,1395,311,315,A guy from cats right society.
-32,Demon Boy,Animal,8,15,2.8,3.1,16,18,14,100,Epic,FireWalk,30,1,2,80,6,0,19,1399,1403,1407,A boy who came from a very dark planet trying to prove himself.
-33,Professor,White,6,12,2.4,2.4,9,16,9,3,Unique,DeductReload,420,1,2,70,3,0,19,1411,1415,1419,A professor received a help message while he is giving a lecture but he can't ignore the message
-34,Mikael Monnier,White,4,7,1.8,1.8,12,6,7,1,Elite,None,0,1,2,60,3,0,19,1423,1427,1431,Monday lover working hard never have blue monday
-35,Oren Marcus,White,5,7,1.7,1.9,10,8,7,1,Elite,None,0,1,2,60,3,0,19,1435,1439,1443,Orientation of newbie captain love to guide others
-36,Rob,Asian,5,7,1.8,1.8,12,8,8,1,Elite,None,0,1,2,60,6,1,19,1449,1453,1457,Rob :)
-37,Thomas,White,10,18,2.7,2.6,15,20,26,8,Hero,DeductReload,600,1,2,90,3,1,3,1461,1465,1469,Finds and destroys bugs on a regular basis. He goes by the name TJ
-38,Eric,Asian,8,15,2.9,2.9,15,21,13,5,Epic,HealSameRoomCharacters,5,1,2,80,3,1,19,1473,1477,1481,A missing boy wanted to leave this unpredictable universe but it's too late!
-39,Elf,Animal,9,15,3,3,20,12,8,5,Epic,HealSameRoomCharacters,6,1,2,80,24,0,19,1485,1489,1493,A creature coming from a mysterious dimension doesn't belong to our world
-40,Captain,White,6,12,2.8,2.5,18,18,18,3,Special,AddReload,50,1,2,200,62,0,9,1497,1501,1505,Captain is an experienced spaceship captain here to enjoy his retired life
-41,Vivien,Asian,6,10,2.5,2.3,10,10,18,1,Unique,HealRoomHp,4,1,2,70,6,1,19,1509,1513,1517,Part-time SavySoda Emergency Response Personnel. Some wonder if she is actually part-robot too. 
-42,Lollita,White,10,18,3.2,3.1,20,20,20,5,Hero,HealSameRoomCharacters,7,1,2,90,24,0,3,1521,1525,1529,ALWAYS CORRECT
-43,Male Nurse,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,0,19,1533,1537,1541,I am a nurse but a male nurse
-44,Kent,White,4,7,1.8,1.8,8,8,8,1,Elite,None,0,1,2,60,5,0,19,1545,1549,1553,My name is Kent
-45,Government Troop,Robot,8,15,3.1,2.5,15,13,13,5,Epic,DamageToRoom,4,1,2,80,12,0,19,1635,1639,1643,Government Conscripted Troops
-46,Gentleman,White,6,12,2.4,2.4,12,12,12,3,Unique,DamageToRoom,3,1,2,70,5,0,19,640,1822,1517,Legendary HeNtAI
-47,Ninja,Asian,8,15,2.8,2.9,20,14,12,5,Epic,DamageToCurrentEnemy,4,1,2,80,6,0,19,1647,1651,1655,Had an assasination mission but his target sent him to space by accident. 
-48,Good student,Black,6,12,2.5,2.3,12,14,10,3,Unique,DeductReload,240,1,2,70,6,0,19,1660,1664,1668,Good student wants to learn everything every knowledge including this mystic universe
-49,Walking Skeleton,Animal,8,12,2.9,2.9,15,18,13,5,Epic,DamageToSameRoomCharacters,4,1,2,80,24,0,19,1672,1676,1680,The only child of Death himself...
-50,Grandpa,White,8,15,2.9,3,15,15,18,6,Special,HealSelfHp,6,1,2,100,3,0,3,1684,1688,1692, An elderly at home is much alike having an invaluable treasure in hand.
-51,Arctic Pole Boy,White,4,7,1.8,1.8,8,3,8,2,Unique,Freeze,120,1,2,70,6,0,19,1696,1700,1704,Ready to explore frozen alien worlds
-52,Astronaut,Black,5,12,2.2,2.3,10,12,19,3,Unique,HealSelfHp,6,1,2,70,10,0,19,1708,1712,1716,Originally trained by MASA
-53,Evil General,Animal,8,12,2.1,2.6,15,3,3,3,Unique,DamageToRoom,5,1,2,70,12,0,19,1720,1724,1728,Ambition general thought he can conquer this whole universe hahaha
-54,Collins,White,4,3,1.7,1.7,2,4,4,1,Common,None,0,1,2,50,3,0,19,1732,381,387,Collins Ex-Russian Astronaut.
-55,Alex,White,4,4,1.5,2.1,2,4,4,1,Common,None,0,1,2,50,3,0,19,1736,381,387,Alex an avid rockstar.
-56,Jake,White,4,3,1.6,1.9,2,4,4,1,Common,None,0,1,2,50,3,0,19,1740,311,315,Huge fan of Elvis 
-57,Larry,White,4,3,1.6,1.8,2,4,4,1,Common,None,0,1,2,50,3,0,19,1744,311,315,A real ladies man
-58,Monkey King,Animal,9,15,2.4,2.9,18,18,0,1,Epic,DamageToRoom,4,1,2,80,5,0,19,1748,744,315,The great monkey first monkey in this space
-59,Peter,Asian,4,3,1.6,2,2,4,4,1,Common,None,0,1,2,50,3,0,19,1752,311,315,Age 34 still lives with parents.
-60,Skully,Asian,4,3,1.8,1.9,2,4,4,1,Common,None,0,1,2,50,3,0,19,1756,311,315,His deranged father chose the name...
 61,Tran,White,4,3,1.8,2.1,2,4,4,1,Common,None,0,1,2,50,3,0,19,1760,381,387,Genetically modified fighter
-62,Sakura,Asian,8,14,3,3,12,16,18,1,Epic,HealRoomHp,4,1,2,80,10,0,19,1764,1768,1772,A tender girl what is covering by her smile. 
-63,Gong Fu girl,Asian,5,7,2,2,3,4,4,3,Elite,None,0,1,2,60,6,0,19,1776,1780,1784,A girl wants to show this world that a female with gong fu can win any type of creatures
-64,Sarah,White,5,10,2.1,1.8,9,9,9,3,Elite,None,0,1,2,60,6,0,19,1788,1792,1796,Lively girl just like your neighbour her smile made your day.
-65,Jemima ,White,3,3,1.7,1.7,13,9,9,3,Elite,None,0,1,2,60,9,0,19,1800,1804,1808,Was a cheer leader cheers every pilot up.
-66,Jane,White,3,3,1.7,1.7,7,12,4,1,Elite,None,0,1,2,60,6,0,19,1812,395,399,Does everything to the books
-67,Cara,Asian,6,12,2.3,2.4,14,18,3,3,Unique,AddReload,30,1,2,70,10,1,19,1818,1822,1826,Graduated from Space Academy with Xin ;).
 68,Witch,White,8,12,3,3,19,14,14,5,Epic,HealSameRoomCharacters,5,1,2,80,10,0,19,1830,1834,1838,Thirst to know every spell on this universe voodoo magic bless everything.
-69,Jessica,White,7,12,2.4,2.4,15,12,12,6,Unique,DamageToCurrentEnemy,4,1,2,70,12,0,19,1842,1846,1850,1/100 vampire lineage. 
-70,Linda,White,3,3,1.7,1.7,7,8,4,1,Elite,None,0,1,2,60,3,0,19,1854,395,399,After becoming famous from a Youtube home video she needed to escape to space.
-71,Tina,White,3,3,1.7,1.7,7,8,8,1,Common,None,0,1,2,50,6,0,19,1858,311,315,Lover of all things space.
-72,Mary,White,4,3,1.7,1.7,7,12,12,1,Elite,None,0,1,2,60,3,0,19,1862,395,399,One of the kindest people you'll meet... unless you're the enemy.
-73,Candy,White,3,3,1.8,1.8,8,8,8,1,Elite,None,0,1,2,60,6,0,19,1866,395,399,Received the nickname 'Candy' after getting a candy cain stuck in her hair. She's never removed it...
-74,Invader,Alien,10,18,2.7,2.6,18,20,19,8,Hero,DamageToSameRoomCharacters,6,1,2,90,24,0,3,1876,1880,1884,We are the rule of galaxy
-75,Blingy Captain,White,6,12,2.8,2.5,18,18,18,3,Special,DeductReload,420,1,2,200,62,0,9,1924,1928,1932,Blingy Captain
-76,Bling Captain,Asian,6,12,2.8,2.5,18,18,18,3,Special,AddReload,55,1,2,200,62,0,9,1936,1940,1944,Bling Captain
-77,Roach,Animal,5,4,3.1,2.8,6,6,6,1,Special,DamageToSameRoomCharacters,7,1,2,100,24,5,3,1952,1956,1960,Roachin' tends to cause Pixel Starships to crash.
-78,Emily,Asian,4,12,2.4,2.1,15,19,19,1,Unique,DamageToRoom,4,1,2,70,6,1,19,1967,1971,1975,Cool Kid
-79,Golden Troop,Robot,8,15,3.1,2.5,15,13,13,5,Epic,HealRoomHp,4,1,2,80,12,0,19,2091,2095,2099,A golden government troop! Like a regular troop only better in every way imaginable.
-80,Salon Customer,Asian,4,10,2.1,1.8,15,9,9,3,Unique,DamageToSameRoomCharacters,3,1,2,70,9,4,3,1982,1986,1990,Hangs out at the local basketball court.
-81,Kingpin,White,7,19,2.4,1.8,9,9,9,3,Epic,HealSameRoomCharacters,5,1,2,80,3,4,3,1994,1998,2002,Making the universe great!
-82,Office Exec,Asian,5,10,2.1,1.8,9,9,9,3,Unique,DamageToCurrentEnemy,4,1,2,70,3,4,3,2006,2010,2014,Has a corner office.
-83,David,White,5,10,2.1,1.8,9,9,9,3,Unique,HealSelfHp,4,1,2,70,3,4,3,2018,2022,2026,Lives in a town house.
-84,Paul,White,5,10,2.1,1.8,9,9,9,3,Unique,DamageToRoom,3,1,2,70,3,4,3,2030,2034,2038,Goes hunting
-85,Omar,Black,5,10,2.1,1.8,9,9,9,3,Unique,DamageToRoom,3,1,2,70,3,4,3,2042,2046,2050,Has poked bowls for lunch.
-86,Jesus,White,5,10,2.1,1.8,9,9,9,3,Unique,AddReload,30,1,2,70,24,4,3,2054,2058,2062,Surname: Christ
-87,Teddy,Animal,7,4,2.8,2.4,12,12,2,0,Epic,AddReload,30,1,2,80,12,0,19,2103,2107,2111,Fluffy and deadly with a gun. Bad at repairing.
-88,Liu Bei,Asian,8,15,2.5,3,16,18,18,4,Epic,AddReload,35,1,2,80,3,2,19,2133,2137,373,Likes to drink tea with his army friends.
-89,Guan Yu,Asian,11,8,3,2,24,20,8,6,Hero,DamageToCurrentEnemy,8,1,2,90,6,2,3,2145,2149,2153,Long beard loves green.
-90,Zhang Fei,Asian,9,3,2.9,2.2,20,19,6,3,Epic,DamageToRoom,6,1,2,80,10,2,19,2158,2162,2166,Hot tempered and smelly.
-91,Dong Zhuo,Asian,8,15,2.5,2.5,18,19,16,5,Epic,HealSameRoomCharacters,2,1,2,80,24,2,19,2170,2175,2179,Quite old but still love young beautiful girls.
-92,Cao Cao,Asian,8,19,2.5,2.6,21,21,21,5,Epic,HealSameRoomCharacters,5,1,2,80,3,2,19,2183,2187,2191,Ancient Emperor. Somehow ended onboard a starship.
-93,Lyu Bu,Asian,10,8,3,2.2,24,20,8,6,Hero,DamageToCurrentEnemy,8,1,2,90,3,2,3,2195,2199,2203,A powerful warrior who loves young beautiful girls
-94,Zhao Yun,Asian,9,3,2.8,2.6,21,20,9,3,Epic,DamageToSameRoomCharacters,4,1,2,80,5,2,19,2207,2211,2215,Dragon warrior. Except he's just human.
-95,Zhuge Liang,Asian,8,21,2.8,3.1,24,24,24,10,Epic,HealSameRoomCharacters,3,1,2,80,10,2,19,2219,2223,2227,Likes board games.
-96,Da Qiao,Asian,4,3,1.8,1.8,7,8,8,1,Elite,None,0,1,2,60,3,2,19,2231,2235,373,A beautiful girl sister of Xiao Qiao
-97,Xiao Qiao,Asian,4,3,1.8,1.8,7,8,8,1,Elite,None,0,1,2,60,10,2,19,2243,2247,2251,A beautiful girl younger sister of Da Qiao
-98,Easter Bunny,Animal,6,4,2.5,2.4,12,12,2,0,Epic,DeductReload,360,1,2,80,10,5,19,2339,2343,2347,I am a bunny Easter bunny!
-99,Mr Egggg,Animal,5,4,2.6,2.8,12,12,2,0,Unique,DeductReload,300,1,2,70,12,0,19,2351,2355,2359,My name is Mr Egggg!
-100,Giant Slime,Animal,10,0,2.8,1.2,12,12,2,0,Epic,DamageToSameRoomCharacters,4,1,2,80,24,0,19,2508,2512,2516,My friends told me that I look like a big and tasty jelly!
-101,Simon,White,6,4,2.6,2.4,12,12,12,0,Unique,HealSelfHp,6,1,2,70,6,0,19,2520,2524,2528,Native American Warrior
-102,Rocky,Animal,13,0,3,1,1,2,2,100,Hero,DamageToRoom,5,1,2,90,24,0,3,2532,2536,2540,Had a hard life
-103,Golden Boy,Robot,6,12,2.2,2.5,14,14,18,30,Epic,DeductReload,420,1,2,80,10,0,19,2547,2551,2555,People love golden stuff such as golden cups. So yeah I am a golden boy :)
-104,Cat Boy,White,9,4,2,1.4,4,15,4,0,Unique,DeductReload,480,1,2,70,5,0,19,2672,2676,2680,Meow. A boy dressed up like a cat
-105,Tin Man,Robot,7,12,3,1.2,16,4,3,0,Epic,DamageToCurrentEnemy,5,1,2,80,24,0,19,2684,2688,2692,Turned a trash can into armour
-106,Abu,Black,6,0,2.1,2.1,9,9,9,0,Elite,None,0,1,2,60,6,0,19,2773,2777,2781,Has a snake as a pet
-107,Mecha,Robot,11,14,2.5,3.2,9,9,18,0,Hero,HealRoomHp,8,1,2,90,24,0,3,2797,2801,2805,Heavily armoured engineering vehicle.
-108,Foxy Girl,White,6,15,2.4,2.4,14,7,7,0,Epic,HealSelfHp,6,1,2,80,12,0,19,2809,2813,2817,Girl who loves foxes.
-109,Dr Sera,White,6,4,2.4,2.4,13,13,13,0,Epic,DamageToSameRoomCharacters,4,1,2,80,10,0,19,2785,2789,2793,Dr Sera
-110,Silver Paladin,Robot,11,22,3.3,3.1,16,12,15,30,Legendary,DamageToRoom,6,1,2,110,9,0,3,2928,2932,2936,Composed of the souls of two legendary heroes.
-112,Ron,White,9,12,2.9,2.8,16,10,12,1,Epic,DamageToCurrentEnemy,7,1,2,80,10,0,19,2940,2944,2948,Dribbles a soccer ball around.
-113,Jaiden,Black,11,8,3,2,21,20,8,6,Hero,DamageToCurrentEnemy,7,1,2,90,9,0,3,2960,2964,2968,Real dream is to explore space.
-114,SCV,White,12,8,3,2,21,24,21,6,Legendary,DamageToCurrentEnemy,9,1,2,110,24,0,3,2979,2983,2987,I am a machine but I know what love is! - thunder_kiss_65 (July 2016 Winner)
-115,Professor Brenda,Asian,11,19,3.2,2.5,20,20,20,12,Legendary,DamageToSameRoomCharacters,7,1,2,110,9,0,3,2997,3001,3005,This star academy professor has an IQ of over 300 which makes it really hard for her to find a date.
-116,Paralympic God,White,9,21,2.2,2,21,21,21,6,Legendary,AddReload,55,1,2,110,24,0,3,3097,3101,3105,Spent decades to work out the rules of the universe... then realizes it was wrong.
-117,Eva,Robot,14,8,2.8,2.5,12,12,27,6,Legendary,HealRoomHp,5,1,2,110,24,0,3,3085,3089,3093,Protector of ancient qtarian artifact
-118,Meowy Cat,Animal,7,7,3.3,2,10,10,10,1,Special,DamageToCurrentEnemy,17,1,2,100,12,3,3,3135,3139,3143,A stray kitten turned space assassin. Lost 2 lives already.
-119,Squid,Animal,14,12,2.4,2,13,14,13,0,Special,HealSelfHp,9,1,2,100,8,5,3,3152,3156,3160,Used to be in a powerful warfleet. Now works at a sushi restaurant.
-120,Zombie,Animal,10,0,2.8,0.9,0,0,0,0,Unique,DamageToSameRoomCharacters,8,1,2,70,9,0,19,3204,3208,3212,Very DEADicated crew.
-121,Zombieee,Animal,9,0,2.8,1,4,0,0,0,Unique,DamageToSameRoomCharacters,8,1,2,70,24,0,19,3216,3220,3224,I love scary movies!
-122,Mummy,Animal,12,0,2.4,2,9,12,0,0,Special,DamageToSameRoomCharacters,6,1,2,100,24,0,3,3228,3232,3236,Strong and walks around with a roll of toilet paper.
-123,Helen,White,5,10,2.1,1.8,9,9,9,1,Unique,DamageToCurrentEnemy,7,1,2,70,3,4,3,3279,3283,3287,Working as a intern at a law firm. Won the local rope skipping competition.
+11,Verunus,Alien,6,12,2.6,2,15,12,3,1,Unique,HealSameRoomCharacters,5,1,2,70,5,0,19,686,690,694,Verunus is born to seduce youeh... okseduce alien 
 124,Chigs,Asian,5,4,1.9,2.2,6,6,6,1,Elite,None,0,1,2,60,10,0,19,3266,3270,3274,Skates everywhere and loves sushi.
-125,Reaper,Animal,12,0,3.2,1.5,7,12,18,0,Legendary,DamageToCurrentEnemy,11,1,2,110,24,0,3,3293,3297,3301,Wears black religiously.
-126,Willy,Black,11,19,2.9,2.7,21,21,18,80,Legendary,HealRoomHp,5,2,2,110,24,0,3,3377,3381,3385,I am Legend(ary)
-127,Alien Queen,Alien,12,15,2.9,2.7,15,14,15,70,Legendary,DamageToSameRoomCharacters,8,1,2,110,12,0,3,3394,3398,3402,Where are my babies?
-128,Turkey Man,Animal,9,10,2.2,2,8,21,7,0,Special,HealSameRoomCharacters,5,1,2,100,24,0,3,3428,3432,3436,Works part time at KFT Marketing.
-129,Wolfy,Animal,9,15,2.9,1.5,22,6,16,1,Special,DamageToRoom,5,1,2,100,6,5,3,3548,3552,3556,Pastime: hanging out with best buddies at the Starbar!
-130,Dark Matter Hero,White,10,8,3.1,1.4,14,27,10,30,Special,DeductReload,600,1,3,100,5,0,3,3507,3511,3515,An epic hero made from dark matter!
-131,Old Driver,Asian,10,25,2.6,2.9,6,6,25,1,Special,HealRoomHp,8,1,2,100,5,0,3,3571,3575,3579,Knows where to go for a good time.
-132,Robo Santa,White,11,22,2.5,2.5,8,22,7,0,Special,DamageToSameRoomCharacters,8,1,2,100,12,0,3,3583,3587,3591,I've got a present for ya.
-133,Orc,Animal,8,12,2.7,2.6,20,8,14,30,Epic,DamageToRoom,5,1,2,50,3,0,19,3717,3721,3725,Feeling orcish.
-134,Soda Delivery Guy,Asian,10,22,2.6,3,6,6,24,35,Special,AddReload,45,2,3,100,6,1,3,3410,3414,3418,Delivers Soda and Fixes Bugs. High on Sugar so walks faster than other ppl.
-135,Zakian,Alien,10,8,3.2,1.2,14,14,14,0,Special,HealSelfHp,7,1,2,100,12,0,3,3865,3869,3873,A dangerous race of assassins.
-136,Giant Chicken,Animal,9,15,2.9,1.8,25,6,14,1,Special,HealSameRoomCharacters,6,1,2,100,24,5,3,3877,3881,3885,Celebrate Year of the Chicken!
-137,Stevo,White,9,15,2.5,1.3,4,7,22,3,Epic,DamageToSameRoomCharacters,6,1,2,80,12,0,19,3619,3623,3627,Crikey! He has a pet crocodile.
-138,Dark Matter Legend,White,10,8,3.2,1.4,14,27,10,30,Special,DeductReload,610,1,2,100,5,0,3,3928,3932,3936,A dark hero has evolved to become a legend.
-139,Transport Driver,Asian,10,25,2.8,3,6,6,26,1,Special,HealRoomHp,9,1,2,100,5,0,3,3915,3919,3923,Part time driver part time assassin.
-140,Phoenix,Animal,10,15,2.6,1.1,22,8,10,100,Special,HealSameRoomCharacters,6,1,2,100,24,5,3,3941,3945,3949,A squid one day made love to a wolf. The result was surprising.
-141,Dark Matter Mechi,White,11,8,3.2,1.5,14,27,12,50,Special,DeductReload,620,1,2,100,6,0,3,4120,4124,4128,A Mechi powered by dark matter.
-142,Mr Blue,White,2,24,3.3,3.3,24,24,24,1,Special,HealRoomHp,9,1,2,100,5,0,3,4132,4136,4140,I'm Mr Blue look at me! I'm happy to help just don't keep me around too long...
+104,Cat Boy,White,9,4,2,1.4,4,15,4,0,Unique,DeductReload,480,1,2,70,5,0,19,2672,2676,2680,Meow. A boy dressed up like a cat
 143,D.R.A.G.O.N,Animal,11,20,2.7,1.1,8,8,22,100,Special,DamageToSameRoomCharacters,7,1,2,100,6,0,3,4108,4112,4116,A mystical creature with scaly skin.
-144,Sie,White,7,10,2.7,1.5,10,21,4,1,Epic,HealSameRoomCharacters,4,1,2,80,12,0,19,3607,3611,3615,Loved by all the engineers.
-145,Bogan,White,10,13,3,2.2,24,14,14,0,Hero,HealSelfHp,6,1,2,90,6,0,3,4164,4168,4172,Drank beer until DNA mutated. Developed regeneration ability.
-146,Saint Patrick,White,8,9,1.8,1.4,13,25,11,0,Special,HealSameRoomCharacters,7,1,2,100,6,0,3,4300,4304,4308,Once a beer loving saint. Now reborn as a Starship Medic.
-147,King Dong,Animal,14,9,2.9,1.6,10,9,9,20,Legendary,HealSelfHp,10,1,2,110,24,5,3,4286,4290,4294,Favourite Food: Banana Favourite Toy: Barbie
-148,Taura,Animal,12,4,2.9,2.2,22,9,15,1,Hero,DamageToSameRoomCharacters,7,1,2,90,24,9,3,4380,4384,4388,A Mystical Beast Hero that frequently appears in the months of April to May.
-149,D.R.A.K.E,Animal,11,21,2.8,1.2,8,8,23,100,Special,DamageToSameRoomCharacters,7,1,2,100,12,0,3,4392,4396,4400,Dragon's older bro... more handsome smarter but older...
-150,Bad Uncle,Robot,9,3,2.5,2.8,14,20,10,1,Epic,DeductReload,580,1,2,80,6,0,19,4368,4372,4376,First generation synthetic human. Spends as long to style hair as real human.
-151,Maya,Robot,10,12,2.9,2.4,16,21,12,1,Hero,AddReload,50,1,2,90,6,0,3,4356,4360,4364,Machina Project. Second Generation Synthetic Human. Loves and Cries like a real Human.
-152,Huntress,Animal,10,10,2.9,1.8,12,17,13,30,Hero,DamageToSameRoomCharacters,7,1,2,90,9,0,3,4332,4336,4340,Forever hunting for a selfie with Doge. - Blacksteed Tournament 11
-153,Dr Dong,Asian,14,14,2,1.5,14,12,12,1,Special,HealSelfHp,14,1,2,100,6,0,3,4537,4541,4545,Doctor trying to get home. Has a 10% chance to be randomly selected for voluntary re-accomodation in each PVP departure.
+15,Doge,Animal,9,15,3,2.8,15,18,16,1,Special,HealSameRoomCharacters,8,1,2,100,6,5,3,891,895,899,Man's Best Friend
 154,Agay,Asian,7,12,3,3.1,21,18,9,1,Epic,AddReload,45,1,2,80,6,0,19,4554,4558,4562,Carry's around a blowdryer and more handsome than most guys...
-155,Bio Android,Robot,14,0,2.5,0,0,0,0,1,Special,DamageToSameRoomCharacters,5,1,1,0,0,0,0,4568,4572,4576,Developed underwater. A powerful offensive droid.
-156,Ryzen,White,11,8,3,1.5,12,25,12,50,Hero,DamageToCurrentEnemy,10,1,2,90,6,0,3,4581,4585,4589,Half man Half god Half Machine... does not compute...
-157,Mama,Asian,6,10,2.3,1.8,9,9,13,1,Unique,DamageToCurrentEnemy,7,1,2,70,12,0,19,4720,4724,4728,Cooks cleans shops up aliens..
-158,Froggy,Animal,10,10,2.9,1.9,20,15,13,0,Special,DamageToSameRoomCharacters,7,1,2,100,6,5,3,4648,4652,4656,He's mean he's green he's a Frog... and best buds with Squid.
-159,Geeky Vincent,Asian,8,18,2.2,3,18,17,21,1,Epic,HealRoomHp,9,1,2,80,6,1,19,4766,4770,4774,Galaxy tabletop game champion and android fanboy. For some reason everyone blames him for all their problems.
-160,Le Vincent,Asian,8,18,2.5,2.9,19,17,22,1,Epic,HealRoomHp,8,1,2,80,6,1,19,4828,4832,4836,By putting on new galaxy sunnies an android boy is now sexy.
-161,Alpaco,Animal,9,9,3.3,1.5,25,10,10,1,Hero,HealSameRoomCharacters,6,1,2,90,24,5,3,4939,4943,4947,One day a sheep slept with a giraffe... A super cute creature was born.
-162,Draconian Mecha,Animal,11,23,3.3,1.9,16,17,25,50,Special,DamageToSameRoomCharacters,7,1,2,100,6,0,3,4952,4956,4960,The latest from D.R.A.G.O.N Engineering. A augmented dragon soldier with exceptional combat stats.
-163,Tiffany,White,6,10,2.5,2.5,10,19,10,1,Unique,HealRoomHp,4,1,2,70,12,1,19,4966,4970,4974,Always cheerful and first to respond to those in need.
-164,Angry Squid,Animal,14,12,2.4,2,13,14,13,0,Special,DamageToCurrentEnemy,11,1,2,100,8,5,3,5008,5012,5016,Squid's brother had a fight at the local pub. Now attending anger management.
-165,Hydra,Animal,10,15,2.6,1.1,22,8,10,100,Special,Freeze,270,1,2,100,24,0,3,5020,5024,5028,Hail Hydra.
-166,Service Droid I,Robot,2,0,0.5,1,0,0,0,30,Common,HealSameRoomCharacters,1,1,1,0,0,0,16,5329,5333,5337,A humble droid ready to serve its wise master.
-167,Ribi,Black,6,10,2.6,2.1,19,10,10,1,Unique,SetFire,200,1,2,70,12,0,19,5152,5156,5160,Has an umbrella ella ellaaa
-168,Service Droid II,Robot,3,0,0.5,1.2,0,0,0,40,Common,HealSameRoomCharacters,2,2,2,0,0,0,16,5317,5321,5325,A humble droid ready to serve its wise master.
-169,Service Droid III,Robot,4,0,0.5,1.5,0,0,0,50,Common,HealSameRoomCharacters,3,2,2,0,0,0,16,5434,5438,5442,A humble droid ready to serve its wise master.
-170,Service Droid IV,Robot,5,0,0.5,1.8,0,0,0,60,Common,HealSameRoomCharacters,4,2,2,0,0,0,16,5446,5450,5454,A humble droid ready to serve its wise master.
-171,Service Droid V,Robot,6,0,0.5,2,0,0,0,75,Common,HealSameRoomCharacters,5,3,3,0,0,0,16,5422,5426,5430,A humble droid ready to serve its wise master.
-172,Defender Droid I,Robot,8,0,1.5,0.5,0,0,0,25,Common,DamageToCurrentEnemy,3,1,1,0,0,0,16,5353,5357,5361,A heavy defender droid ready to stop intruders.
-173,Defender Droid II,Robot,9,0,1.8,0.5,0,0,0,35,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,5410,5414,5418,A heavy defender droid ready to stop intruders.
-174,Defender Droid III,Robot,10,0,2,0.5,0,0,0,40,Common,DamageToCurrentEnemy,4,2,2,0,0,0,16,5482,5486,5490,A heavy defender droid ready to stop intruders.
-175,Defender Droid IV,Robot,12,0,2.3,0.5,0,0,0,45,Common,DamageToCurrentEnemy,4,2,2,0,0,0,16,5494,5498,5502,A heavy defender droid ready to stop intruders.
-176,Defender Droid V,Robot,14,0,2.5,0.5,0,0,0,50,Common,DamageToCurrentEnemy,5,3,3,0,0,0,16,4568,4572,4576,A heavy defender droid ready to stop intruders.
-177,Boarder Droid I,Robot,6,0,2,0,0,0,0,25,Common,DamageToRoom,3,1,1,0,0,0,16,5341,5345,5349,An aggressive droid looking to cause havoc.
-178,Boarder Droid II,Robot,7,0,2.3,0,0,0,0,35,Common,DamageToRoom,3,2,2,0,0,0,16,5398,5402,5406,An aggressive droid looking to cause havoc.
-179,Boarder Droid III,Robot,8,0,2.5,0,0,0,0,40,Common,DamageToRoom,4,2,2,0,0,0,16,5458,5462,5466,An aggressive droid looking to cause havoc.
-180,Boarder Droid IV,Robot,9,0,3,0,0,0,0,45,Common,DamageToRoom,4,2,2,0,0,0,16,5470,5474,5478,An aggressive droid looking to cause havoc.
-181,Boarder Droid V,Robot,10,0,3.5,0,0,0,0,50,Common,DamageToRoom,5,3,3,0,0,0,16,5231,5235,5239,An aggressive droid looking to cause havoc.
-182,King Salamander,White,7,9,2.3,1.9,16,9,9,3,Unique,DamageToSameRoomCharacters,5,1,2,70,3,0,19,5139,5143,5147,Has a gold car watch castle ship.
-183,Captain Mack Swallow,White,9,18,2.2,1.4,4,6,4,0,Unique,DeductReload,480,1,2,70,5,0,19,5179,5183,5187,A Pirate Captain turned Starship Captain.
-184,Zakian Assassin,Alien,11,8,3.2,1,14,15,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,3,5605,5609,5613,A specialised Zakian Assassin. Only 130 deployed in the galaxy.
-185,Mcdonalds,White,9,3,2.8,2,14,15,20,1,Epic,DamageToCurrentEnemy,11,1,2,80,12,0,19,5620,5624,5628,A plumber turned professional boxer decided to try life onboard a Starship.
-186,Stove Tops,White,9,15,2.8,1.3,4,7,23,3,Epic,AddReload,40,1,2,80,12,0,19,5693,5697,5700,Was CEO of a popular fruit company. 
-187,Ethan,Asian,10,18,2.7,2.7,15,18,24,1,Hero,AddReload,50,1,2,90,3,0,1,5633,5637,5641,Always walking around with an iPad.
-188,Brenda Linuxer,Robot,12,12,3,3.1,21,18,21,1,Hero,DamageToRoom,6,1,2,90,5,0,1,6786,744,748,A crazy robot developer put himself into a linux-base robot body
-189,Huge Hellaloya,White,7,18,2.8,1.2,18,18,18,3,Epic,AddReload,50,1,2,100,10,0,19,6843,6847,6851,Once partied with a thousand cute cadets; now hangs around Starship staff quarters.
-190,Dolores,Robot,13,25,3,2.5,15,25,15,50,Special,Freeze,300,2,3,100,0,0,3,5375,5379,5383,A female tutorial synth. Reminds you of days back at the academy.
-191,Robyna Hoots,White,8,3,2.7,1.8,20,8,8,1,Unique,DeductReload,500,1,2,70,10,0,19,6794,6798,6802,Good with a arrow like her older brother.
-192,Keira,Asian,7,23,2.4,2.4,13,13,13,0,Epic,HealRoomHp,7,1,2,80,10,0,19,6830,6834,6838,Graduated from the Pilot academy with top grades. A quiet girl with talent.
-193,Masky Lia,Robot,7,11,2.7,2.5,10,22,10,30,Epic,DeductReload,500,1,2,80,6,0,19,6818,6822,6826,Worked at the galaxy science labs until an unfortunate accident requiring a permanent operation.
-194,Red Ninja,White,7,15,2.4,1.6,19,13,11,50,Unique,SetFire,210,1,2,70,6,0,19,6857,6861,6865,Red Ninja Yellow Ninja White Ninja Black Ninja... Still Ninja
-195,Admiral Serena,Black,11,18,3.2,2.2,22,16,10,5,Hero,DamageToCurrentEnemy,10,1,2,90,24,0,3,6806,6810,6814,After retiring from athletics life decided to join the academy and beat all the boys in class.
-196,Pinkzilla,Animal,12,9,2.5,1.4,10,9,9,100,Legendary,FireWalk,40,1,2,110,24,0,3,6988,6992,6996,Godzilla's baby sister. Cute and deadly with fire. 
-197,Miss Jane,White,9,12,2.3,2,18,18,18,100,Hero,FireWalk,40,1,2,90,6,0,3,6874,6878,6882,Top of her class during special ops training. Has a mutated gene capable of igniting fire to her surrounds.
-198,Cammy,White,4,3,2,1.7,7,9,4,1,Elite,None,0,1,2,60,3,0,19,6887,6891,6895,Retired from MMA training and joined the Starship Academy.
-199,Mr Horse,Animal,10,13,2.9,1.5,17,18,15,1,Special,SetFire,300,1,3,100,24,5,3,7243,7247,7251,Has a long face. Plays with fire in spare time.
-200,Mini Droid I,Robot,2,0,0.5,0.5,0,0,0,50,Common,DamageToCurrentEnemy,2,2,2,0,0,0,16,7315,7319,7323,A smaller droid that tries to do everything but isn't particularly good at anything.
-201,Mini Droid II,Robot,3,0,0.6,0.6,0,0,0,50,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,7327,7331,7335,A smaller droid that tries to do everything but isn't particularly good at anything.
-203,Santa's Helpstress,White,7,10,2.2,2.7,21,16,4,1,Special,HealSameRoomCharacters,4,2,3,100,12,0,3,7446,7450,7454,Busy busy; a super fast worker. Helps Santa with gift packaging and keeps workshops nice and clean.
-204,Santa's Helper,White,8,10,2.5,2.9,14,13,19,1,Special,AddReload,40,2,3,100,6,0,3,7442,7450,7454,Work work. Helps Santa run errands and wears a nice green hat. Probably being cheated on by girlfriend.
-205,Nolan,Asian,6,12,3,1.5,15,12,3,0,Unique,DamageToRoom,5,1,2,70,3,0,19,7616,7620,7624,A cute crybaby with unusually high attack.. for a baby.
-206,Sagita,Animal,10,4,3.3,2.2,13,22,15,1,Hero,DamageToCurrentEnemy,9,2,3,90,9,9,3,7575,7579,7583,Has 4 legs so runs twice as fast. Frequently appears in the months of November to December.
-207,Tripod,Animal,8,4,3,2.2,12,20,15,1,Epic,DamageToCurrentEnemy,8,2,3,80,9,0,19,7587,7591,7595,Tall Strong and broke.
-208,Mr She,White,8,10,2.5,1.5,10,22,4,1,Epic,AddReload,45,1,2,80,12,0,19,7535,7539,7543,Nobody knows who she is...yet.
-209,Whaler,Animal,13,12,2.6,2.2,13,21,21,0,Special,DamageToSameRoomCharacters,7,1,2,100,8,5,3,7676,7680,7684,Bit of a hipster. Only wears designer stuff.
-210,Mr Old,White,8,10,2.5,1.5,10,7,23,1,Epic,AddReload,45,1,2,80,12,0,19,7482,7486,7490,Nobody really knows who this old guy is...
-211,Mr Alan,White,9,11,2.8,1.3,23,7,12,3,Epic,AddReload,40,1,2,80,12,0,19,7509,7513,7517,Always going places.
-212,Mr Cray,White,9,11,2.9,1.3,11,7,21,3,Epic,DamageToCurrentEnemy,8,1,2,80,12,0,19,7522,7526,7530,A young angry man always playing with a screwdriver.
-213,Leon Mars,White,9,15,2.3,2.8,15,25,24,3,Hero,AddReload,50,1,2,90,12,0,3,7782,7786,7790,Wants to ship his car to Mars.
-214,Mini Droid III,Robot,4,0,0.7,0.7,0,0,0,50,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,7857,7861,7865,A smaller droid that tries to do everything but isn't particularly good at anything.
-215,Aaron,White,8,20,2.8,2.4,21,13,14,1,Epic,HealRoomHp,8,1,2,80,6,1,19,7834,7838,7842,Always holding a cup of coffee.
+95,Zhuge Liang,Asian,8,21,2.8,3.1,24,24,24,10,Epic,HealSameRoomCharacters,3,1,2,80,10,2,19,2219,2223,2227,Likes board games.
+28,Assassin alien,Alien,6,12,2.8,2.5,18,15,15,1,Epic,DamageToCurrentEnemy,6,1,2,80,9,0,19,1367,1371,1375,The best assassin from the well known bloody planet.
 216,KS Gray,Alien,8,14,2.7,2.7,12,14,18,5,Special,DeductReload,600,1,2,100,10,13,3,7796,7800,7804,Loading...
+76,Bling Captain,Asian,6,12,2.8,2.5,18,18,18,3,Special,AddReload,55,1,2,200,62,0,9,1936,1940,1944,Bling Captain
+45,Government Troop,Robot,8,15,3.1,2.5,15,13,13,5,Epic,DamageToRoom,4,1,2,80,12,0,19,1635,1639,1643,Government Conscripted Troops
+207,Tripod,Animal,8,4,3,2.2,12,20,15,1,Epic,DamageToCurrentEnemy,8,2,3,80,9,0,19,7587,7591,7595,Tall Strong and broke.
+327,Wandering Spirit,Animal,8,8,3,2,8,15,6,2,Unique,DamageToCurrentEnemy,6,1,3,70,10,0,3,12274,12278,12282,A ghost of captains past.
+66,Jane,White,3,3,1.7,1.7,7,12,4,1,Elite,None,0,1,2,60,6,0,19,1812,395,399,Does everything to the books
+102,Rocky,Animal,13,0,3,1,1,2,2,100,Hero,DamageToRoom,5,1,2,90,24,0,3,2532,2536,2540,Had a hard life
+99,Mr Egggg,Animal,5,4,2.6,2.8,12,12,2,0,Unique,DeductReload,300,1,2,70,12,0,19,2351,2355,2359,My name is Mr Egggg!
 217,Sparko,White,9,14,2.6,3,15,26,18,1,Special,HealSameRoomCharacters,8,1,2,100,5,0,3,7022,7026,7030,You can tell he is an alien from looking at his ears.
+41,Vivien,Asian,6,10,2.5,2.3,10,10,18,1,Unique,HealRoomHp,4,1,2,70,6,1,19,1509,1513,1517,Part-time SavySoda Emergency Response Personnel. Some wonder if she is actually part-robot too. 
+79,Golden Troop,Robot,8,15,3.1,2.5,15,13,13,5,Epic,HealRoomHp,4,1,2,80,12,0,19,2091,2095,2099,A golden government troop! Like a regular troop only better in every way imaginable.
+54,Collins,White,4,3,1.7,1.7,2,4,4,1,Common,None,0,1,2,50,3,0,19,1732,381,387,Collins Ex-Russian Astronaut.
 218,Visiri Alchemist,Alien,10,12,2.5,2,9,26,8,1,Hero,Freeze,240,1,2,90,24,14,3,7738,7742,7746,Studying the histories and technologies of species long past ever present and yet to come.
-219,Faerie Dragon,Animal,10,12,2.9,2,13,27,13,0,Special,HealSameRoomCharacters,7,1,2,100,24,0,3,7884,7888,7892,A Beautiful Mystical creature with healing powers.
-220,Lionheart,Animal,10,20,3.1,1.4,17,6,13,35,Special,SetFire,330,1,2,100,12,0,3,7918,7930,7934,Born to be a king.
-221,Franky,Animal,10,13,3,1.3,12,6,11,1,Special,SetFire,300,1,3,100,24,0,3,7913,7922,7926,Made a prison break from a bread roll.
-222,Tin Robot,Robot,7,12,2.7,2.8,14,14,14,1,Special,DeductReload,480,1,2,100,10,0,3,7988,7992,7996,R..o..b....o.........to
+300,Infected Drakian,Alien,10,11,3.4,1,16,14,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,7,10859,10863,10867,An infected D.R.A.G.O.N soldier upgraded with Zakian Armor.
+283,Bonnie Blacktooth,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,6,17,9879,9883,9887,A Starship Captain that understands her ship far better than she ever understood the law. She can fix things almost as quickly as she could steal them!
+230,Sphinx,Animal,11,9,2.4,1,9,7,9,100,Special,FireWalk,35,1,2,100,24,3,3,8141,8145,8149,Ancient Meowy statue from a long lost civilization.
+36,Rob,Asian,5,7,1.8,1.8,12,8,8,1,Elite,None,0,1,2,60,6,1,19,1449,1453,1457,Rob :)
+35,Oren Marcus,White,5,7,1.7,1.9,10,8,7,1,Elite,None,0,1,2,60,3,0,19,1435,1439,1443,Orientation of newbie captain love to guide others
+286,Kevin Kruel,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,6,17,9935,9939,9943,Got tricked by a pirate movie when young.
+311,Mad Jackson,Black,9,10,3,1.5,14,12,6,3,Epic,HealSelfHp,8,1,2,80,12,0,19,11179,11183,11187,Ask anyone who knows him he's not really mad. He's furious!
+329,Ichigo,Asian,9,9,3.5,1.5,25,16,9,1,Hero,DamageToCurrentEnemy,10,1,2,90,24,0,3,12237,12241,12245,If he's got a bat stand back! This guy hits like no one else!
+256,Gemini,White,10,12,2.7,1.6,11,24,8,100,Hero,SetFire,280,1,2,90,24,9,3,8457,8461,8465,A mystical crew commanding the Twin Spirits. Walks the path of the galaxy looking for balance.
+280,Virgo,White,7,15,2.8,2.6,17,23,16,1,Hero,HealSameRoomCharacters,8,1,2,90,20,9,19,8529,8533,8537,Quite beautiful but has chronic OCD.
+158,Froggy,Animal,10,10,2.9,1.9,20,15,13,0,Special,DamageToSameRoomCharacters,7,1,2,100,6,5,3,4648,4652,4656,He's mean he's green he's a Frog... and best buds with Squid.
+151,Maya,Robot,10,12,2.9,2.4,16,21,12,1,Hero,AddReload,50,1,2,90,6,0,3,4356,4360,4364,Machina Project. Second Generation Synthetic Human. Loves and Cries like a real Human.
+203,Santa's Helpstress,White,7,10,2.2,2.7,21,16,4,1,Special,HealSameRoomCharacters,4,2,3,100,12,0,3,7446,7450,7454,Busy busy; a super fast worker. Helps Santa with gift packaging and keeps workshops nice and clean.
+193,Masky Lia,Robot,7,11,2.7,2.5,10,22,10,30,Epic,DeductReload,500,1,2,80,6,0,19,6818,6822,6826,Worked at the galaxy science labs until an unfortunate accident requiring a permanent operation.
+171,Service Droid V,Robot,6,0,0.5,2,0,0,0,75,Common,HealSameRoomCharacters,5,3,3,0,0,0,16,5422,5426,5430,A humble droid ready to serve its wise master.
+29,Ponytail Alien,Alien,6,3,2.4,2.8,14,10,10,1,Epic,DeductReload,540,1,2,80,24,0,19,1379,1383,1387,An alien who loves humankind culture. 
 223,P.A.N.D.A,Animal,11,23,3.2,1.7,8,8,25,0,Special,DamageToSameRoomCharacters,7,1,2,100,12,5,3,8046,8050,8054,A Panda Scholar with some Kung Fu skills.
+237,Fed Laura,Asian,6,18,2.1,1.7,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8846,8711,8727,A Starship Captain that never backs down from a fight! She takes to the front lines boarding enemy ships and defending her crew in close quarters combat!
+146,Saint Patrick,White,8,9,1.8,1.4,13,25,11,0,Special,HealSameRoomCharacters,7,1,2,100,6,0,3,4300,4304,4308,Once a beer loving saint. Now reborn as a Starship Medic.
+347,Commodore Firenz,Black,9,18,3,3.4,15,20,20,5,Hero,HealSameRoomCharacters,8,1,3,90,6,7,3,12529,12533,12537,An inspirational Federation leader who quickly gives aid wherever needed to maintain her ship as a strategic asset on the battlefield.
+281,Ophiuchus,Alien,11,23,3.2,1.7,8,8,25,0,Special,DamageToSameRoomCharacters,7,1,2,100,12,9,3,10412,10416,10420,A secret member of an ancient society. Likes playing with snakes.
+108,Foxy Girl,White,6,15,2.4,2.4,14,7,7,0,Epic,HealSelfHp,6,1,2,80,12,0,19,2809,2813,2817,Girl who loves foxes.
+120,Zombie,Animal,10,0,2.8,0.9,0,0,0,0,Unique,DamageToSameRoomCharacters,8,1,2,70,9,0,19,3204,3208,3212,Very DEADicated crew.
+318,Ardent Stardancer,Black,5,3,2.5,3,5,10,4,2,Elite,None,0,1,3,60,12,15,19,11279,11283,11287,The grace and beauty of this lithe Ardent's movements belie his deadliness in combat.
+301,Tom no.3,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,7,17,10800,10804,10808,Named to differentiate him from the other two Toms neither of whom you've met.
+297,Whats-his-name,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,7,17,10776,10780,10784,You never got this friendly young recruit's name and at this point it's too late to ask.
+159,Geeky Vincent,Asian,8,18,2.2,3,18,17,21,1,Epic,HealRoomHp,9,1,2,80,6,1,19,4766,4770,4774,Galaxy tabletop game champion and android fanboy. For some reason everyone blames him for all their problems.
+9,Big Football Fan,White,4,3,2.3,1.8,2,7,8,1,Elite,None,0,1,2,60,6,0,19,662,666,670,A football fan who is seeking the legendary football player
+94,Zhao Yun,Asian,9,3,2.8,2.6,21,20,9,3,Epic,DamageToSameRoomCharacters,4,1,2,80,5,2,19,2207,2211,2215,Dragon warrior. Except he's just human.
+50,Grandpa,White,8,15,2.9,3,15,15,18,6,Special,HealSelfHp,6,1,2,100,3,0,3,1684,1688,1692, An elderly at home is much alike having an invaluable treasure in hand.
+136,Giant Chicken,Animal,9,15,2.9,1.8,25,6,14,1,Special,HealSameRoomCharacters,6,1,2,100,24,5,3,3877,3881,3885,Celebrate Year of the Chicken!
+103,Golden Boy,Robot,6,12,2.2,2.5,14,14,18,30,Epic,DeductReload,420,1,2,80,10,0,19,2547,2551,2555,People love golden stuff such as golden cups. So yeah I am a golden boy :)
+173,Defender Droid II,Robot,9,0,1.8,0.5,0,0,0,35,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,5410,5414,5418,A heavy defender droid ready to stop intruders.
+322,Capricorn,Animal,8,13,2.6,2.2,14,23,18,0,Hero,AddReload,45,1,2,90,10,9,3,8445,8449,8453,Possibly the horniest guy in the galaxy. Also refuses to run at fast speeds to avoid creasing his fine suit.
+150,Bad Uncle,Robot,9,3,2.5,2.8,14,20,10,1,Epic,DeductReload,580,1,2,80,6,0,19,4368,4372,4376,First generation synthetic human. Spends as long to style hair as real human.
+245,Pirate Michelle,Black,6,18,1.9,1.7,4,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9138,8663,8667,This is one Starship Captain with attitude! She's not afraid to let her weapons do the talking.
+142,Mr Blue,White,2,24,3.3,3.3,24,24,24,1,Special,HealRoomHp,9,1,2,100,5,0,3,4132,4136,4140,I'm Mr Blue look at me! I'm happy to help just don't keep me around too long...
+58,Monkey King,Animal,9,15,2.4,2.9,18,18,0,1,Epic,DamageToRoom,4,1,2,80,5,0,19,1748,744,315,The great monkey first monkey in this space
+308,Vit the Idiot,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,8,17,10888,10892,10896,The Qtarian is not the sharpest tool in the shed but he makes up for it in sheer bloodyminded tenacity.
+30,Area51 Alien,Alien,8,14,2.7,2.7,12,14,18,5,Special,DeductReload,600,1,2,100,10,13,3,1391,931,935,Loading...
+20,Monk,White,4,1,1.4,2.1,3,15,3,1,Elite,None,0,1,2,60,9,0,19,965,969,973,A monk who doesn't want to limit his own living area trying find the only truth.
+199,Mr Horse,Animal,10,13,2.9,1.5,17,18,15,1,Special,SetFire,300,1,3,100,24,5,3,7243,7247,7251,Has a long face. Plays with fire in spare time.
+310,Jacob-57a,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,8,17,10916,10892,10896,This gregarious Qtarian became an astronaut not from a love of adventure but from a deep hatred of dirt.
+34,Mikael Monnier,White,4,7,1.8,1.8,12,6,7,1,Elite,None,0,1,2,60,3,0,19,1423,1427,1431,Monday lover working hard never have blue monday
+47,Ninja,Asian,8,15,2.8,2.9,20,14,12,5,Epic,DamageToCurrentEnemy,4,1,2,80,6,0,19,1647,1651,1655,Had an assasination mission but his target sent him to space by accident. 
+258,First Mate,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,6,19,8623,8627,8631,Once first mate to Captain Swallow this Pirate is now your loyal friend.
 224,Alien McAlienface,Alien,7,10,2.7,0.9,19,8,15,1,Unique,AddReload,33,2,3,70,24,0,19,7642,7646,7649,Ugly as a bug and not very smart. But still handles weapons well.
+133,Orc,Animal,8,12,2.7,2.6,20,8,14,30,Epic,DamageToRoom,5,1,2,50,3,0,19,3717,3721,3725,Feeling orcish.
+196,Pinkzilla,Animal,12,9,2.5,1.4,10,9,9,100,Legendary,FireWalk,40,1,2,110,24,0,3,6988,6992,6996,Godzilla's baby sister. Cute and deadly with fire. 
+242,Fed Tony,Black,6,20,1.9,1.7,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8850,8723,8727,This hot-shot Starship Captain is on of the Federation's best up-and-coming pilots. Daring and brave in the pilot's seat!
+330,Aries,White,10,23,2.8,2,10,17,12,0,Hero,HealSelfHp,10,1,2,90,10,9,3,8433,8437,8441,First of the Zodiacs! Impetuosity is her trademark.
+181,Boarder Droid V,Robot,10,0,3.5,0,0,0,0,50,Common,DamageToRoom,5,3,3,0,0,0,16,5231,5235,5239,An aggressive droid looking to cause havoc.
+116,Paralympic God,White,9,21,2.2,2,21,21,21,6,Legendary,AddReload,55,1,2,110,24,0,3,3097,3101,3105,Spent decades to work out the rules of the universe... then realizes it was wrong.
+282,Cheng the Red,Asian,6,18,1.9,1.7,3,6,4,1,Common,None,0,1,2,50,12,6,17,9921,9925,9929,Famous on her home planet for mass media piracy. Now taking the swashbucklers life to the stars.
+131,Old Driver,Asian,10,25,2.6,2.9,6,6,25,1,Special,HealRoomHp,8,1,2,100,5,0,3,3571,3575,3579,Knows where to go for a good time.
+130,Dark Matter Hero,White,10,8,3.1,1.4,14,27,10,30,Special,DeductReload,600,1,3,100,5,0,3,3507,3511,3515,An epic hero made from dark matter!
+339,Zongzi Droid,Robot,7,0,1,1.2,0,0,0,30,Common,HealSelfHp,3,2,2,0,0,0,0,12605,12609,12613,A mad scientist's obsession with rice dumplings led him to invent a strange contraption that is part droid and part rice dumpling.
+284,Mabel Mayhem,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,6,17,9948,9952,9956,An intelligent pirate girl. Willing to serve the captain for life!
+83,David,White,5,10,2.1,1.8,9,9,9,3,Unique,HealSelfHp,4,1,2,70,3,4,3,2018,2022,2026,Lives in a town house.
+17,Robot,Robot,7,12,2.7,2.8,14,14,14,1,Special,DeductReload,480,1,2,100,10,0,3,915,919,923,R..o..b....o.........to
+88,Liu Bei,Asian,8,15,2.5,3,16,18,18,4,Epic,AddReload,35,1,2,80,3,2,19,2133,2137,373,Likes to drink tea with his army friends.
+250,Qtarian Laura,Asian,6,20,1.9,1.7,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8802,8573,8577,A Starship Captain capable of flying even the most rickety scrap heap... As long as there's an engine attached!
+210,Mr Old,White,8,10,2.5,1.5,10,7,23,1,Epic,AddReload,45,1,2,80,12,0,19,7482,7486,7490,Nobody really knows who this old guy is...
+1,Laura,Unknown,6,18,1.9,1.7,4,7,3,1,Special,DeductReload,460,1,2,200,62,0,9,366,370,373,Space Academy graduate and much loved Capt'n of the Starship.
+172,Defender Droid I,Robot,8,0,1.5,0.5,0,0,0,25,Common,DamageToCurrentEnemy,3,1,1,0,0,0,16,5353,5357,5361,A heavy defender droid ready to stop intruders.
 225,Miss McAlienface,Alien,7,10,2.5,1.1,19,8,15,1,Unique,AddReload,33,2,3,70,24,0,19,7653,7657,7662,Ugly as a bug and not very smart. But still handles weapons well.
-226,Daft Kittus,Animal,9,7,3.1,2,9,9,9,1,Special,DamageToCurrentEnemy,17,1,2,100,24,3,3,8156,8160,8164,Meowy has turned to the Dark Side and gained 2 more Lives. He also finds your lack of catnip disturbing.
+78,Emily,Asian,4,12,2.4,2.1,15,19,19,1,Unique,DamageToRoom,4,1,2,70,6,1,19,1967,1971,1975,Cool Kid
+270,Lilith,Black,12,18,3.2,2,26,14,12,30,Legendary,DamageToCurrentEnemy,12,1,2,110,24,15,3,9502,9506,9510,A legendary general of the Ardent Cabal. Lilith was tasked with leading the Ardent's covert ops fleet to explore an uncharted galaxy.
+287,Awful Alex,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,6,17,9908,9912,9916,His act as a pirate have thus far been... pretty awful.
+70,Linda,White,3,3,1.7,1.7,7,8,4,1,Elite,None,0,1,2,60,3,0,19,1854,395,399,After becoming famous from a Youtube home video she needed to escape to space.
+145,Bogan,White,10,13,3,2.2,24,14,14,0,Hero,HealSelfHp,6,1,2,90,6,0,3,4164,4168,4172,Drank beer until DNA mutated. Developed regeneration ability.
+260,Libra,White,9,10,3,2.3,9,23,8,3,Hero,Freeze,260,1,2,90,5,9,3,8481,8485,8489,From Venus AKA Lady Justice.
+209,Whaler,Animal,13,12,2.6,2.2,13,21,21,0,Special,DamageToSameRoomCharacters,7,1,2,100,8,5,3,7676,7680,7684,Bit of a hipster. Only wears designer stuff.
+275,Schrodinger,Animal,6,7,3.3,2.2,10,16,10,1,Unique,HealRoomHp,17,1,1,70,24,3,19,9418,9422,9426,A very uncertain kitty!
+16,Serge Eric,White,5,3,2.1,1.7,12,7,10,1,Unique,DeductReload,360,1,2,70,3,0,19,903,907,911,A boy who willing to be a general in the space
+363,Ma Chao,Asian,11,24,2.5,2.4,19,19,14,6,Hero,DamageToCurrentEnemy,9,1,2,90,6,2,3,13381,13385,13389, Hero or traitor? You be the judge. A brave leader of the Three Kingdoms.
+229,Maizi,Asian,11,12,3,1.5,12,13,16,1,Special,DeductReload,620,1,2,100,24,0,5,8260,8264,8268,3 Time Tournament Winner as of April 2018!
+182,King Salamander,White,7,9,2.3,1.9,16,9,9,3,Unique,DamageToSameRoomCharacters,5,1,2,70,3,0,19,5139,5143,5147,Has a gold car watch castle ship.
+118,Meowy Cat,Animal,7,7,3.3,2,10,10,10,1,Special,DamageToCurrentEnemy,17,1,2,100,12,3,3,3135,3139,3143,A stray kitten turned space assassin. Lost 2 lives already.
+106,Abu,Black,6,0,2.1,2.1,9,9,9,0,Elite,None,0,1,2,60,6,0,19,2773,2777,2781,Has a snake as a pet
+304,Drogon,Alien,11,11,3.1,1.7,13,14,21,50,Special,Freeze,300,1,2,100,12,0,3,11105,11109,11113,ZAKI? Elder. ????. 8 time tournament title holder in 2018 Season - Nov 2018.
+178,Boarder Droid II,Robot,7,0,2.3,0,0,0,0,35,Common,DamageToRoom,3,2,2,0,0,0,16,5398,5402,5406,An aggressive droid looking to cause havoc.
+249,Qtarian Bobby,Asian,6,18,1.9,1.9,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8798,8561,8565,An expert engineer. This Starship Captain has been turning scrap to starships since he was first able to hold a spanner.
+101,Simon,White,6,4,2.6,2.4,12,12,12,0,Unique,HealSelfHp,6,1,2,70,6,0,19,2520,2524,2528,Native American Warrior
+307,Sally Smelter,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,8,17,10932,10936,10940,Born into the role of a forge worker this cool-headed Qtarian keeps samples of interesting alloys as a hobby.
+312,Gray Conductor,Alien,4,5,1.8,2,8,14,6,1,Elite,None,0,1,2,60,5,13,19,11191,11195,11199,The role of this Grey is to unify experiments set their living tempo execute clear genetic patterns and critically shape the new life-form as it grows.
 227,King Ellie,Animal,14,0,3,1,1,2,2,100,Special,DamageToRoom,6,1,2,100,24,5,3,8129,8133,8137,Not Fat Just big boned.
 228,Barot,White,9,9,2.8,1.3,4,7,9,3,Epic,SetFire,250,1,2,80,12,0,19,8093,8097,8101,Learning the culture of the Galaxy.
-229,Maizi,Asian,11,12,3,1.5,12,13,16,1,Special,DeductReload,620,1,2,100,24,0,5,8260,8264,8268,3 Time Tournament Winner as of April 2018!
-230,Sphinx,Animal,11,9,2.4,1,9,7,9,100,Special,FireWalk,35,1,2,100,24,3,3,8141,8145,8149,Ancient Meowy statue from a long lost civilization.
-231,Messiah,White,5,7,2.2,1.5,9,15,9,1,Unique,HealSameRoomCharacters,5,1,2,70,3,0,19,8061,8065,8069,Goes on fishing trips with Jesus.
-232,Private Brian,White,5,3,2.4,1.8,8,2,8,1,Elite,None,0,1,2,60,6,0,19,8396,8400,8404,Many have died trying to save him.
-233,Cathulhu,Animal,9,7,2.8,1.5,8,10,10,1,Special,DamageToSameRoomCharacters,7,1,2,100,12,3,3,8105,8109,8113,A lonely kitten was attacked by an Octopus.
-234,Polar Bear,Animal,10,23,2.9,1.9,23,8,11,0,Special,Freeze,280,1,2,100,12,5,3,8034,8038,8042,Had planned on becoming a professional boxer. But couldn't find fitting gloves.
-235,Drakian,Alien,11,9,3.2,1.1,14,16,14,0,Special,HealSelfHp,8,1,2,100,12,0,7,8544,8548,8552,A D.R.A.G.O.N soldier upgraded with Zakian Armor.
-236,Drakian Clone,Alien,11,9,3.2,1.1,14,16,14,0,Special,HealSelfHp,8,1,2,100,12,0,3,8544,8548,8552,A D.R.A.G.O.N soldier upgraded with Zakian Armor.
-237,Fed Laura,Asian,6,18,2.1,1.7,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8846,8711,8727,A Starship Captain that never backs down from a fight! She takes to the front lines boarding enemy ships and defending her crew in close quarters combat!
-238,Fed Lisa,White,6,18,1.9,1.7,3,5,5,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8862,8759,8727,This Starship Captain moves with grace and so does her ship. As long as she is in the engine room her ship dances out of reach of many enemy missiles.
-239,Fed Michelle,Black,6,18,1.9,1.9,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8854,8735,8727,Hardy Starship Captain and wonder with a wrench. She will keep her ship fighting through the toughest of battles.
-240,Fed Bobby,Asian,6,18,1.9,1.7,4,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8842,8699,8727,Passed the gunnery course at the academy with unprecedented scores! This Starship Captain prefers commanding from the weapons deck to standing on the bridge.
-241,Fed Peter,White,6,18,1.9,1.7,3,6,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8858,8747,8727,This Starship Captain excels in the field of science. He is adept at using his ship's tech systems to gain an advantage in battle.
-242,Fed Tony,Black,6,20,1.9,1.7,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8850,8723,8727,This hot-shot Starship Captain is on of the Federation's best up-and-coming pilots. Daring and brave in the pilot's seat!
-243,Pirate Loretta,Asian,6,18,1.9,1.7,3,6,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9167,8639,8643,You must understand laws in order to break them. Once a scientist now a pirate this Starship Captain has studied the laws of the universe to exploit them to her will.
-244,Pirate Lia,White,6,18,1.9,1.9,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9199,8687,8691,A Starship Captain that understands her ship far better than she ever understood the law. She can fix things almost as quickly as she could steal them!
-245,Pirate Michelle,Black,6,18,1.9,1.7,4,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9138,8663,8667,This is one Starship Captain with attitude! She's not afraid to let her weapons do the talking.
-246,Pirate Alex,Asian,6,18,1.9,1.7,3,5,6,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,8881,8627,8631,This Starship Captain's mechanical skill has gotten him out of some tricky situations. He always tunes his starship's engine perfectly for dodging trouble!
-247,Pirate Edward,White,6,20,1.9,1.7,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9195,8675,8679,An attractive aerial ace! This stylish Pirate Captain can make any ship dance through the stars like a winged ballerina!
-248,Pirate Tony,Black,6,18,2.1,1.7,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9191,8651,8655,As a seasoned Swashbuckler this Starship Captain is not afraid to go toe-to-toe with any foe!
-249,Qtarian Bobby,Asian,6,18,1.9,1.9,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8798,8561,8565,An expert engineer. This Starship Captain has been turning scrap to starships since he was first able to hold a spanner.
-250,Qtarian Laura,Asian,6,20,1.9,1.7,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8802,8573,8577,A Starship Captain capable of flying even the most rickety scrap heap... As long as there's an engine attached!
-251,Qtarian Tony,Black,6,18,1.9,1.7,3,5,6,1,Special,AddReload,35,1,2,200,62,8,9,8806,8585,8589,Some say that this Starship Captain can make an engine from nothing but a single piece of scrap and two bottles of gas. His Starship can dodge like no other!
-252,Qtarian Michelle,Black,6,18,1.9,1.7,3,6,4,1,Special,AddReload,35,1,2,200,62,8,9,8810,8597,8601,The Science of Scrap is no mystery to this Starship Captain. She can have a ruined starship's electronic systems up and running before you can say That shouldn't even be possible!
-253,Qtarian Lisa,White,6,18,2.1,1.7,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8818,8609,8613,Expert salvager and natural-born fighter. This is one Starship Captain who can hold her own in a fight! To her any old scrap from a chain to a toaster makes the perfect improvised weapon!
-254,Qtarian Edward,White,6,18,1.9,1.7,4,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8814,8771,8775,A starship captain that can craft projectile weapons from just about anything. His mechanic's touch is enough to make the rustiest gun barrel rapid-fire!
-255,Cancer,White,10,18,3,2,3,7,23,1,Hero,DamageToSameRoomCharacters,6,1,2,90,10,9,3,8409,8413,8417,Loves crabby paddies. 
-256,Gemini,White,10,12,2.7,1.6,11,24,8,100,Hero,SetFire,280,1,2,90,24,9,3,8457,8461,8465,A mystical crew commanding the Twin Spirits. Walks the path of the galaxy looking for balance.
-257,Fed Medic,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,7,19,8695,8699,8703,A medic and lone Federation survivor from the Pirate attack on the Discipline Space Station.
-258,First Mate,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,6,19,8623,8627,8631,Once first mate to Captain Swallow this Pirate is now your loyal friend.
-259,Qtarian Healer,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,8,19,8557,8561,8565,This Qtarian healer was once held captive on a Pirate vessel.
-260,Libra,White,9,10,3,2.3,9,23,8,3,Hero,Freeze,260,1,2,90,5,9,3,8481,8485,8489,From Venus AKA Lady Justice.
-261,Henry,White,9,22,2.9,1.5,4,7,18,3,Epic,DamageToCurrentEnemy,8,1,2,80,12,0,19,9044,9048,9052,Goes jogging in the morning.
-262,Chihuahua,Animal,9,15,2.8,1.8,18,10,23,1,Special,DamageToRoom,5,1,2,100,24,5,3,9056,9060,9064,Pastime: hanging out with best buddies at the Starbar!
-265,Nova,White,10,15,3.1,2.4,18,13,24,20,Special,DamageToCurrentEnemy,8,1,2,100,12,0,3,9277,9281,9283,A brave star marine forever remembered in the galaxy.
-266,Mousey,Animal,8,15,2.7,1.2,20,6,15,1,Special,DamageToRoom,5,2,3,100,6,1,3,9207,9211,9215,Pastime: eating leftover food from the kitchenette. Fast as a kitten. (actually faster)
-267,Leo,Animal,8,13,3,1.3,13,6,22,50,Hero,DamageToRoom,5,1,2,90,6,9,3,8469,8473,8477,50% Lion 50% Human 0% Fat.
-268,Buns,Animal,7,4,2.7,2,13,13,2,0,Special,DeductReload,390,1,2,100,10,5,3,9397,9401,9405,Cute on the outside meaty on the inside. Has several hundred siblings.
-269,Christian,White,8,18,2.9,2.2,15,13,14,1,Unique,HealRoomHp,7,1,2,70,6,1,19,9515,9519,9523,Pro-gamer and gourmet food extraordinaire. Also part-time SavySoda Emergency Response Personnel. 
-270,Lilith,Black,12,18,3.2,2,26,14,12,30,Legendary,DamageToCurrentEnemy,12,1,2,110,24,15,3,9502,9506,9510,A legendary general of the Ardent Cabal. Lilith was tasked with leading the Ardent's covert ops fleet to explore an uncharted galaxy.
-271,Abbie,Asian,9,18,2.2,2.9,15,22,12,1,Epic,HealSelfHp,8,1,2,80,3,1,19,9649,9653,9657,Resides in the mountains designing secret weapons for the federation.
-272,Mistycball,Alien,10,10,3.2,2,10,27,13,0,Epic,Freeze,280,1,2,100,24,0,19,9445,9449,9453,A mysterious traveller with technology so advanced it is indistinguishable from magic.
-273,Ardent Templar,Black,8,20,4.8,2,15,10,10,5,Epic,HealSelfHp,8,1,2,80,24,15,19,9490,9494,9498,A well-trained combatant from the Ardent Cabal. Skilled in both space warfare and hand-to-hand fighting.
-275,Schrodinger,Animal,6,7,3.3,2.2,10,16,10,1,Unique,HealRoomHp,17,1,1,70,24,3,19,9418,9422,9426,A very uncertain kitty!
-276,TJ,Asian,7,15,2.6,2.5,20,18,18,1,Epic,DeductReload,550,1,2,80,3,1,19,9750,9754,9758,Will the real TJ please stand up.
-277,Angel,White,9,13,2.5,2.5,17,18,18,1,Hero,HealSameRoomCharacters,9,1,2,90,9,0,19,9778,9782,9786,From the beautiful Rigel system. Only eats organic food.
-278,Bad Vlad,White,3,2,5,2,20,2,2,0,Epic,DamageToCurrentEnemy,12,1,2,80,24,0,19,10262,10266,10270,He's so bad his opponents take extra damage from his attacks.
-279,Ennui,White,8,15,2.2,2.4,17,20,18,1,Epic,HealSameRoomCharacters,6,1,2,80,12,1,19,10393,10397,10401,Never seen without his magic pencil; completely useless in the digital age.
-280,Virgo,White,7,15,2.8,2.6,17,23,16,1,Hero,HealSameRoomCharacters,8,1,2,90,20,9,19,8529,8533,8537,Quite beautiful but has chronic OCD.
-281,Ophiuchus,Alien,11,23,3.2,1.7,8,8,25,0,Special,DamageToSameRoomCharacters,7,1,2,100,12,9,3,10412,10416,10420,A secret member of an ancient society. Likes playing with snakes.
-282,Cheng the Red,Asian,6,18,1.9,1.7,3,6,4,1,Common,None,0,1,2,50,12,6,17,9921,9925,9929,Famous on her home planet for mass media piracy. Now taking the swashbucklers life to the stars.
-283,Bonnie Blacktooth,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,6,17,9879,9883,9887,A Starship Captain that understands her ship far better than she ever understood the law. She can fix things almost as quickly as she could steal them!
-284,Mabel Mayhem,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,6,17,9948,9952,9956,An intelligent pirate girl. Willing to serve the captain for life!
-285,Burt the Terrible,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,6,17,9892,9896,9900,Its a beautiful day and I am so beautiful also!
-286,Kevin Kruel,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,6,17,9935,9939,9943,Got tricked by a pirate movie when young.
-287,Awful Alex,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,6,17,9908,9912,9916,His act as a pirate have thus far been... pretty awful.
-288,Dracorpse,Animal,14,0,3,0,0,0,0,1,Legendary,DamageToSameRoomCharacters,7,1,1,110,24,6,3,9364,9368,9372,Don't let the Dracorpse's injuries fool you into thinking you have a chance. Just run.
-289,Infected Victoria,Asian,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10692,10696,10700,A secret Lingerie Officer in the Federation Navy. 2 years your senior. Now afflicted by some strange crystal growths.
-290,Infected Trey,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10666,10670,10674,A hostage negotiator working for the Federation Navy. That is until he was afflicted by a strange crystal growth.
-291,Female Citizen,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10679,10683,10687,From the Federation capital Central. She enjoys smooth cappuccinos.
-292,Male Civilian,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10653,10657,10661,A citizen of the federation. From the capital Central. Enjoys Avocado with brunch.
-293,Scorpio,Animal,9,13,2.8,2,16,15,15,0,Hero,DamageToCurrentEnemy,8,1,2,90,6,9,3,8505,8509,8513,Has a tail and competes regularly in the iron man competition.
-294,Deadeye Diana,Asian,6,18,1.9,1.7,3,6,4,1,Common,None,0,1,2,50,12,7,17,10764,10768,10772,In truth she's not that great of a shot but she's so nice that everyone humours her.
-295,Cross-eyed Mary,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,7,17,10788,10792,10796,Cute and capable even if you can't tell where she's looking.
-296,'Saucy' Maguire,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,7,17,10812,10816,10820,This intelligent young woman writes erotic novels in her leisure time. Very popular with the other recruits.
-297,Whats-his-name,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,7,17,10776,10780,10784,You never got this friendly young recruit's name and at this point it's too late to ask.
-299,Handsome Michael,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,7,17,10746,10750,10754,The looker of his graduate class unfortunately prone to busting out his guitar at parties.
-300,Infected Drakian,Alien,10,11,3.4,1,16,14,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,7,10859,10863,10867,An infected D.R.A.G.O.N soldier upgraded with Zakian Armor.
-301,Tom no.3,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,7,17,10800,10804,10808,Named to differentiate him from the other two Toms neither of whom you've met.
-302,Infected Drakian Clone,Alien,10,11,3.4,1,16,14,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,3,10859,10863,10867,An infected D.R.A.G.O.N soldier upgraded with Zakian Armor.
-303,Alley Cat Zombie,Animal,9,7,3.3,1.1,10,10,10,1,Special,DamageToCurrentEnemy,17,1,2,100,12,3,3,10873,10877,10881,A stray cat from the Alley that has used up all its lives and now returns one last time...as a zombie.
-304,Drogon,Alien,11,11,3.1,1.7,13,14,21,50,Special,Freeze,300,1,2,100,12,0,3,11105,11109,11113,ZAKI? Elder. ????. 8 time tournament title holder in 2018 Season - Nov 2018.
-305,Fixer Silvertongue,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,8,17,10900,10904,10908,Contrary to popular rumour this Qtarian does not have an actual robot tongue; she's just very polite.
-306,Katie-8 'Hammerhead',Asian,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,8,17,10920,10924,10928,This eager recruit is famous for fixing a gun array purely by headbutting it. Some say it left her a little odd though.
-307,Sally Smelter,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,8,17,10932,10936,10940,Born into the role of a forge worker this cool-headed Qtarian keeps samples of interesting alloys as a hobby.
-308,Vit the Idiot,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,8,17,10888,10892,10896,The Qtarian is not the sharpest tool in the shed but he makes up for it in sheer bloodyminded tenacity.
-309,Serial25 - Bookworm,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,8,17,10912,10892,10896,This Qtarian loves human fantasy novels; apparently they burn better than any other kind of book.
-310,Jacob-57a,Black,6,18,2.1,1.7,3,5,4,1,Common,None,0,1,2,50,12,8,17,10916,10892,10896,This gregarious Qtarian became an astronaut not from a love of adventure but from a deep hatred of dirt.
-311,Mad Jackson,Black,9,10,3,1.5,14,12,6,3,Epic,HealSelfHp,8,1,2,80,12,0,19,11179,11183,11187,Ask anyone who knows him he's not really mad. He's furious!
-312,Gray Conductor,Alien,4,5,1.8,2,8,14,6,1,Elite,None,0,1,2,60,5,13,19,11191,11195,11199,The role of this Grey is to unify experiments set their living tempo execute clear genetic patterns and critically shape the new life-form as it grows.
-313,Snow Joe,Robot,8,4,2.2,3,8,15,6,0,Epic,Freeze,300,1,2,70,5,0,19,11158,11162,11166,Regards others with an icy stare before giving them the cold shoulder. Loves singing 'Do you want to build a snowman' during a fight.
-314,Leela,Alien,4,16,1.8,1.8,4,7,4,1,Common,None,0,1,2,50,12,13,17,11230,11234,11239,Only has 2D eyesight. Job: Gray Curator Pastime: abducting animals for experimentation.
-315,Gray Virtuoso,Alien,6,10,2.5,3,10,19,8,1,Unique,HealSameRoomCharacters,5,1,2,70,24,13,19,11203,11207,11211,These Gray possess outstanding ability in creating living artwork from their experiments.
-316,Dr Mew,Animal,6,10,2.8,2,10,18,10,3,Unique,HealSameRoomCharacters,3,1,2,70,5,3,19,11244,11248,11252,Dogs couldn't operate an MRI machine... but CATscan!
-318,Ardent Stardancer,Black,5,3,2.5,3,5,10,4,2,Elite,None,0,1,3,60,12,15,19,11279,11283,11287,The grace and beauty of this lithe Ardent's movements belie his deadliness in combat.
-319,Ardent Starhuntress,Black,8,8,3,2,8,15,6,2,Unique,DamageToCurrentEnemy,6,1,3,70,24,15,19,11256,11260,11264,This laconic heroine wields the traditional weapon of her people with enough skill to make it the equal of any modern blaster.
-320,Miss Santa,White,7,23,2.8,2.4,19,13,16,0,Special,DamageToCurrentEnemy,8,1,2,100,10,0,3,11339,11343,11347,Has taken all of Santa's gifts to give to stray dogs in Proxima Centauri.
-321,Server Eric,White,8,20,2.3,2.8,12,13,26,1,Epic,AddReload,40,1,2,80,6,1,19,11324,11328,11332,The real Eric is standing up - next to the server adding stuff.
-322,Capricorn,Animal,8,13,2.6,2.2,14,23,18,0,Hero,AddReload,45,1,2,90,10,9,3,8445,8449,8453,Possibly the horniest guy in the galaxy. Also refuses to run at fast speeds to avoid creasing his fine suit.
-323,Harmony Dragon,Animal,10,12,2.9,2,13,27,13,0,Special,HealSameRoomCharacters,7,1,2,100,24,0,3,11511,11515,11519,A Beautiful Mystical creature with healing powers.
+114,SCV,White,12,8,3,2,21,24,21,6,Legendary,DamageToCurrentEnemy,9,1,2,110,24,0,3,2979,2983,2987,I am a machine but I know what love is! - thunder_kiss_65 (July 2016 Winner)
 324,Aquarius,White,9,23,2.4,2.4,14,12,13,50,Hero,HealSameRoomCharacters,7,1,2,90,10,9,3,8421,8425,8429,Washes hands 50 times a day.
-325,Draki Soldier,Alien,11,9,3.2,1.2,17,13,13,0,Special,HealRoomHp,10,1,2,100,12,0,7,11995,11999,12003,ZAKI? Soldier. 2019 January Tournament Crew.
-326,Pisces,Black,9,11,2.8,2.4,13,22,12,0,Hero,Freeze,250,1,2,90,6,9,3,8493,8497,8501,Prefers seafood.
-327,Wandering Spirit,Animal,8,8,3,2,8,15,6,2,Unique,DamageToCurrentEnemy,6,1,3,70,10,0,3,12274,12278,12282,A ghost of captains past.
-328,Ancestral Spirit,Animal,12,4,2.9,2.2,22,9,15,1,Hero,DamageToSameRoomCharacters,7,1,2,90,24,0,3,12259,12263,12267,A ghost of captains present. How does that work?
-329,Ichigo,Asian,9,9,3.5,1.5,25,16,9,1,Hero,DamageToCurrentEnemy,10,1,2,90,24,0,3,12237,12241,12245,If he's got a bat stand back! This guy hits like no one else!
-330,Aries,White,10,23,2.8,2,10,17,12,0,Hero,HealSelfHp,10,1,2,90,10,9,3,8433,8437,8441,First of the Zodiacs! Impetuosity is her trademark.
-331,Mangrove,Alien,9,6,2.6,1.8,8,9,8,0,Unique,DamageToSameRoomCharacters,8,1,2,70,16,0,3,12297,12301,12305,The salad that bites back!
-332,Cypress,Alien,9,8,2.6,2,8,11,8,0,Unique,DamageToSameRoomCharacters,8,1,2,70,1,0,3,12309,12313,12317,Loves the cold and damp hates summer and French cuisine.
-333,Papyrus,Alien,9,6,3,2,10,9,8,0,Unique,DamageToSameRoomCharacters,7,1,2,70,8,0,3,12321,12325,12329,A surprisingly capable mezzo soprano.
-334,Timber,Animal,9,9,3.3,1.5,25,10,10,1,Hero,DamageToCurrentEnemy,10,1,2,90,24,5,3,12356,12360,12364,For a professional golfer this tiger spends a lot of time in the woods.
-335,Itsura,White,5,7,1.8,1.8,11,8,8,1,Common,None,0,1,2,50,6,1,19,12410,12414,12418,Community Manager for Russia and Beyond!
+100,Giant Slime,Animal,10,0,2.8,1.2,12,12,2,0,Epic,DamageToSameRoomCharacters,4,1,2,80,24,0,19,2508,2512,2516,My friends told me that I look like a big and tasty jelly!
 336,Infested Qtarian,White,8,0,2.6,0.6,7.2,0,8.5,0,Elite,DamageToSameRoomCharacters,7,1,2,50,24,0,1,12423,12427,12431,The empty shell of a once-proud Qtarian. Fights with unfeeling brutality.
-337,Bliss,White,8,15,2.6,2.9,15,12,22,50,Epic,HealSameRoomCharacters,6,1,2,80,12,1,19,12436,12440,12444,Master media manipulator. Never without a fire extinguisher for the multiple social media accounts.
-338,Zongzi-Man,Alien,10,10,2.5,2.5,15,21,20,20,Hero,DamageToSameRoomCharacters,7,1,2,90,24,0,3,12618,12622,12627,Alien by day Rice Dumpling by night! It's Zongzi-Man!
-339,Zongzi Droid,Robot,7,0,1,1.2,0,0,0,30,Common,HealSelfHp,3,2,2,0,0,0,0,12605,12609,12613,A mad scientist's obsession with rice dumplings led him to invent a strange contraption that is part droid and part rice dumpling.
-340,Xeon,Asian,12,13,3,2.5,17,21,12,50,Special,DamageToSameRoomCharacters,7,1,2,100,24,15,1,12734,12738,12742,An errant Ardent warrior that decided to embark on a quest to find secret technology that could save his home galaxy.
-342,Western Crow,Alien,12,7,2.8,2.5,13,22,22,1,Hero,DeductReload,360,1,2,90,6,0,3,12754,12758,12762,A genetic food experiment gone wrong what was once a grain of rice has mutated into a monstrous yet dastardly handsome humanoid creature.
-343,Princess Vega,Asian,10,19,2.8,2.5,9,13,8,1,Special,Freeze,280,1,2,100,17,16,1,12813,12817,12821,The royal princess of a distant empire in search of her lost love. Has an unhealthy addiction to weaving.
-344,Altair,Asian,10,19,2.5,2.8,15,16,12,0,Special,DamageToSameRoomCharacters,7,1,3,100,17,16,1,12801,12805,12809,A wanderer from a distant galaxy that herds Starcows for a living and is now attempting to find a way home after accidentally getting sucked into a black hole.
-345,Sherry,Asian,9,18,3.2,2.1,15,13,14,1,Epic,Freeze,260,1,2,80,6,1,19,12859,12863,12867,Can tell how powerful you are with her unique power detector.
-346,Snowie,Robot,8,15,2.2,3.2,19,9,21,1,Hero,DamageToCurrentEnemy,9,1,3,100,6,0,3,12954,12958,12962,Don't let his cute exterior fool you! This cyborg-assassin bunny can kill you armed with only snowballs.
-347,Commodore Firenz,Black,9,18,3,3.4,15,20,20,5,Hero,HealSameRoomCharacters,8,1,3,90,6,7,3,12529,12533,12537,An inspirational Federation leader who quickly gives aid wherever needed to maintain her ship as a strategic asset on the battlefield.
-348,Galactic Sprite,Animal,13,9,1.5,3.3,10,23,28,40,Legendary,Freeze,320,3,3,110,24,0,3,12975,12979,12983,The orphaned child of forgotten divinities. Isn't she cute? She hates you all of you. So so much.
-349,Loong,Alien,10,23,2.9,1.9,23,8,11,0,Special,Freeze,280,1,2,100,24,0,1,13002,13006,13010,Tournament reward for September 2019. This proud warrior has only one weakness: An unquenchable thirst for fine green tea.
-350,Galactic Alchemist,White,12,12,2,2,17,29,14,100,Legendary,SetFire,1000,1,2,110,17,0,3,12988,12992,12996,Cold and inscrutable her search for immortality has led her to knowledge best left forgotten...
-351,Namith,White,10,13,3.7,1.8,24,17,12,50,Special,Freeze,230,1,2,100,24,14,1,13035,13039,13043,A villainous warrior of The Eaten Alliance she twists Visiri biomachinery into parasitic instruments of oppression and control. 
-352,Countess Miyoko,White,9,18,1.8,1.8,15,17,21,95,Hero,SetFire,500,1,2,90,6,6,3,13052,13056,13060,Voted 'most likely to overthrow the empress' in her high-school yearbook. Her parents couldn't be more proud.
-353,Ghostly Holo-Droid,Robot,4,0,1,1.8,0,0,0,60,Common,Freeze,100,2,2,0,0,0,0,13102,13106,13110,I was working in the lab late one night when my eyes beheld an eerie sight. For my ghost from his projector began to rise. And suddenly to my surprise; He did the mash! He did the monster mash!
-354,Alibaba,White,8,9,2.3,2.5,16,9,14,3,Epic,DamageToSameRoomCharacters,7,1,2,80,10,0,19,13139,13143,13147,No vault is safe from this dashing thief. Open Sesame!
+246,Pirate Alex,Asian,6,18,1.9,1.7,3,5,6,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,8881,8627,8631,This Starship Captain's mechanical skill has gotten him out of some tricky situations. He always tunes his starship's engine perfectly for dodging trouble!
+255,Cancer,White,10,18,3,2,3,7,23,1,Hero,DamageToSameRoomCharacters,6,1,2,90,10,9,3,8409,8413,8417,Loves crabby paddies. 
+332,Cypress,Alien,9,8,2.6,2,8,11,8,0,Unique,DamageToSameRoomCharacters,8,1,2,70,1,0,3,12309,12313,12317,Loves the cold and damp hates summer and French cuisine.
+132,Robo Santa,White,11,22,2.5,2.5,8,22,7,0,Special,DamageToSameRoomCharacters,8,1,2,100,12,0,3,3583,3587,3591,I've got a present for ya.
+185,Mcdonalds,White,9,3,2.8,2,14,15,20,1,Epic,DamageToCurrentEnemy,11,1,2,80,12,0,19,5620,5624,5628,A plumber turned professional boxer decided to try life onboard a Starship.
+262,Chihuahua,Animal,9,15,2.8,1.8,18,10,23,1,Special,DamageToRoom,5,1,2,100,24,5,3,9056,9060,9064,Pastime: hanging out with best buddies at the Starbar!
 355,Turkey Hero,Animal,10,15,1.2,3.5,23,9,18,95,Hero,HealRoomHp,6,2,2,90,9,0,3,13187,13191,13195,Superhero turkey who survived the trials of the oven
-356,Cyber Duck,Robot,14,12,1.2,1.2,17,27,22,100,Legendary,AddReload,50,2,3,110,24,0,3,13209,13213,13217,Looks tougher than it is.
-357,Galactic Snow Maiden,White,9,18,3.2,2.5,26,16,17,0,Legendary,Freeze,300,1,2,110,9,0,3,13236,13240,13244,Able to communicate with woodland creatures this powerful but naive frost manipulator is the only person the galactic sprite doesn't completely hate.
-358,Rudolph,Animal,10,20,2,2.8,18,18,18,20,Hero,HealSameRoomCharacters,6,2,3,90,9,0,3,13224,13228,13232,Rudolph the Red-Nosed Reindeer had a very shiny nose and if you ever saw it you would even say it glows...
+148,Taura,Animal,12,4,2.9,2.2,22,9,15,1,Hero,DamageToSameRoomCharacters,7,1,2,90,24,9,3,4380,4384,4388,A Mystical Beast Hero that frequently appears in the months of April to May.
+248,Pirate Tony,Black,6,18,2.1,1.7,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9191,8651,8655,As a seasoned Swashbuckler this Starship Captain is not afraid to go toe-to-toe with any foe!
+212,Mr Cray,White,9,11,2.9,1.3,11,7,21,3,Epic,DamageToCurrentEnemy,8,1,2,80,12,0,19,7522,7526,7530,A young angry man always playing with a screwdriver.
+117,Eva,Robot,14,8,2.8,2.5,12,12,27,6,Legendary,HealRoomHp,5,1,2,110,24,0,3,3085,3089,3093,Protector of ancient qtarian artifact
+340,Xeon,Asian,12,13,3,2.5,17,21,12,50,Special,DamageToSameRoomCharacters,7,1,2,100,24,15,1,12734,12738,12742,An errant Ardent warrior that decided to embark on a quest to find secret technology that could save his home galaxy.
+231,Messiah,White,5,7,2.2,1.5,9,15,9,1,Unique,HealSameRoomCharacters,5,1,2,70,3,0,19,8061,8065,8069,Goes on fishing trips with Jesus.
+87,Teddy,Animal,7,4,2.8,2.4,12,12,2,0,Epic,AddReload,30,1,2,80,12,0,19,2103,2107,2111,Fluffy and deadly with a gun. Bad at repairing.
+64,Sarah,White,5,10,2.1,1.8,9,9,9,3,Elite,None,0,1,2,60,6,0,19,1788,1792,1796,Lively girl just like your neighbour her smile made your day.
+288,Dracorpse,Animal,14,0,3,0,0,0,0,1,Legendary,DamageToSameRoomCharacters,7,1,1,110,24,6,3,9364,9368,9372,Don't let the Dracorpse's injuries fool you into thinking you have a chance. Just run.
+134,Soda Delivery Guy,Asian,10,22,2.6,3,6,6,24,35,Special,AddReload,45,2,3,100,6,1,3,3410,3414,3418,Delivers Soda and Fixes Bugs. High on Sugar so walks faster than other ppl.
+215,Aaron,White,8,20,2.8,2.4,21,13,14,1,Epic,HealRoomHp,8,1,2,80,6,1,19,7834,7838,7842,Always holding a cup of coffee.
+235,Drakian,Alien,11,9,3.2,1.1,14,16,14,0,Special,HealSelfHp,8,1,2,100,12,0,7,8544,8548,8552,A D.R.A.G.O.N soldier upgraded with Zakian Armor.
+234,Polar Bear,Animal,10,23,2.9,1.9,23,8,11,0,Special,Freeze,280,1,2,100,12,5,3,8034,8038,8042,Had planned on becoming a professional boxer. But couldn't find fitting gloves.
+183,Captain Mack Swallow,White,9,18,2.2,1.4,4,6,4,0,Unique,DeductReload,480,1,2,70,5,0,19,5179,5183,5187,A Pirate Captain turned Starship Captain.
+112,Ron,White,9,12,2.9,2.8,16,10,12,1,Epic,DamageToCurrentEnemy,7,1,2,80,10,0,19,2940,2944,2948,Dribbles a soccer ball around.
+272,Mistycball,Alien,10,10,3.2,2,10,27,13,0,Epic,Freeze,280,1,2,100,24,0,19,9445,9449,9453,A mysterious traveller with technology so advanced it is indistinguishable from magic.
+236,Drakian Clone,Alien,11,9,3.2,1.1,14,16,14,0,Special,HealSelfHp,8,1,2,100,12,0,3,8544,8548,8552,A D.R.A.G.O.N soldier upgraded with Zakian Armor.
+273,Ardent Templar,Black,8,20,4.8,2,15,10,10,5,Epic,HealSelfHp,8,1,2,80,24,15,19,9490,9494,9498,A well-trained combatant from the Ardent Cabal. Skilled in both space warfare and hand-to-hand fighting.
+85,Omar,Black,5,10,2.1,1.8,9,9,9,3,Unique,DamageToRoom,3,1,2,70,3,4,3,2042,2046,2050,Has poked bowls for lunch.
+267,Leo,Animal,8,13,3,1.3,13,6,22,50,Hero,DamageToRoom,5,1,2,90,6,9,3,8469,8473,8477,50% Lion 50% Human 0% Fat.
+96,Da Qiao,Asian,4,3,1.8,1.8,7,8,8,1,Elite,None,0,1,2,60,3,2,19,2231,2235,373,A beautiful girl sister of Xiao Qiao
+31,Dennis,White,6,10,2,2.8,12,9,9,3,Unique,HealSameRoomCharacters,4,1,2,70,6,0,19,1395,311,315,A guy from cats right society.
+135,Zakian,Alien,10,8,3.2,1.2,14,14,14,0,Special,HealSelfHp,7,1,2,100,12,0,3,3865,3869,3873,A dangerous race of assassins.
+170,Service Droid IV,Robot,5,0,0.5,1.8,0,0,0,60,Common,HealSameRoomCharacters,4,2,2,0,0,0,16,5446,5450,5454,A humble droid ready to serve its wise master.
 359,Glitch,Robot,10,20,2.8,2.8,18,23,16,20,Hero,DeductReload,610,2,2,90,6,0,3,13291,13295,13299,01001000 01101001 01110011 01110011 
-361,Meng Huo,Asian,12,8,2.5,2.2,21,23,8,6,Hero,HealSelfHp,11,1,2,90,5,2,3,13368,13372,13376,Seven times captured seven times freed! A powerful warrior of the Three Kingdoms.
-362,Xiahou Dun,Asian,11,8,2.8,2,14,16,21,6,Hero,DamageToSameRoomCharacters,6,1,2,90,6,2,3,13355,13359,13363,What could be more hardcore than eating your own eye? A courageous general of the Three Kingdoms.
-363,Ma Chao,Asian,11,24,2.5,2.4,19,19,14,6,Hero,DamageToCurrentEnemy,9,1,2,90,6,2,3,13381,13385,13389, Hero or traitor? You be the judge. A brave leader of the Three Kingdoms.
+107,Mecha,Robot,11,14,2.5,3.2,9,9,18,0,Hero,HealRoomHp,8,1,2,90,24,0,3,2797,2801,2805,Heavily armoured engineering vehicle.
+334,Timber,Animal,9,9,3.3,1.5,25,10,10,1,Hero,DamageToCurrentEnemy,10,1,2,90,24,5,3,12356,12360,12364,For a professional golfer this tiger spends a lot of time in the woods.
+240,Fed Bobby,Asian,6,18,1.9,1.7,4,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8842,8699,8727,Passed the gunnery course at the academy with unprecedented scores! This Starship Captain prefers commanding from the weapons deck to standing on the bridge.
+345,Sherry,Asian,9,18,3.2,2.1,15,13,14,1,Epic,Freeze,260,1,2,80,6,1,19,12859,12863,12867,Can tell how powerful you are with her unique power detector.
+177,Boarder Droid I,Robot,6,0,2,0,0,0,0,25,Common,DamageToRoom,3,1,1,0,0,0,16,5341,5345,5349,An aggressive droid looking to cause havoc.
+137,Stevo,White,9,15,2.5,1.3,4,7,22,3,Epic,DamageToSameRoomCharacters,6,1,2,80,12,0,19,3619,3623,3627,Crikey! He has a pet crocodile.
+220,Lionheart,Animal,10,20,3.1,1.4,17,6,13,35,Special,SetFire,330,1,2,100,12,0,3,7918,7930,7934,Born to be a king.
+295,Cross-eyed Mary,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,7,17,10788,10792,10796,Cute and capable even if you can't tell where she's looking.
+189,Huge Hellaloya,White,7,18,2.8,1.2,18,18,18,3,Epic,AddReload,50,1,2,100,10,0,19,6843,6847,6851,Once partied with a thousand cute cadets; now hangs around Starship staff quarters.
+80,Salon Customer,Asian,4,10,2.1,1.8,15,9,9,3,Unique,DamageToSameRoomCharacters,3,1,2,70,9,4,3,1982,1986,1990,Hangs out at the local basketball court.
+257,Fed Medic,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,7,19,8695,8699,8703,A medic and lone Federation survivor from the Pirate attack on the Discipline Space Station.
+44,Kent,White,4,7,1.8,1.8,8,8,8,1,Elite,None,0,1,2,60,5,0,19,1545,1549,1553,My name is Kent
+49,Walking Skeleton,Animal,8,12,2.9,2.9,15,18,13,5,Epic,DamageToSameRoomCharacters,4,1,2,80,24,0,19,1672,1676,1680,The only child of Death himself...
+160,Le Vincent,Asian,8,18,2.5,2.9,19,17,22,1,Epic,HealRoomHp,8,1,2,80,6,1,19,4828,4832,4836,By putting on new galaxy sunnies an android boy is now sexy.
+38,Eric,Asian,8,15,2.9,2.9,15,21,13,5,Epic,HealSameRoomCharacters,5,1,2,80,3,1,19,1473,1477,1481,A missing boy wanted to leave this unpredictable universe but it's too late!
+23,Lin,Asian,3,4,1.8,1.3,6,6,6,1,Common,None,0,1,2,50,6,0,19,1346,370,373,A cute girl.
+13,Visiri Capt'n,Alien,6,12,2.4,2.4,18,12,18,1,Unique,AddReload,30,1,2,70,24,14,19,863,867,871,An ugly alien captain.
+59,Peter,Asian,4,3,1.6,2,2,4,4,1,Common,None,0,1,2,50,3,0,19,1752,311,315,Age 34 still lives with parents.
+48,Good student,Black,6,12,2.5,2.3,12,14,10,3,Unique,DeductReload,240,1,2,70,6,0,19,1660,1664,1668,Good student wants to learn everything every knowledge including this mystic universe
+276,TJ,Asian,7,15,2.6,2.5,20,18,18,1,Epic,DeductReload,550,1,2,80,3,1,19,9750,9754,9758,Will the real TJ please stand up.
+3,Michelle,Unknown,6,18,1.9,1.7,13,4,3,1,Special,HealSameRoomCharacters,5,1,2,200,62,0,9,415,420,423,Space Academy graduate and much loved Capt'n of the Starship.
+306,Katie-8 'Hammerhead',Asian,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,8,17,10920,10924,10928,This eager recruit is famous for fixing a gun array purely by headbutting it. Some say it left her a little odd though.
+303,Alley Cat Zombie,Animal,9,7,3.3,1.1,10,10,10,1,Special,DamageToCurrentEnemy,17,1,2,100,12,3,3,10873,10877,10881,A stray cat from the Alley that has used up all its lives and now returns one last time...as a zombie.
+293,Scorpio,Animal,9,13,2.8,2,16,15,15,0,Hero,DamageToCurrentEnemy,8,1,2,90,6,9,3,8505,8509,8513,Has a tail and competes regularly in the iron man competition.
+247,Pirate Edward,White,6,20,1.9,1.7,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9195,8675,8679,An attractive aerial ace! This stylish Pirate Captain can make any ship dance through the stars like a winged ballerina!
+39,Elf,Animal,9,15,3,3,20,12,8,5,Epic,HealSameRoomCharacters,6,1,2,80,24,0,19,1485,1489,1493,A creature coming from a mysterious dimension doesn't belong to our world
+42,Lollita,White,10,18,3.2,3.1,20,20,20,5,Hero,HealSameRoomCharacters,7,1,2,90,24,0,3,1521,1525,1529,ALWAYS CORRECT
+241,Fed Peter,White,6,18,1.9,1.7,3,6,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8858,8747,8727,This Starship Captain excels in the field of science. He is adept at using his ship's tech systems to gain an advantage in battle.
+197,Miss Jane,White,9,12,2.3,2,18,18,18,100,Hero,FireWalk,40,1,2,90,6,0,3,6874,6878,6882,Top of her class during special ops training. Has a mutated gene capable of igniting fire to her surrounds.
+192,Keira,Asian,7,23,2.4,2.4,13,13,13,0,Epic,HealRoomHp,7,1,2,80,10,0,19,6830,6834,6838,Graduated from the Pilot academy with top grades. A quiet girl with talent.
+253,Qtarian Lisa,White,6,18,2.1,1.7,3,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8818,8609,8613,Expert salvager and natural-born fighter. This is one Starship Captain who can hold her own in a fight! To her any old scrap from a chain to a toaster makes the perfect improvised weapon!
+352,Countess Miyoko,White,9,18,1.8,1.8,15,17,21,95,Hero,SetFire,500,1,2,90,6,6,3,13052,13056,13060,Voted 'most likely to overthrow the empress' in her high-school yearbook. Her parents couldn't be more proud.
+127,Alien Queen,Alien,12,15,2.9,2.7,15,14,15,70,Legendary,DamageToSameRoomCharacters,8,1,2,110,12,0,3,3394,3398,3402,Where are my babies?
+140,Phoenix,Animal,10,15,2.6,1.1,22,8,10,100,Special,HealSameRoomCharacters,6,1,2,100,24,5,3,3941,3945,3949,A squid one day made love to a wolf. The result was surprising.
+141,Dark Matter Mechi,White,11,8,3.2,1.5,14,27,12,50,Special,DeductReload,620,1,2,100,6,0,3,4120,4124,4128,A Mechi powered by dark matter.
+342,Western Crow,Alien,12,7,2.8,2.5,13,22,22,1,Hero,DeductReload,360,1,2,90,6,0,3,12754,12758,12762,A genetic food experiment gone wrong what was once a grain of rice has mutated into a monstrous yet dastardly handsome humanoid creature.
+221,Franky,Animal,10,13,3,1.3,12,6,11,1,Special,SetFire,300,1,3,100,24,0,3,7913,7922,7926,Made a prison break from a bread roll.
+24,Hulk,Black,3,4,1.4,1.4,8,6,6,1,Common,None,0,1,2,50,3,0,19,1350,407,411,In pursuit of happiness.
+60,Skully,Asian,4,3,1.8,1.9,2,4,4,1,Common,None,0,1,2,50,3,0,19,1756,311,315,His deranged father chose the name...
+56,Jake,White,4,3,1.6,1.9,2,4,4,1,Common,None,0,1,2,50,3,0,19,1740,311,315,Huge fan of Elvis 
+46,Gentleman,White,6,12,2.4,2.4,12,12,12,3,Unique,DamageToRoom,3,1,2,70,5,0,19,640,1822,1517,Legendary HeNtAI
+6,Tony,Unknown,6,18,1.9,1.7,2,4,7,1,Special,HealRoomHp,5,1,2,200,62,0,9,403,407,411,Space Academy graduate and much loved Capt'n of the Starship.
+219,Faerie Dragon,Animal,10,12,2.9,2,13,27,13,0,Special,HealSameRoomCharacters,7,1,2,100,24,0,3,7884,7888,7892,A Beautiful Mystical creature with healing powers.
 364,Cupid Trooper,White,9,15,2.6,2.5,23,14,19,3,Hero,AddReload,50,1,3,90,20,0,3,13799,13803,13807,Shot through the heart and you're to blame! You give love a bad name!
+331,Mangrove,Alien,9,6,2.6,1.8,8,9,8,0,Unique,DamageToSameRoomCharacters,8,1,2,70,16,0,3,12297,12301,12305,The salad that bites back!
+71,Tina,White,3,3,1.7,1.7,7,8,8,1,Common,None,0,1,2,50,6,0,19,1858,311,315,Lover of all things space.
+138,Dark Matter Legend,White,10,8,3.2,1.4,14,27,10,30,Special,DeductReload,610,1,2,100,5,0,3,3928,3932,3936,A dark hero has evolved to become a legend.
+320,Miss Santa,White,7,23,2.8,2.4,19,13,16,0,Special,DamageToCurrentEnemy,8,1,2,100,10,0,3,11339,11343,11347,Has taken all of Santa's gifts to give to stray dogs in Proxima Centauri.
+243,Pirate Loretta,Asian,6,18,1.9,1.7,3,6,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9167,8639,8643,You must understand laws in order to break them. Once a scientist now a pirate this Starship Captain has studied the laws of the universe to exploit them to her will.
+115,Professor Brenda,Asian,11,19,3.2,2.5,20,20,20,12,Legendary,DamageToSameRoomCharacters,7,1,2,110,9,0,3,2997,3001,3005,This star academy professor has an IQ of over 300 which makes it really hard for her to find a date.
+200,Mini Droid I,Robot,2,0,0.5,0.5,0,0,0,50,Common,DamageToCurrentEnemy,2,2,2,0,0,0,16,7315,7319,7323,A smaller droid that tries to do everything but isn't particularly good at anything.
+204,Santa's Helper,White,8,10,2.5,2.9,14,13,19,1,Special,AddReload,40,2,3,100,6,0,3,7442,7450,7454,Work work. Helps Santa run errands and wears a nice green hat. Probably being cheated on by girlfriend.
+174,Defender Droid III,Robot,10,0,2,0.5,0,0,0,40,Common,DamageToCurrentEnemy,4,2,2,0,0,0,16,5482,5486,5490,A heavy defender droid ready to stop intruders.
+319,Ardent Starhuntress,Black,8,8,3,2,8,15,6,2,Unique,DamageToCurrentEnemy,6,1,3,70,24,15,19,11256,11260,11264,This laconic heroine wields the traditional weapon of her people with enough skill to make it the equal of any modern blaster.
+77,Roach,Animal,5,4,3.1,2.8,6,6,6,1,Special,DamageToSameRoomCharacters,7,1,2,100,24,5,3,1952,1956,1960,Roachin' tends to cause Pixel Starships to crash.
+326,Pisces,Black,9,11,2.8,2.4,13,22,12,0,Hero,Freeze,250,1,2,90,6,9,3,8493,8497,8501,Prefers seafood.
+128,Turkey Man,Animal,9,10,2.2,2,8,21,7,0,Special,HealSameRoomCharacters,5,1,2,100,24,0,3,3428,3432,3436,Works part time at KFT Marketing.
+252,Qtarian Michelle,Black,6,18,1.9,1.7,3,6,4,1,Special,AddReload,35,1,2,200,62,8,9,8810,8597,8601,The Science of Scrap is no mystery to this Starship Captain. She can have a ruined starship's electronic systems up and running before you can say That shouldn't even be possible!
+188,Brenda Linuxer,Robot,12,12,3,3.1,21,18,21,1,Hero,DamageToRoom,6,1,2,90,5,0,1,6786,744,748,A crazy robot developer put himself into a linux-base robot body
+176,Defender Droid V,Robot,14,0,2.5,0.5,0,0,0,50,Common,DamageToCurrentEnemy,5,3,3,0,0,0,16,4568,4572,4576,A heavy defender droid ready to stop intruders.
+72,Mary,White,4,3,1.7,1.7,7,12,12,1,Elite,None,0,1,2,60,3,0,19,1862,395,399,One of the kindest people you'll meet... unless you're the enemy.
+201,Mini Droid II,Robot,3,0,0.6,0.6,0,0,0,50,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,7327,7331,7335,A smaller droid that tries to do everything but isn't particularly good at anything.
+251,Qtarian Tony,Black,6,18,1.9,1.7,3,5,6,1,Special,AddReload,35,1,2,200,62,8,9,8806,8585,8589,Some say that this Starship Captain can make an engine from nothing but a single piece of scrap and two bottles of gas. His Starship can dodge like no other!
+328,Ancestral Spirit,Animal,12,4,2.9,2.2,22,9,15,1,Hero,DamageToSameRoomCharacters,7,1,2,90,24,0,3,12259,12263,12267,A ghost of captains present. How does that work?
+161,Alpaco,Animal,9,9,3.3,1.5,25,10,10,1,Hero,HealSameRoomCharacters,6,1,2,90,24,5,3,4939,4943,4947,One day a sheep slept with a giraffe... A super cute creature was born.
+55,Alex,White,4,4,1.5,2.1,2,4,4,1,Common,None,0,1,2,50,3,0,19,1736,381,387,Alex an avid rockstar.
+358,Rudolph,Animal,10,20,2,2.8,18,18,18,20,Hero,HealSameRoomCharacters,6,2,3,90,9,0,3,13224,13228,13232,Rudolph the Red-Nosed Reindeer had a very shiny nose and if you ever saw it you would even say it glows...
+149,D.R.A.K.E,Animal,11,21,2.8,1.2,8,8,23,100,Special,DamageToSameRoomCharacters,7,1,2,100,12,0,3,4392,4396,4400,Dragon's older bro... more handsome smarter but older...
+10,Mr Coconut,Asian,7,15,2.7,2.5,25,18,18,1,Hero,DeductReload,600,1,2,90,3,1,3,674,678,682,A man born from a coconut.
+343,Princess Vega,Asian,10,19,2.8,2.5,9,13,8,1,Special,Freeze,280,1,2,100,17,16,1,12813,12817,12821,The royal princess of a distant empire in search of her lost love. Has an unhealthy addiction to weaving.
+323,Harmony Dragon,Animal,10,12,2.9,2,13,27,13,0,Special,HealSameRoomCharacters,7,1,2,100,24,0,3,11511,11515,11519,A Beautiful Mystical creature with healing powers.
+254,Qtarian Edward,White,6,18,1.9,1.7,4,5,4,1,Special,AddReload,35,1,2,200,62,8,9,8814,8771,8775,A starship captain that can craft projectile weapons from just about anything. His mechanic's touch is enough to make the rustiest gun barrel rapid-fire!
+167,Ribi,Black,6,10,2.6,2.1,19,10,10,1,Unique,SetFire,200,1,2,70,12,0,19,5152,5156,5160,Has an umbrella ella ellaaa
+214,Mini Droid III,Robot,4,0,0.7,0.7,0,0,0,50,Common,DamageToCurrentEnemy,3,2,2,0,0,0,16,7857,7861,7865,A smaller droid that tries to do everything but isn't particularly good at anything.
+213,Leon Mars,White,9,15,2.3,2.8,15,25,24,3,Hero,AddReload,50,1,2,90,12,0,3,7782,7786,7790,Wants to ship his car to Mars.
+90,Zhang Fei,Asian,9,3,2.9,2.2,20,19,6,3,Epic,DamageToRoom,6,1,2,80,10,2,19,2158,2162,2166,Hot tempered and smelly.
+40,Captain,White,6,12,2.8,2.5,18,18,18,3,Special,AddReload,50,1,2,200,62,0,9,1497,1501,1505,Captain is an experienced spaceship captain here to enjoy his retired life
+63,Gong Fu girl,Asian,5,7,2,2,3,4,4,3,Elite,None,0,1,2,60,6,0,19,1776,1780,1784,A girl wants to show this world that a female with gong fu can win any type of creatures
+186,Stove Tops,White,9,15,2.8,1.3,4,7,23,3,Epic,AddReload,40,1,2,80,12,0,19,5693,5697,5700,Was CEO of a popular fruit company. 
+195,Admiral Serena,Black,11,18,3.2,2.2,22,16,10,5,Hero,DamageToCurrentEnemy,10,1,2,90,24,0,3,6806,6810,6814,After retiring from athletics life decided to join the academy and beat all the boys in class.
+123,Helen,White,5,10,2.1,1.8,9,9,9,1,Unique,DamageToCurrentEnemy,7,1,2,70,3,4,3,3279,3283,3287,Working as a intern at a law firm. Won the local rope skipping competition.
+37,Thomas,White,10,18,2.7,2.6,15,20,26,8,Hero,DeductReload,600,1,2,90,3,1,3,1461,1465,1469,Finds and destroys bugs on a regular basis. He goes by the name TJ
+105,Tin Man,Robot,7,12,3,1.2,16,4,3,0,Epic,DamageToCurrentEnemy,5,1,2,80,24,0,19,2684,2688,2692,Turned a trash can into armour
+187,Ethan,Asian,10,18,2.7,2.7,15,18,24,1,Hero,AddReload,50,1,2,90,3,0,1,5633,5637,5641,Always walking around with an iPad.
+73,Candy,White,3,3,1.8,1.8,8,8,8,1,Elite,None,0,1,2,60,6,0,19,1866,395,399,Received the nickname 'Candy' after getting a candy cain stuck in her hair. She's never removed it...
+277,Angel,White,9,13,2.5,2.5,17,18,18,1,Hero,HealSameRoomCharacters,9,1,2,90,9,0,19,9778,9782,9786,From the beautiful Rigel system. Only eats organic food.
+314,Leela,Alien,4,16,1.8,1.8,4,7,4,1,Common,None,0,1,2,50,12,13,17,11230,11234,11239,Only has 2D eyesight. Job: Gray Curator Pastime: abducting animals for experimentation.
+289,Infected Victoria,Asian,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10692,10696,10700,A secret Lingerie Officer in the Federation Navy. 2 years your senior. Now afflicted by some strange crystal growths.
+98,Easter Bunny,Animal,6,4,2.5,2.4,12,12,2,0,Epic,DeductReload,360,1,2,80,10,5,19,2339,2343,2347,I am a bunny Easter bunny!
+122,Mummy,Animal,12,0,2.4,2,9,12,0,0,Special,DamageToSameRoomCharacters,6,1,2,100,24,0,3,3228,3232,3236,Strong and walks around with a roll of toilet paper.
+357,Galactic Snow Maiden,White,9,18,3.2,2.5,26,16,17,0,Legendary,Freeze,300,1,2,110,9,0,3,13236,13240,13244,Able to communicate with woodland creatures this powerful but naive frost manipulator is the only person the galactic sprite doesn't completely hate.
+121,Zombieee,Animal,9,0,2.8,1,4,0,0,0,Unique,DamageToSameRoomCharacters,8,1,2,70,24,0,19,3216,3220,3224,I love scary movies!
+155,Bio Android,Robot,14,0,2.5,0,0,0,0,1,Special,DamageToSameRoomCharacters,5,1,1,0,0,0,0,4568,4572,4576,Developed underwater. A powerful offensive droid.
+362,Xiahou Dun,Asian,11,8,2.8,2,14,16,21,6,Hero,DamageToSameRoomCharacters,6,1,2,90,6,2,3,13355,13359,13363,What could be more hardcore than eating your own eye? A courageous general of the Three Kingdoms.
+156,Ryzen,White,11,8,3,1.5,12,25,12,50,Hero,DamageToCurrentEnemy,10,1,2,90,6,0,3,4581,4585,4589,Half man Half god Half Machine... does not compute...
+26,Kevin,White,3,4,1.4,1.4,6,6,8,1,Common,None,0,1,2,50,6,0,19,1358,381,387,Jack of all trades.
+338,Zongzi-Man,Alien,10,10,2.5,2.5,15,21,20,20,Hero,DamageToSameRoomCharacters,7,1,2,90,24,0,3,12618,12622,12627,Alien by day Rice Dumpling by night! It's Zongzi-Man!
+129,Wolfy,Animal,9,15,2.9,1.5,22,6,16,1,Special,DamageToRoom,5,1,2,100,6,5,3,3548,3552,3556,Pastime: hanging out with best buddies at the Starbar!
+82,Office Exec,Asian,5,10,2.1,1.8,9,9,9,3,Unique,DamageToCurrentEnemy,4,1,2,70,3,4,3,2006,2010,2014,Has a corner office.
+348,Galactic Sprite,Animal,13,9,1.5,3.3,10,23,28,40,Legendary,Freeze,320,3,3,110,24,0,3,12975,12979,12983,The orphaned child of forgotten divinities. Isn't she cute? She hates you all of you. So so much.
+266,Mousey,Animal,8,15,2.7,1.2,20,6,15,1,Special,DamageToRoom,5,2,3,100,6,1,3,9207,9211,9215,Pastime: eating leftover food from the kitchenette. Fast as a kitten. (actually faster)
+233,Cathulhu,Animal,9,7,2.8,1.5,8,10,10,1,Special,DamageToSameRoomCharacters,7,1,2,100,12,3,3,8105,8109,8113,A lonely kitten was attacked by an Octopus.
+163,Tiffany,White,6,10,2.5,2.5,10,19,10,1,Unique,HealRoomHp,4,1,2,70,12,1,19,4966,4970,4974,Always cheerful and first to respond to those in need.
+211,Mr Alan,White,9,11,2.8,1.3,23,7,12,3,Epic,AddReload,40,1,2,80,12,0,19,7509,7513,7517,Always going places.
+22,Steve,Asian,4,3,1.4,1.4,6,6,6,1,Common,None,0,1,2,50,3,0,19,1342,311,315,A humble crew.
+126,Willy,Black,11,19,2.9,2.7,21,21,18,80,Legendary,HealRoomHp,5,2,2,110,24,0,3,3377,3381,3385,I am Legend(ary)
+305,Fixer Silvertongue,White,6,18,1.9,1.9,3,5,4,1,Common,None,0,1,2,50,12,8,17,10900,10904,10908,Contrary to popular rumour this Qtarian does not have an actual robot tongue; she's just very polite.
+93,Lyu Bu,Asian,10,8,3,2.2,24,20,8,6,Hero,DamageToCurrentEnemy,8,1,2,90,3,2,3,2195,2199,2203,A powerful warrior who loves young beautiful girls
+75,Blingy Captain,White,6,12,2.8,2.5,18,18,18,3,Special,DeductReload,420,1,2,200,62,0,9,1924,1928,1932,Blingy Captain
+67,Cara,Asian,6,12,2.3,2.4,14,18,3,3,Unique,AddReload,30,1,2,70,10,1,19,1818,1822,1826,Graduated from Space Academy with Xin ;).
+279,Ennui,White,8,15,2.2,2.4,17,20,18,1,Epic,HealSameRoomCharacters,6,1,2,80,12,1,19,10393,10397,10401,Never seen without his magic pencil; completely useless in the digital age.
+239,Fed Michelle,Black,6,18,1.9,1.9,3,5,4,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8854,8735,8727,Hardy Starship Captain and wonder with a wrench. She will keep her ship fighting through the toughest of battles.
+25,Michelle,Black,3,4,1.4,1.4,6,8,6,1,Common,None,0,1,2,50,3,0,19,1354,420,423,Wants to marry a president.
+337,Bliss,White,8,15,2.6,2.9,15,12,22,50,Epic,HealSameRoomCharacters,6,1,2,80,12,1,19,12436,12440,12444,Master media manipulator. Never without a fire extinguisher for the multiple social media accounts.
+180,Boarder Droid IV,Robot,9,0,3,0,0,0,0,45,Common,DamageToRoom,4,2,2,0,0,0,16,5470,5474,5478,An aggressive droid looking to cause havoc.
+296,'Saucy' Maguire,Black,6,18,1.9,1.7,4,5,4,1,Common,None,0,1,2,50,12,7,17,10812,10816,10820,This intelligent young woman writes erotic novels in her leisure time. Very popular with the other recruits.
+353,Ghostly Holo-Droid,Robot,4,0,1,1.8,0,0,0,60,Common,Freeze,100,2,2,0,0,0,0,13102,13106,13110,I was working in the lab late one night when my eyes beheld an eerie sight. For my ghost from his projector began to rise. And suddenly to my surprise; He did the mash! He did the monster mash!
+191,Robyna Hoots,White,8,3,2.7,1.8,20,8,8,1,Unique,DeductReload,500,1,2,70,10,0,19,6794,6798,6802,Good with a arrow like her older brother.
+81,Kingpin,White,7,19,2.4,1.8,9,9,9,3,Epic,HealSameRoomCharacters,5,1,2,80,3,4,3,1994,1998,2002,Making the universe great!
+147,King Dong,Animal,14,9,2.9,1.6,10,9,9,20,Legendary,HealSelfHp,10,1,2,110,24,5,3,4286,4290,4294,Favourite Food: Banana Favourite Toy: Barbie
+166,Service Droid I,Robot,2,0,0.5,1,0,0,0,30,Common,HealSameRoomCharacters,1,1,1,0,0,0,16,5329,5333,5337,A humble droid ready to serve its wise master.
+238,Fed Lisa,White,6,18,1.9,1.7,3,5,5,1,Special,HealSameRoomCharacters,5,1,2,200,62,7,9,8862,8759,8727,This Starship Captain moves with grace and so does her ship. As long as she is in the engine room her ship dances out of reach of many enemy missiles.
+97,Xiao Qiao,Asian,4,3,1.8,1.8,7,8,8,1,Elite,None,0,1,2,60,10,2,19,2243,2247,2251,A beautiful girl younger sister of Da Qiao
+313,Snow Joe,Robot,8,4,2.2,3,8,15,6,0,Epic,Freeze,300,1,2,70,5,0,19,11158,11162,11166,Regards others with an icy stare before giving them the cold shoulder. Loves singing 'Do you want to build a snowman' during a fight.
+190,Dolores,Robot,13,25,3,2.5,15,25,15,50,Special,Freeze,300,2,3,100,0,0,3,5375,5379,5383,A female tutorial synth. Reminds you of days back at the academy.
+74,Invader,Alien,10,18,2.7,2.6,18,20,19,8,Hero,DamageToSameRoomCharacters,6,1,2,90,24,0,3,1876,1880,1884,We are the rule of galaxy
+27,Monica,White,3,4,1.4,1.8,6,6,6,1,Common,None,0,1,2,50,3,0,19,1362,395,399,The mistress.
+299,Handsome Michael,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,7,17,10746,10750,10754,The looker of his graduate class unfortunately prone to busting out his guitar at parties.
+119,Squid,Animal,14,12,2.4,2,13,14,13,0,Special,HealSelfHp,9,1,2,100,8,5,3,3152,3156,3160,Used to be in a powerful warfleet. Now works at a sushi restaurant.
+194,Red Ninja,White,7,15,2.4,1.6,19,13,11,50,Unique,SetFire,210,1,2,70,6,0,19,6857,6861,6865,Red Ninja Yellow Ninja White Ninja Black Ninja... Still Ninja
+125,Reaper,Animal,12,0,3.2,1.5,7,12,18,0,Legendary,DamageToCurrentEnemy,11,1,2,110,24,0,3,3293,3297,3301,Wears black religiously.
+309,Serial25 - Bookworm,Asian,6,18,1.9,1.7,3,5,6,1,Common,None,0,1,2,50,12,8,17,10912,10892,10896,This Qtarian loves human fantasy novels; apparently they burn better than any other kind of book.
+294,Deadeye Diana,Asian,6,18,1.9,1.7,3,6,4,1,Common,None,0,1,2,50,12,7,17,10764,10768,10772,In truth she's not that great of a shot but she's so nice that everyone humours her.
+302,Infected Drakian Clone,Alien,10,11,3.4,1,16,14,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,3,10859,10863,10867,An infected D.R.A.G.O.N soldier upgraded with Zakian Armor.
+8,Engineer Bob,Asian,7,3,1.7,3,6,6,24,1,Special,HealRoomHp,10,1,2,100,3,0,3,640,311,315,An engineer engine up!
+168,Service Droid II,Robot,3,0,0.5,1.2,0,0,0,40,Common,HealSameRoomCharacters,2,2,2,0,0,0,16,5317,5321,5325,A humble droid ready to serve its wise master.
+175,Defender Droid IV,Robot,12,0,2.3,0.5,0,0,0,45,Common,DamageToCurrentEnemy,4,2,2,0,0,0,16,5494,5498,5502,A heavy defender droid ready to stop intruders.
+57,Larry,White,4,3,1.6,1.8,2,4,4,1,Common,None,0,1,2,50,3,0,19,1744,311,315,A real ladies man
+208,Mr She,White,8,10,2.5,1.5,10,22,4,1,Epic,AddReload,45,1,2,80,12,0,19,7535,7539,7543,Nobody knows who she is...yet.
+271,Abbie,Asian,9,18,2.2,2.9,15,22,12,1,Epic,HealSelfHp,8,1,2,80,3,1,19,9649,9653,9657,Resides in the mountains designing secret weapons for the federation.
+109,Dr Sera,White,6,4,2.4,2.4,13,13,13,0,Epic,DamageToSameRoomCharacters,4,1,2,80,10,0,19,2785,2789,2793,Dr Sera
+349,Loong,Alien,10,23,2.9,1.9,23,8,11,0,Special,Freeze,280,1,2,100,24,0,1,13002,13006,13010,Tournament reward for September 2019. This proud warrior has only one weakness: An unquenchable thirst for fine green tea.
+157,Mama,Asian,6,10,2.3,1.8,9,9,13,1,Unique,DamageToCurrentEnemy,7,1,2,70,12,0,19,4720,4724,4728,Cooks cleans shops up aliens..
+346,Snowie,Robot,8,15,2.2,3.2,19,9,21,1,Hero,DamageToCurrentEnemy,9,1,3,100,6,0,3,12954,12958,12962,Don't let his cute exterior fool you! This cyborg-assassin bunny can kill you armed with only snowballs.
+315,Gray Virtuoso,Alien,6,10,2.5,3,10,19,8,1,Unique,HealSameRoomCharacters,5,1,2,70,24,13,19,11203,11207,11211,These Gray possess outstanding ability in creating living artwork from their experiments.
+139,Transport Driver,Asian,10,25,2.8,3,6,6,26,1,Special,HealRoomHp,9,1,2,100,5,0,3,3915,3919,3923,Part time driver part time assassin.
+113,Jaiden,Black,11,8,3,2,21,20,8,6,Hero,DamageToCurrentEnemy,7,1,2,90,9,0,3,2960,2964,2968,Real dream is to explore space.
+179,Boarder Droid III,Robot,8,0,2.5,0,0,0,0,40,Common,DamageToRoom,4,2,2,0,0,0,16,5458,5462,5466,An aggressive droid looking to cause havoc.
+259,Qtarian Healer,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,8,19,8557,8561,8565,This Qtarian healer was once held captive on a Pirate vessel.
+269,Christian,White,8,18,2.9,2.2,15,13,14,1,Unique,HealRoomHp,7,1,2,70,6,1,19,9515,9519,9523,Pro-gamer and gourmet food extraordinaire. Also part-time SavySoda Emergency Response Personnel. 
+285,Burt the Terrible,White,6,20,1.9,1.7,3,5,4,1,Common,None,0,1,2,50,12,6,17,9892,9896,9900,Its a beautiful day and I am so beautiful also!
+206,Sagita,Animal,10,4,3.3,2.2,13,22,15,1,Hero,DamageToCurrentEnemy,9,2,3,90,9,9,3,7575,7579,7583,Has 4 legs so runs twice as fast. Frequently appears in the months of November to December.
+53,Evil General,Animal,8,12,2.1,2.6,15,3,3,3,Unique,DamageToRoom,5,1,2,70,12,0,19,1720,1724,1728,Ambition general thought he can conquer this whole universe hahaha
+290,Infected Trey,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10666,10670,10674,A hostage negotiator working for the Federation Navy. That is until he was afflicted by a strange crystal growth.
+232,Private Brian,White,5,3,2.4,1.8,8,2,8,1,Elite,None,0,1,2,60,6,0,19,8396,8400,8404,Many have died trying to save him.
+14,Medusa,Alien,7,15,2.9,2.9,14,12,20,1,Epic,AddReload,35,1,2,80,24,14,19,876,867,880,Visiri with evolved manuvering mechanics.
+86,Jesus,White,5,10,2.1,1.8,9,9,9,3,Unique,AddReload,30,1,2,70,24,4,3,2054,2058,2062,Surname: Christ
+291,Female Citizen,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10679,10683,10687,From the Federation capital Central. She enjoys smooth cappuccinos.
+5,Edward,Unknown,6,18,1.9,1.7,3,6,4,1,Special,DamageToRoom,4,1,2,200,62,0,9,377,381,387,Space Academy graduate and much loved Capt'n of the Starship.
+165,Hydra,Animal,10,15,2.6,1.1,22,8,10,100,Special,Freeze,270,1,2,100,24,0,3,5020,5024,5028,Hail Hydra.
+321,Server Eric,White,8,20,2.3,2.8,12,13,26,1,Epic,AddReload,40,1,2,80,6,1,19,11324,11328,11332,The real Eric is standing up - next to the server adding stuff.
+12,Menga Linuxer,Robot,12,12,3,3.1,21,18,21,1,Hero,DamageToRoom,6,1,2,90,5,1,3,740,744,748,A crazy robot developer put himself into a linux-base robot body
+84,Paul,White,5,10,2.1,1.8,9,9,9,3,Unique,DamageToRoom,3,1,2,70,3,4,3,2030,2034,2038,Goes hunting
+69,Jessica,White,7,12,2.4,2.4,15,12,12,6,Unique,DamageToCurrentEnemy,4,1,2,70,12,0,19,1842,1846,1850,1/100 vampire lineage. 
+361,Meng Huo,Asian,12,8,2.5,2.2,21,23,8,6,Hero,HealSelfHp,11,1,2,90,5,2,3,13368,13372,13376,Seven times captured seven times freed! A powerful warrior of the Three Kingdoms.
+244,Pirate Lia,White,6,18,1.9,1.9,3,5,4,1,Special,DamageToSameRoomCharacters,6,1,2,200,62,6,9,9199,8687,8691,A Starship Captain that understands her ship far better than she ever understood the law. She can fix things almost as quickly as she could steal them!
+32,Demon Boy,Animal,8,15,2.8,3.1,16,18,14,100,Epic,FireWalk,30,1,2,80,6,0,19,1399,1403,1407,A boy who came from a very dark planet trying to prove himself.
+265,Nova,White,10,15,3.1,2.4,18,13,24,20,Special,DamageToCurrentEnemy,8,1,2,100,12,0,3,9277,9281,9283,A brave star marine forever remembered in the galaxy.
+152,Huntress,Animal,10,10,2.9,1.8,12,17,13,30,Hero,DamageToSameRoomCharacters,7,1,2,90,9,0,3,4332,4336,4340,Forever hunting for a selfie with Doge. - Blacksteed Tournament 11
+4,Bobby,Unknown,6,18,1.9,1.7,3,3,14,1,Special,AddReload,40,1,2,200,62,0,9,306,311,315,Space Academy graduate and much loved Capt'n of the Starship.
+335,Itsura,White,5,7,1.8,1.8,11,8,8,1,Common,None,0,1,2,50,6,1,19,12410,12414,12418,Community Manager for Russia and Beyond!
+89,Guan Yu,Asian,11,8,3,2,24,20,8,6,Hero,DamageToCurrentEnemy,8,1,2,90,6,2,3,2145,2149,2153,Long beard loves green.
+2,Lisa,Unknown,6,18,1.9,1.7,7,12,4,1,Special,HealSelfHp,6,1,2,200,62,0,9,391,395,399,Space Academy graduate and much loved Capt'n of the Starship.
+356,Cyber Duck,Robot,14,12,1.2,1.2,17,27,22,100,Legendary,AddReload,50,2,3,110,24,0,3,13209,13213,13217,Looks tougher than it is.
+354,Alibaba,White,8,9,2.3,2.5,16,9,14,3,Epic,DamageToSameRoomCharacters,7,1,2,80,10,0,19,13139,13143,13147,No vault is safe from this dashing thief. Open Sesame!
+62,Sakura,Asian,8,14,3,3,12,16,18,1,Epic,HealRoomHp,4,1,2,80,10,0,19,1764,1768,1772,A tender girl what is covering by her smile. 
+261,Henry,White,9,22,2.9,1.5,4,7,18,3,Epic,DamageToCurrentEnemy,8,1,2,80,12,0,19,9044,9048,9052,Goes jogging in the morning.
+316,Dr Mew,Animal,6,10,2.8,2,10,18,10,3,Unique,HealSameRoomCharacters,3,1,2,70,5,3,19,11244,11248,11252,Dogs couldn't operate an MRI machine... but CATscan!
+91,Dong Zhuo,Asian,8,15,2.5,2.5,18,19,16,5,Epic,HealSameRoomCharacters,2,1,2,80,24,2,19,2170,2175,2179,Quite old but still love young beautiful girls.
+92,Cao Cao,Asian,8,19,2.5,2.6,21,21,21,5,Epic,HealSameRoomCharacters,5,1,2,80,3,2,19,2183,2187,2191,Ancient Emperor. Somehow ended onboard a starship.
+350,Galactic Alchemist,White,12,12,2,2,17,29,14,100,Legendary,SetFire,1000,1,2,110,17,0,3,12988,12992,12996,Cold and inscrutable her search for immortality has led her to knowledge best left forgotten...
+325,Draki Soldier,Alien,11,9,3.2,1.2,17,13,13,0,Special,HealRoomHp,10,1,2,100,12,0,7,11995,11999,12003,ZAKI? Soldier. 2019 January Tournament Crew.
+144,Sie,White,7,10,2.7,1.5,10,21,4,1,Epic,HealSameRoomCharacters,4,1,2,80,12,0,19,3607,3611,3615,Loved by all the engineers.
+344,Altair,Asian,10,19,2.5,2.8,15,16,12,0,Special,DamageToSameRoomCharacters,7,1,3,100,17,16,1,12801,12805,12809,A wanderer from a distant galaxy that herds Starcows for a living and is now attempting to find a way home after accidentally getting sucked into a black hole.
+164,Angry Squid,Animal,14,12,2.4,2,13,14,13,0,Special,DamageToCurrentEnemy,11,1,2,100,8,5,3,5008,5012,5016,Squid's brother had a fight at the local pub. Now attending anger management.
+162,Draconian Mecha,Animal,11,23,3.3,1.9,16,17,25,50,Special,DamageToSameRoomCharacters,7,1,2,100,6,0,3,4952,4956,4960,The latest from D.R.A.G.O.N Engineering. A augmented dragon soldier with exceptional combat stats.
+351,Namith,White,10,13,3.7,1.8,24,17,12,50,Special,Freeze,230,1,2,100,24,14,1,13035,13039,13043,A villainous warrior of The Eaten Alliance she twists Visiri biomachinery into parasitic instruments of oppression and control. 
+33,Professor,White,6,12,2.4,2.4,9,16,9,3,Unique,DeductReload,420,1,2,70,3,0,19,1411,1415,1419,A professor received a help message while he is giving a lecture but he can't ignore the message
+65,Jemima ,White,3,3,1.7,1.7,13,9,9,3,Elite,None,0,1,2,60,9,0,19,1800,1804,1808,Was a cheer leader cheers every pilot up.
+21,Roborob,Robot,12,12,2.8,3.1,20,20,8,1,Hero,DeductReload,360,1,2,90,9,0,3,1030,1034,1038,Artificial life super technology if you don't see a man inside
+153,Dr Dong,Asian,14,14,2,1.5,14,12,12,1,Special,HealSelfHp,14,1,2,100,6,0,3,4537,4541,4545,Doctor trying to get home. Has a 10% chance to be randomly selected for voluntary re-accomodation in each PVP departure.
+198,Cammy,White,4,3,2,1.7,7,9,4,1,Elite,None,0,1,2,60,3,0,19,6887,6891,6895,Retired from MMA training and joined the Starship Academy.
+226,Daft Kittus,Animal,9,7,3.1,2,9,9,9,1,Special,DamageToCurrentEnemy,17,1,2,100,24,3,3,8156,8160,8164,Meowy has turned to the Dark Side and gained 2 more Lives. He also finds your lack of catnip disturbing.
+184,Zakian Assassin,Alien,11,8,3.2,1,14,15,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,3,5605,5609,5613,A specialised Zakian Assassin. Only 130 deployed in the galaxy.
+333,Papyrus,Alien,9,6,3,2,10,9,8,0,Unique,DamageToSameRoomCharacters,7,1,2,70,8,0,3,12321,12325,12329,A surprisingly capable mezzo soprano.
+110,Silver Paladin,Robot,11,22,3.3,3.1,16,12,15,30,Legendary,DamageToRoom,6,1,2,110,9,0,3,2928,2932,2936,Composed of the souls of two legendary heroes.
+52,Astronaut,Black,5,12,2.2,2.3,10,12,19,3,Unique,HealSelfHp,6,1,2,70,10,0,19,1708,1712,1716,Originally trained by MASA
+18,Yusi,Asian,10,18,2.5,2.9,18,21,12,1,Hero,HealSelfHp,10,1,2,90,3,1,3,927,931,935,An artist wish that he found every astronomical landscape and record them by drawing
+292,Male Civilian,White,4,3,1.9,1.9,6,6,6,1,Common,None,0,1,2,50,3,0,19,10653,10657,10661,A citizen of the federation. From the capital Central. Enjoys Avocado with brunch.
+43,Male Nurse,Asian,6,10,2.6,2.2,12,14,14,3,Unique,HealSameRoomCharacters,4,1,2,70,5,0,19,1533,1537,1541,I am a nurse but a male nurse
+169,Service Droid III,Robot,4,0,0.5,1.5,0,0,0,50,Common,HealSameRoomCharacters,3,2,2,0,0,0,16,5434,5438,5442,A humble droid ready to serve its wise master.
+222,Tin Robot,Robot,7,12,2.7,2.8,14,14,14,1,Special,DeductReload,480,1,2,100,10,0,3,7988,7992,7996,R..o..b....o.........to
+268,Buns,Animal,7,4,2.7,2,13,13,2,0,Special,DeductReload,390,1,2,100,10,5,3,9397,9401,9405,Cute on the outside meaty on the inside. Has several hundred siblings.
+278,Bad Vlad,White,3,2,5,2,20,2,2,0,Epic,DamageToCurrentEnemy,12,1,2,80,24,0,19,10262,10266,10270,He's so bad his opponents take extra damage from his attacks.
+19,Xin,Asian,10,18,2.7,2.7,15,18,24,1,Hero,AddReload,50,1,2,90,3,1,3,953,957,961,The BOSS
+7,Green Ranger - Oliver,White,9,3,2.8,2.4,7,21,6,1,Hero,DamageToSameRoomCharacters,6,1,2,90,3,0,3,481,485,489,Justice never loses
+51,Arctic Pole Boy,White,4,7,1.8,1.8,8,3,8,2,Unique,Freeze,120,1,2,70,6,0,19,1696,1700,1704,Ready to explore frozen alien worlds
+205,Nolan,Asian,6,12,3,1.5,15,12,3,0,Unique,DamageToRoom,5,1,2,70,3,0,19,7616,7620,7624,A cute crybaby with unusually high attack.. for a baby.

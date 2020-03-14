@@ -14,8 +14,14 @@ import xml.etree.ElementTree
 import pandas as pd
 import numpy as np
 
+import urllib
+import os.path
+
 import mysql.connector
 from sqlalchemy import create_engine
+
+import pymysql
+pymysql.install_as_MySQLdb()
 
 PSS_CHARS_RAW_FILE = 'pss-chars-raw.txt'
 MAXIMUM_CHARACTERS = 1900
@@ -134,29 +140,29 @@ def main():
     for k in ctbl.keys():
         item=ctbl[k]
             
-        txt += f"{item['CharacterDesignId']},"
-        txt += f"{item['CharacterDesignName']},"
-        txt += f"{item['RaceType']},"
-        txt += f"{item['FinalHp']},"
-        txt += f"{item['FinalPilot']},"
-        txt += f"{item['FinalAttack']},"
-        txt += f"{item['FinalRepair']},"
-        txt += f"{item['FinalWeapon']},"
-        txt += f"{item['FinalScience']},"
-        txt += f"{item['FinalEngine']},"
-        txt += f"{item['FireResistance']},"
-        txt += f"{item['Rarity']},"
-        txt += f"{item['SpecialAbilityType']},"
-        txt += f"{item['SpecialAbilityFinalArgument']},"
-        txt += f"{item['WalkingSpeed']},"
-        txt += f"{item['RunSpeed']},"
-        txt += f"{item['TrainingCapacity']},"
-        txt += f"{item['EquipmentMask']},"
-        txt += f"{item['CollectionDesignId']},"
-        txt += f"{item['Flags']},"
-        txt += f"{item['Head']},"       
-        txt += f"{item['Body']},"
-        txt += f"{item['Leg']},"
+        txt += str(item['CharacterDesignId']) + ','
+        txt += str(item['CharacterDesignName']) + ',' 
+        txt += str(item['RaceType']) + ','
+        txt += str(item['FinalHp']) + ','
+        txt += str(item['FinalPilot']) + ','
+        txt += str(item['FinalAttack']) + ','
+        txt += str(item['FinalRepair']) + ','
+        txt += str(item['FinalWeapon']) + ','
+        txt += str(item['FinalScience']) + ","
+        txt += str(item['FinalEngine']) + ","
+        txt += str(item['FireResistance']) + ","
+        txt += str(item['Rarity']) + ","
+        txt += str(item['SpecialAbilityType']) + ","
+        txt += str(item['SpecialAbilityFinalArgument']) + ","
+        txt += str(item['WalkingSpeed']) + ","
+        txt += str(item['RunSpeed']) + ","
+        txt += str(item['TrainingCapacity']) + ","
+        txt += str(item['EquipmentMask']) + ","
+        txt += str(item['CollectionDesignId']) + ","
+        txt += str(item['Flags']) + ","
+        txt += str(item['Head']) + ","
+        txt += str(item['Body']) + ","
+        txt += str(item['Leg']) + ","
         
         desc = item['CharacterDesignDescription'].replace(",", "").encode('ascii', 'replace').decode()
         txt += desc + '\n'
@@ -172,6 +178,33 @@ def main():
     # HACK hack HACK - drop the common Michelle, since there are two crew named Michelle =/
     # row = crew_df.query('CharacterDesignName=="Michelle" & Rarity=="Common"').index
     # crew_df = crew_df.drop(row, axis=0).copy()
+    
+    # -------------------------- Get sprite images
+    # GET SPRITE IMAGES
+    print('Getting sprite images...')
+    baseSprite_url = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId='
+
+    for index, row in crew_df.iterrows():
+        # head
+        url = baseSprite_url + str(row['Head'])
+        filename = 'sprites/' + str(row['Head']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
+    
+        # body
+        url = baseSprite_url + str(row['Body'])
+        filename = 'sprites/' + str(row['Body']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
+    
+        # leg
+        url = baseSprite_url + str(row['Leg'])
+        filename = 'sprites/' + str(row['Leg']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
     
     # -------------------------- Write to wordpress
     engine = create_engine('mysql://pixelpg4_rigging:PIXs@tt03fl@162.241.219.104/pixelpg4_crew', echo=False)    
