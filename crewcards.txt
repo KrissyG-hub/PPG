@@ -34,27 +34,28 @@ $crewId = $crew->CharacterDesignId;
 
 //Clean up the data to be human readable
 
+/* get images directly from pixel starships API
 $headImage = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=' . $crew->Head;
 $bodyImage = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=' . $crew->Body;
 $legImage = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=' . $crew->Leg;
+*/ 
+
+/* get images from wordpress */
+$headImage = 'https://pixelperfectguide.com/wp-content/uploads/sprites/' . $crew->Head . '.png';
+$bodyImage = 'https://pixelperfectguide.com/wp-content/uploads/sprites/' . $crew->Body . '.png';
+$legImage = 'https://pixelperfectguide.com/wp-content/uploads/sprites/' . $crew->Leg . '.png';
 
 list($headImageWidth, $headImageHeight, $type, $attr) = getimagesize($headImage);
 list($bodyImageWidth, $bodyImageHeight, $type, $attr) = getimagesize($bodyImage);
 list($legImageWidth, $legImageHeight, $type, $attr) = getimagesize($legImage);
 
-$headImageWidth = intval($headImageWidth) * 4;
-$headImageHeight = intval($headImageHeight) * 4;
-$bodyImageWidth *= 4;
-$bodyImageHeight *= 4;
-$legImageWidth *= 4;
-$legImageHeight *= 4;
-
-
-
-
-
-
-
+$scalingSize = min(4, 100 / max($headImageWidth, $bodyImageWidth, $legImageWidth));
+$headImageWidth *= $scalingSize;
+$headImageHeight *= $scalingSize;
+$bodyImageWidth *= $scalingSize;
+$bodyImageHeight *= $scalingSize;
+$legImageWidth *= $scalingSize;
+$legImageHeight *= $scalingSize;
 
 //Ability type and power
 switch ($crew->SpecialAbilityType) {
@@ -235,48 +236,22 @@ $roleStrings[$crewRoles->PilotInput] = $roleStrings[$crewRoles->PilotInput] . 'P
 $roleStrings[$crewRoles->BoarderInput] = $roleStrings[$crewRoles->BoarderInput] . 'Boarder ';
 $roleStrings[$crewRoles->AntiboarderInput] = $roleStrings[$crewRoles->AntiboarderInput] . 'Antiboarder ';
 
-/* from pixyship, green range sprite
-<div class="ctooltip">
-  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/249.png&quot;) 0px 0px; width: 18px; height: 16px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
-  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/252.png&quot;) 0px 0px; width: 18px; height: 7px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
-  <div class="char-part" style="background: url(&quot;//pixelstarships.s3.amazonaws.com/253.png&quot;) 0px 0px; width: 10px; height: 5px; border: 0px solid lightgrey; image-rendering: pixelated;"></div>
-</div>
-from pixyship github Crew.vue
-        <div class="char-part" :style="spriteStyle(char.head_sprite)"></div>
-        <div class="char-part" :style="spriteStyle(char.body_sprite)"></div>
-        <div class="char-part" :style="spriteStyle(char.leg_sprite)"></div>
-http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId=489
-http://apibackup.pixelstarships.com/FileService/DownloadSprite?SpriteId=485
-
-    spriteStyle (s, color = '', border = 0) {
-      if (Object.keys(s).length === 0) {
-        return {}
-      }
-      let obj = {
-        background: `${color} url('//pixelstarships.s3.amazonaws.com/${s.source}.png') -${s.x}px -${s.y}px`,
-        width: `${s.width}px`,
-        height: `${s.height}px`,
-        border: `${border}px solid lightgrey`,
-        imageRendering: 'pixelated'
-      }
-      return obj
-    },
-*/
-
 /* Get prestige options for the crew */
 $prestigeCrewString = '';
 if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
     $prestigeCrewString = 'This crew rarity can\'t be prestiged.';
+} else {
+  $getPrestigeCrew = $crewdb->prepare("SELECT DISTINCT crew_stats.CharacterDesignName FROM crew_stats LEFT JOIN crew_prestige ON crew_stats.CharacterDesignId = crew_prestige.ToCharacterDesignId WHERE (crew_prestige.CharacterDesignId1 = %d OR crew_prestige.CharacterDesignId2 = %d) AND crew_stats.CharacterDesignId IN (SELECT DISTINCT crew_stats.CharacterDesignId from crew_stats LEFT JOIN crew_grades ON crew_stats.CharacterDesignId = crew_grades.CharacterDesignId WHERE 4 IN(GunnerGrade, ShielderGrade, EngineerGrade, PilotGrade, RusherGrade, RepairerGrade, BoarderGrade, AntiboarderGrade)) ORDER BY crew_stats.CharacterDesignName", array($crewId, $crewId));
+  $allPrestigeCrew = $crewdb->get_results($getPrestigeCrew);
+  foreach ($allPrestigeCrew as $prestigeCrew)
+  {
+    $prestigeCrewString = $prestigeCrewString . '<a href="https://pixelperfectguide.com/cards?' . $crewId . '">' . $prestigeCrew->CharacterDesignName . '</a>. ';   
+  }
+  if ($prestigeCrewString == '') {
+    $prestigeCrewString = 'No prestige crew rated "Best" in any role. All prestige options are ' . '<a href="http://pixyship.com/crew/' . $crewId . '">here</a>.';
   } else {
-    $getPrestigeCrew = $crewdb->prepare("SELECT DISTINCT crew_stats.CharacterDesignName FROM crew_stats LEFT JOIN crew_prestige ON crew_stats.CharacterDesignId = crew_prestige.ToCharacterDesignId WHERE (crew_prestige.CharacterDesignId1 = %d OR crew_prestige.CharacterDesignId2 = %d) ORDER BY crew_stats.CharacterDesignName", array($crewId, $crewId));
-    $allPrestigeCrew = $crewdb->get_results($getPrestigeCrew);
-    foreach ($allPrestigeCrew as $prestigeCrew)
-    {
-      $prestigeCrewString = $prestigeCrewString . '<a href="https://pixelperfectguide.com/cards?' . $crewId . '">' . $prestigeCrew->CharacterDesignName . '</a>  ';   
-    }
-}
-if ($prestigeCrewString == '') {
-  $prestigeCrewString = 'No prestige crew rated "Best" in any role. All prestige options are ' . '<a href="http://pixyship.com/crew/' . $crewId . '">here</a>.';
+    $prestigeCrewString = $prestigeCrewString . '<a href="http://pixyship.com/crew/' . $crewId . '">All Prestige Options</a>';
+  }
 }
 ?>
 
