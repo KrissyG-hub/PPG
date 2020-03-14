@@ -14,6 +14,9 @@ import xml.etree.ElementTree
 import pandas as pd
 import numpy as np
 
+import urllib
+import os.path
+
 import mysql.connector
 from sqlalchemy import create_engine
 
@@ -175,6 +178,33 @@ def main():
     # HACK hack HACK - drop the common Michelle, since there are two crew named Michelle =/
     # row = crew_df.query('CharacterDesignName=="Michelle" & Rarity=="Common"').index
     # crew_df = crew_df.drop(row, axis=0).copy()
+    
+    # -------------------------- Get sprite images
+    # GET SPRITE IMAGES
+    print('Getting sprite images...')
+    baseSprite_url = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId='
+
+    for index, row in crew_df.iterrows():
+        # head
+        url = baseSprite_url + str(row['Head'])
+        filename = 'sprites/' + str(row['Head']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
+    
+        # body
+        url = baseSprite_url + str(row['Body'])
+        filename = 'sprites/' + str(row['Body']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
+    
+        # leg
+        url = baseSprite_url + str(row['Leg'])
+        filename = 'sprites/' + str(row['Leg']) + '.png'
+        if os.path.isfile(filename) == False:
+            urllib.request.urlretrieve(url, filename)
+            print(filename)
     
     # -------------------------- Write to wordpress
     engine = create_engine('mysql://pixelpg4_rigging:PIXs@tt03fl@162.241.219.104/pixelpg4_crew', echo=False)    
