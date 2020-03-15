@@ -218,7 +218,7 @@ switch ($crew->Rarity) {
 }
 
 //Roles
-$fetchCrewRoles = $crewdb->prepare("SELECT crew_input.* FROM crew_input WHERE crew_input.CharacterDesignId = %d", $crew->CharacterDesignId);
+$fetchCrewRoles = $crewdb->prepare("SELECT crew_grades.* FROM crew_grades WHERE crew_grades.CharacterDesignId = %d", $crew->CharacterDesignId);
 $crewRoles = $crewdb->get_row($fetchCrewRoles);
 $roleStrings = array(
     0 => '',
@@ -227,14 +227,14 @@ $roleStrings = array(
     3 => '',
     4 => '',
 );
-$roleStrings[$crewRoles->RusherInput] = $roleStrings[$crewRoles->RusherInput] . 'Rusher ';
-$roleStrings[$crewRoles->RepairerInput] = $roleStrings[$crewRoles->RepairerInput] . 'Repairer ';
-$roleStrings[$crewRoles->GunnerInput] = $roleStrings[$crewRoles->GunnerInput] . 'Gunner ';
-$roleStrings[$crewRoles->ShielderInput] = $roleStrings[$crewRoles->ShielderInput] . 'Shielder ';
-$roleStrings[$crewRoles->EngineerInput] = $roleStrings[$crewRoles->EngineerInput] . 'Engineer ';
-$roleStrings[$crewRoles->PilotInput] = $roleStrings[$crewRoles->PilotInput] . 'Pilot ';
-$roleStrings[$crewRoles->BoarderInput] = $roleStrings[$crewRoles->BoarderInput] . 'Boarder ';
-$roleStrings[$crewRoles->AntiboarderInput] = $roleStrings[$crewRoles->AntiboarderInput] . 'Antiboarder ';
+$roleStrings[$crewRoles->RusherGrade] = $roleStrings[$crewRoles->RusherGrade] . 'Rusher ';
+$roleStrings[$crewRoles->RepairerGrade] = $roleStrings[$crewRoles->RepairerGrade] . 'Repairer ';
+$roleStrings[$crewRoles->GunnerGrade] = $roleStrings[$crewRoles->GunnerGrade] . 'Gunner ';
+$roleStrings[$crewRoles->ShielderGrade] = $roleStrings[$crewRoles->ShielderGrade] . 'Scientist ';
+$roleStrings[$crewRoles->EngineerGrade] = $roleStrings[$crewRoles->EngineerGrade] . 'Engineer ';
+$roleStrings[$crewRoles->PilotGrade] = $roleStrings[$crewRoles->PilotGrade] . 'Pilot ';
+$roleStrings[$crewRoles->BoarderGrade] = $roleStrings[$crewRoles->BoarderGrade] . 'Boarder ';
+$roleStrings[$crewRoles->AntiboarderGrade] = $roleStrings[$crewRoles->AntiboarderGrade] . 'Antiboarder ';
 
 /* Get prestige options for the crew */
 $prestigeCrewString = '';
@@ -323,7 +323,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
     <input type="radio" id="four" style="margin-left: 20px;" name="rating" value="4">
     <label for="four">4</label>
     <input type="hidden" name="CrewId" value=<? echo $crewId; ?>>
-    <input type="submit" value="Rate"><br />
+    <input type="submit" value="Pilot"><br />
   </form>
 </div>
 
