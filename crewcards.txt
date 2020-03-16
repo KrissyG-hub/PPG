@@ -2,22 +2,25 @@
 $wpdb->show_errors();
 $crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219.104');
 
-/* Turn this back on for normal search of crew
+/* Turn this back on for normal search of crew */
 //Check if a crew was searched for
-if (isset($_POST['CrewName'])) {
-  $crewName = sanitize_text_field($_POST['CrewName']);
-  echo $crewName;
+if (isset($_POST['CrewId'])) {
+  $crewId = sanitize_text_field($_POST['CrewId']);
+  $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = %d", $crewId);
 } else {
-  $crewName = 'Roborob';
+  if (isset($_POST['CrewName'])) {
+    $crewName = sanitize_text_field($_POST['CrewName']);
+    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $crewName);
+  } else {
+    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = 76");
+  }
 }
-
-$fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", $crewName);
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
-*/
 
 /* Use this to do grading, check if a crew was graded */
 /* Three places to change when changing role to grade! */
+/*
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
   $crewId = sanitize_text_field($_POST['CrewId']);
@@ -25,10 +28,11 @@ if (isset($_POST['rating'])) {
   $crewdb->query($insertRating);
 }
 
-/* Get the next crew to grade */
+// Get the next crew to grade
 $fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.PilotInput IS NULL ORDER BY RAND() LIMIT 1");
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
+*/
 
 //print_r($crew); //debugging for printing all crew data
 
@@ -290,26 +294,36 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
 }
 </style>
 
-<!-- Also turn this back on to search for crew 
+<!-- Turn this back on to search for crew -->
 <div>
-  <p>The crew cards are on this page can be used to review the stats of crew, what roles they can perform on your ship, and what crew they can prestige into. Crew role ratings are among ALL crew, so a crew marked "Best as: gunner" is one of the best gunner crews in the game.</p>
-  <form action="" method="post">
-    <label for="crewName">Crew name:</label>
-    <input type="text" style="width: 150px;margin-right: 10px" name="CrewName" placeholder="Ardent Templar" autocomplete="off" list="crewList"autofocus>
+  <form action="" method="post" style="display:inline;">
+    <label for="CrewId">Crew name:</label>
+    <input type="text" style="width: 150px;margin-right: 10px" name="CrewId" placeholder="Ardent Templar" autocomplete="off" list="crewList"autofocus>
       <?php 
         echo '<datalist id="crewList">';
-        $fetchCrewNames = $crewdb->prepare("SELECT CharacterDesignName FROM crew_stats ORDER BY CharacterDesignName");
+        $fetchCrewNames = $crewdb->prepare("SELECT CharacterDesignName, CharacterDesignId FROM crew_stats ORDER BY CharacterDesignName");
         $crewsList = $crewdb->get_results($fetchCrewNames);
         foreach ($crewsList as $crewList) {
-          echo '<option value="' . $crewList->CharacterDesignName . '"/>';
+          echo '<option value="' . $crewList->CharacterDesignId . '">' . $crewList->CharacterDesignName . '</option>';
         }
         echo '</datalist>';
       ?>
-    <input type="submit" value="Submit"><br /><br />
+
+    <select style="width: 150px;margin-right: 10px" name="CrewId">
+      <?php
+        $fetchCrewNames = $crewdb->prepare("SELECT CharacterDesignName, CharacterDesignId FROM crew_stats ORDER BY CharacterDesignName");
+        $crewsList = $crewdb->get_results($fetchCrewNames);
+        foreach ($crewsList as $crewList) {
+          echo '<option value="' . $crewList->CharacterDesignId . '">' . $crewList->CharacterDesignName . '</option>';
+        }
+      ?>
+    </select>
+    <input type="submit" value="Submit">
+    <span> Go <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles. </span>
   </form>
 </div>
--->
-<!-- Turn this on to grade crew -->
+<!-- Turn above on to search for crew-->
+<!-- Turn this on to grade crew
 <div>
   <form action="" method="post">
     <input type="radio" id="zero" name="rating" value="0">
@@ -326,12 +340,13 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
     <input type="submit" value="Pilot"><br />
   </form>
 </div>
+-->
 
 <div style="border-style:solid;border-width:4px;max-width:650px">
 <div style="float: left; max-width: 20%; min-width: 100px; height: auto;">
   <img src="<? echo $headImage; ?>" alt="head image" style="width: <?echo $headImageWidth; ?>px; height: <?echo $headImageHeight; ?>px; image-rendering: pixelated; display: block; margin: 10px auto -4px;">
-  <img src="<? echo $bodyImage; ?>" alt="head image" style="width: <?echo $bodyImageWidth; ?>px; height: <?echo $bodyImageHeight; ?>px; image-rendering: pixelated; display: block; margin: 0 auto -4px;">
-  <img src="<? echo $legImage; ?>" alt="head image" style="width: <?echo $legImageWidth; ?>px; height: <?echo $legImageHeight; ?>px; image-rendering: pixelated; display: block; margin: 0 auto 0;">
+  <img src="<? echo $bodyImage; ?>" alt="body image" style="width: <?echo $bodyImageWidth; ?>px; height: <?echo $bodyImageHeight; ?>px; image-rendering: pixelated; display: block; margin: 0 auto -4px;">
+  <img src="<? echo $legImage; ?>" alt="leg image" style="width: <?echo $legImageWidth; ?>px; height: <?echo $legImageHeight; ?>px; image-rendering: pixelated; display: block; margin: 0 auto 0;">
 </div>
   <h1 id="crewTitle"><strong><? echo $crew->CharacterDesignName; ?></strong></h1>
   <div>
