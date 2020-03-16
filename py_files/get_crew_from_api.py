@@ -20,6 +20,8 @@ import os.path
 import mysql.connector
 from sqlalchemy import create_engine
 
+from ftplib import FTP
+
 import pymysql
 pymysql.install_as_MySQLdb()
 
@@ -182,29 +184,44 @@ def main():
     # -------------------------- Get sprite images
     # GET SPRITE IMAGES
     print('Getting sprite images...')
+    ftp = FTP(host='pixelperfectguide.com', user='pixelpg4', passwd='BLUs@tt03fl')
+    ftp.cwd('/public_html/wp-content/uploads/sprites')
+    wordpress_files = ftp.nlst()
+    
     baseSprite_url = 'http://apibackup.pixelstarships.com/FileService/DownloadSprite?spriteId='
 
     for index, row in crew_df.iterrows():
         # head
         url = baseSprite_url + str(row['Head'])
-        filename = 'sprites/' + str(row['Head']) + '.png'
-        if os.path.isfile(filename) == False:
-            urllib.request.urlretrieve(url, filename)
-            print(filename)
+        imgfile = str(row['Head']) + '.png'
+        localfile = 'sprites/' + imgfile
+        if (imgfile in wordpress_files) == False:
+            urllib.request.urlretrieve(url, localfile)
+            fp = open(localfile, 'rb')
+            ftp.storbinary('STOR %s' %imgfile, fp)
+            print(imgfile)
     
         # body
         url = baseSprite_url + str(row['Body'])
-        filename = 'sprites/' + str(row['Body']) + '.png'
-        if os.path.isfile(filename) == False:
-            urllib.request.urlretrieve(url, filename)
-            print(filename)
+        imgfile = str(row['Body']) + '.png'
+        localfile = 'sprites/' + imgfile
+        if (imgfile in wordpress_files) == False:
+            urllib.request.urlretrieve(url, localfile)
+            fp = open(localfile, 'rb')
+            ftp.storbinary('STOR %s' %imgfile, fp)
+            print(imgfile)
     
         # leg
         url = baseSprite_url + str(row['Leg'])
-        filename = 'sprites/' + str(row['Leg']) + '.png'
-        if os.path.isfile(filename) == False:
-            urllib.request.urlretrieve(url, filename)
-            print(filename)
+        imgfile = str(row['Leg']) + '.png'
+        localfile = 'sprites/' + imgfile
+        if (imgfile in wordpress_files) == False:
+            urllib.request.urlretrieve(url, localfile)
+            fp = open(localfile, 'rb')
+            ftp.storbinary('STOR %s' %imgfile, fp)
+            print(imgfile)
+            
+    ftp.close()
     
     # -------------------------- Write to wordpress
     engine = create_engine('mysql://pixelpg4_rigging:PIXs@tt03fl@162.241.219.104/pixelpg4_crew', echo=False)    
