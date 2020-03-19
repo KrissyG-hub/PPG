@@ -3,37 +3,17 @@ $wpdb->show_errors();
 $crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219.104');
 
 /* Turn this back on for normal search of crew */
-/* semi-working code
 //Check if a crew was searched for
 if (isset($_GET['CrewId'])) {
-  echo $_GET['CrewId'];
   $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = %d", $_GET['CrewId']);
 } else {
-  if (isset($_POST['CrewName'])) {
-    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", str_replace('\\', '', $_POST['CrewName']));
+  if (isset($_GET['CrewName'])) {
+    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", str_replace('\\', '', $_GET['CrewName']));
   } else {
-    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = 76");
+    $rarities = array('Unique', 'Epic', 'Hero', 'Special', 'Legendary');
+    $fetchCrew = $crewdb->prepare("SELECT * from crew_stats WHERE Rarity = %s ORDER BY RAND() LIMIT 1", $rarities[array_rand($rarities)]);
   }
 }
-
-
-htmlspecialchars($_POST["name"]); use this to post when new crew comes in?
-
-echo '<meta http-equiv="Refresh" content="5; url=https://pixelperfectguide.com/php-test-4?CrewId=' . $_GET['CrewId'] . '" />';
-*/
-
-//Check if a crew was searched for
-if (isset($_GET['CrewId'])) {
-  echo 'I got this crew: ' . $_GET['CrewId'] . ' ';
-  $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = %d", $_GET['CrewId']);
-} else {
-  if (isset($_POST['CrewName'])) {
-    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignName = %s", str_replace('\\', '', $_POST['CrewName']));
-  } else {
-    $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = 76");
-  }
-}
-echo $fetchCrew . 'Im outside the if else';
 
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
@@ -269,18 +249,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
   $allPrestigeCrew = $crewdb->get_results($getPrestigeCrew);
   foreach ($allPrestigeCrew as $prestigeCrew)
   {
-    $prestigeCrewString = $prestigeCrewString . '<a href="https://pixelperfectguide.com/php-test-4?CrewId=' . $crewId . '">' . $prestigeCrew->CharacterDesignName . '</a>. ';   
-
-
-
-
-/* Figure out how to get this to link to my own site!
-    $prestigeCrewString = $prestigeCrewString . '<a href="http://pixyship.com/crew/' . $prestigeCrew->CharacterDesignId . '">' . $prestigeCrew->CharacterDesignName . '</a>. ';   
-*/
-
-
-
-
+    $prestigeCrewString = $prestigeCrewString . '<a href="https://pixelperfectguide.com/cards?CrewId=' . $prestigeCrew->CharacterDesignId . '">' . $prestigeCrew->CharacterDesignName . '</a>. ';
   }
   if ($prestigeCrewString == '') {
     $prestigeCrewString = 'No prestige crew rated "Best" in any role. All prestige options are ' . '<a href="http://pixyship.com/crew/' . $crewId . '">here</a>.';
@@ -327,7 +296,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
 
 <!-- Turn this back on to search for crew -->
 <div>
-  <form action="" method="post" style="display:inline;">
+  <form action="" method="get" style="display:inline;">
     <label for="CrewName">Crew name:</label>
     <input type="text" style="width: 150px;margin-right: 10px" name="CrewName" placeholder="Bling Captain" autocomplete="off" list="crewList"autofocus>
       <?php 
@@ -340,7 +309,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
         echo '</datalist>';
       ?>
     <input type="submit" value="Submit">
-    <span> Go <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles. </span>
+    <span> Look <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles, and a list of the best crew in each role. </span>
   </form>
 </div>
 <!-- Turn above on to search for crew-->
