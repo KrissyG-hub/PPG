@@ -295,7 +295,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
 </style>
 
 <!-- Turn this back on to search for crew -->
-<div>
+<div style="max-width:650px;">
   <form action="" method="get" style="display:inline;">
     <label for="CrewName">Crew name:</label>
     <input type="text" style="width: 150px;margin-right: 10px" name="CrewName" placeholder="Bling Captain" autocomplete="off" list="crewList"autofocus>
@@ -309,7 +309,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
         echo '</datalist>';
       ?>
     <input type="submit" value="Submit">
-    <span> Look <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles, and a list of the best crew in each role. </span>
+    <p> Look <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles, and a list of the best crew in each role. </p>
   </form>
 </div>
 <!-- Turn above on to search for crew-->
