@@ -90,7 +90,7 @@ def main(crew_data):
     model_data.drop(['Flags', 'EquipmentMask'], axis=1, inplace=True)
     model_data.drop(['0', '1', '13', '14', '15', '16', '2', '3', '4', '5', '6', '7', '8', '9'], axis = 1, inplace=True)
     model_data.drop(['Alien', 'Asian', 'Animal', 'Black', 'Robot', 'Unknown', 'White'], axis = 1, inplace=True)
-    model_data.drop(['Common', 'Elite', 'Epic', 'Hero', 'Legendary', 'Special', 'Unique'], axis = 1, inplace=True)
+    # model_data.drop(['Common', 'Elite', 'Epic', 'Hero', 'Legendary', 'Special', 'Unique'], axis = 1, inplace=True)
     
     
     # -------------------------- Add interaction terms
@@ -102,10 +102,10 @@ def main(crew_data):
     for skill in ['AddReload', 'DamageToCurrentEnemy', 'DamageToRoom', 'DamageToSameRoomCharacters', 'DeductReload', 'FireWalk', 
                   'Freeze', 'HealRoomHp', 'HealSameRoomCharacters', 'HealSelfHp', 'SetFire']:
         poly_model_data[skill+'Xscore'] = model_data[skill]*model_data['AbilityScore_norm']
-    for item in ['FireResistance', 'TrainingCapacity', 'AddReload', 'DamageToCurrentEnemy', 'DamageToRoom', 
-                'DamageToSameRoomCharacters', 'DeductReload', 'FireWalk', 'Freeze', 'HealRoomHp', 'HealSameRoomCharacters', 
-                'HealSelfHp', 'SetFire']:
-        poly_model_data[item+'Xhp'] = model_data[item]*model_data['FinalHp']
+    # for item in ['FireResistance', 'TrainingCapacity', 'AddReload', 'DamageToCurrentEnemy', 'DamageToRoom', 
+    #            'DamageToSameRoomCharacters', 'DeductReload', 'FireWalk', 'Freeze', 'HealRoomHp', 'HealSameRoomCharacters', 
+    #            'HealSelfHp', 'SetFire']:
+    #    poly_model_data[item+'Xhp'] = model_data[item]*model_data['FinalHp']
     poly_model_data['AbilityScore_squared'] = model_data['AbilityScore_norm']*model_data['AbilityScore_norm']
     
     print("Ready for modeling!")
