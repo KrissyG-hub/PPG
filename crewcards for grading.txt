@@ -2,7 +2,7 @@
 $wpdb->show_errors();
 $crewdb = new wpdb('pixelpg4_rigging','PIXs@tt03fl','pixelpg4_crew','162.241.219.104');
 
-/* Turn this back on for normal search of crew */
+/* Turn this back on for normal search of crew 
 //Check if a crew was searched for
 if (isset($_GET['CrewId'])) {
   $fetchCrew = $crewdb->prepare("SELECT * FROM crew_stats WHERE CharacterDesignId = %d", $_GET['CrewId']);
@@ -15,24 +15,28 @@ if (isset($_GET['CrewId'])) {
   }
 }
 
-$crew = $crewdb->get_row($fetchCrew);
-$crewId = $crew->CharacterDesignId;
+*/
 
 /* Use this to do grading, check if a crew was graded */
 /* Three places to change when changing role to grade! */
-/*
+/* Roles are GunnerInput  ShielderInput  EngineerInput  PilotInput  RusherInput  AntiboarderInput  RepairerInput  BoarderInput */
+$roleToGrade = "GunnerInput";
+
 if (isset($_POST['rating'])) {
   $rating = sanitize_text_field($_POST['rating']);
   $crewId = sanitize_text_field($_POST['CrewId']);
-  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, PilotInput) VALUES(%d, %d) ON DUPLICATE KEY UPDATE PilotInput=%d", array($crewId, $rating, $rating));
+  $insertRating = $crewdb->prepare("INSERT INTO crew_input (CharacterDesignId, $roleToGrade) VALUES(%d, %d) ON DUPLICATE KEY UPDATE $roleToGrade=%d", array($crewId, $rating, $rating));
   $crewdb->query($insertRating);
 }
 
 // Get the next crew to grade
-$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE crew_input.PilotInput IS NULL ORDER BY RAND() LIMIT 1");
+$roleToGradePlusTable = "crew_input." . $roleToGrade;
+$fetchCrew = $crewdb->prepare("SELECT crew_stats.* FROM crew_stats LEFT JOIN crew_input ON crew_stats.CharacterDesignId = crew_input.CharacterDesignId WHERE $roleToGradePlusTable IS NULL ORDER BY RAND() LIMIT 1");
+/* echo $fetchCrew; */
+
+
 $crew = $crewdb->get_row($fetchCrew);
 $crewId = $crew->CharacterDesignId;
-*/
 
 //print_r($crew); //debugging for printing all crew data
 
@@ -306,7 +310,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
 }
 </style>
 
-<!-- Turn this back on to search for crew -->
+<!-- Turn on to search for crew
 <div style="max-width:650px;">
   <form action="" method="get" style="display:inline;">
     <label for="CrewName">Crew name:</label>
@@ -324,25 +328,27 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
     <p> Look <a href="https://pixelperfectguide.com/crew/stats-and-roles/">here</a> for an explanation of crew attributes and roles, and a list of the best crew in each role. </p>
   </form>
 </div>
+-->
 <!-- Turn above on to search for crew-->
-<!-- Turn this on to grade crew
+
+<!-- Turn this on to grade crew -->
 <div>
   <form action="" method="post">
     <input type="radio" id="zero" name="rating" value="0">
-    <label for="zero">0</label>
+    <label for="zero">5</label>
     <input type="radio" id="one" style="margin-left: 20px;" name="rating" value="1">
-    <label for="one">1</label>
+    <label for="one">10</label>
     <input type="radio" id="two" style="margin-left: 20px;" name="rating" value="2">
-    <label for="two">2</label>
+    <label for="two">15</label>
     <input type="radio" id="three" style="margin-left: 20px;" name="rating" value="3">
-    <label for="three">3</label>
+    <label for="three">20</label>
     <input type="radio" id="four" style="margin-left: 20px;" name="rating" value="4">
-    <label for="four">4</label>
+    <label for="four">25</label>
     <input type="hidden" name="CrewId" value=<? echo $crewId; ?>>
-    <input type="submit" value="Pilot"><br />
+    <input type="submit" value="<? echo $roleToGrade; ?>"<br />
   </form>
 </div>
--->
+
 
 <div style="border-style:solid;border-width:4px;max-width:650px">
 <div style="float: left; max-width: 20%; min-width: 100px; height: auto;">
@@ -380,7 +386,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
       <button id="moreStatsButton" style="color: white;background-color: MidnightBlue;" onclick="moreStats()">More Stats</button>
     </div>
   </div>
-  <div class="outercontainer" id="roomStats" style="display: none">
+  <div class="outercontainer" id="roomStats" style="display: block">
     <h4 class="containerheading"><b>Room Stats<br /></b></h4>
     <div class="statblock">
       <h5 class="statheading"><strong>Weapon</strong></h5>
@@ -399,7 +405,7 @@ if ($crew->Rarity == 'Special' or $crew->Rarity == 'Legendary') {
       <h5><? echo $crew->FinalEngine; ?></h5>
     </div>
   </div>
-  <div class="outercontainer" id="utilityStats" style="display: none">
+  <div class="outercontainer" id="utilityStats" style="display: block">
     <h4 class="containerheading"><strong>Utility Stats<br /></strong></h4>
     <div class="statblock">
       <h5 class="statheading"><strong>Walk/Run Speed</strong></h5>
