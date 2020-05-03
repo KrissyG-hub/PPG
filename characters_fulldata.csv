@@ -178,7 +178,7 @@ CharacterDesignId,CharacterDesignName,RaceType,FinalHp,FinalPilot,FinalAttack,Fi
 178,Boarder Droid II,Robot,7,0,2.3,0,0,0,0,35,Common,DamageToRoom,3,2,2,0,0,0,16,5398,5402,5406,An aggressive droid looking to cause havoc.
 179,Boarder Droid III,Robot,8,0,2.5,0,0,0,0,40,Common,DamageToRoom,4,2,2,0,0,0,16,5458,5462,5466,An aggressive droid looking to cause havoc.
 180,Boarder Droid IV,Robot,9,0,3,0,0,0,0,45,Common,DamageToRoom,4,2,2,0,0,0,16,5470,5474,5478,An aggressive droid looking to cause havoc.
-181,Boarder Droid V,Robot,10,0,3.5,0,0,0,0,50,Common,DamageToRoom,5,3,3,0,0,0,16,5231,5235,5239,An aggressive droid looking to cause havoc.
+181,Boarder Droid V,Robot,10,0,3.5,0,0,0,0,50,Common,DamageToRoom,5,3,3,0,0,0,0,5231,5235,5239,An aggressive droid looking to cause havoc.
 182,King Salamander,White,7,9,2.3,1.9,16,9,9,3,Unique,DamageToSameRoomCharacters,5,1,2,70,3,0,19,5139,5143,5147,Has a gold car watch castle ship.
 183,Captain Mack Swallow,White,9,18,2.2,1.4,4,6,4,0,Unique,DeductReload,480,1,2,70,5,0,19,5179,5183,5187,A Pirate Captain turned Starship Captain.
 184,Zakian Assassin,Alien,11,8,3.2,1,14,15,14,0,Special,DamageToCurrentEnemy,10,1,2,100,12,0,3,5605,5609,5613,A specialised Zakian Assassin. Only 130 deployed in the galaxy.
